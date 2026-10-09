@@ -916,6 +916,13 @@ function FAQ() {
         }
 
         @media (max-width: 768px) {
+          .faq-container {
+            padding: 0 16px;
+          }
+          .faq-breadcrumb {
+            flex-wrap: wrap;
+            row-gap: 4px;
+          }
           .faq-controls-flex {
             flex-direction: column;
             align-items: stretch;
@@ -939,6 +946,8 @@ function FAQ() {
           .faq-filter-pills {
             width: 100%;
             justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 8px;
           }
           .faq-related-grid-3col {
             grid-template-columns: repeat(2, 1fr);
@@ -968,9 +977,50 @@ function FAQ() {
         }
 
         @media (max-width: 480px) {
+          .faq-section {
+            padding: 32px 0;
+          }
+
+          .faq-hero-title {
+            font-size: 24px;
+            line-height: 1.25;
+          }
+
+          .faq-hero-img-box {
+            min-height: 250px;
+            padding: 16px;
+          }
+
+          .faq-hero-float-card {
+            padding: 6px 10px;
+            font-size: 10px;
+          }
+
+          .faq-hero-float-query {
+            top: 10px;
+            right: 10px;
+          }
+
+          .faq-hero-float-ans {
+            bottom: 10px;
+            left: 10px;
+          }
+
+          .faq-accordion-header {
+            padding: 14px 14px;
+          }
+
+          .faq-accordion-question {
+            font-size: 14px;
+          }
+
           .faq-related-grid-3col,
           .faq-related-grid-2col {
             grid-template-columns: 1fr;
+          }
+
+          .faq-bottom-cta-card {
+            padding: 24px 16px;
           }
         }
       `}</style>

@@ -1025,8 +1025,18 @@ function BusinessMSMELoans() {
         }
 
         @media (max-width: 640px) {
+          .bms-container {
+            padding: 0 16px;
+          }
+
+          .bms-breadcrumb {
+            flex-wrap: wrap;
+            row-gap: 4px;
+          }
+
           .bms-cards-2x2,
           .bms-msme-cards-row,
+          .bms-evaluate-cards-wrap,
           .bms-related-cards {
             grid-template-columns: 1fr;
           }
@@ -1048,6 +1058,96 @@ function BusinessMSMELoans() {
 
           .bms-bottom-cta-card {
             padding: 28px 20px;
+          }
+
+          .bms-disclaimer-strip {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .bms-section {
+            padding: 32px 0;
+          }
+
+          .bms-hero-title {
+            font-size: 24px;
+            line-height: 1.25;
+          }
+
+          .bms-hero-actions {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .bms-btn-primary,
+          .bms-btn-secondary {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .bms-heading {
+            font-size: 22px;
+          }
+
+          .bms-header-row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 18px;
+          }
+
+          .bms-hero-visual-card {
+            min-height: 260px;
+          }
+
+          .bms-floating-card {
+            padding: 8px 10px;
+            font-size: 10px;
+          }
+
+          .bms-float-1 {
+            top: 14px;
+            left: 14px;
+          }
+
+          .bms-float-2 {
+            top: 50%;
+            left: 14px;
+          }
+
+          .bms-float-3 {
+            bottom: 14px;
+            right: 14px;
+          }
+
+          .bms-bottom-cta-card {
+            padding: 24px 16px;
+          }
+
+          .bms-bottom-cta-buttons {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .bms-btn-cta-gold,
+          .bms-btn-cta-outline {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .bms-faq-header {
+            padding: 12px 14px;
+          }
+
+          .bms-faq-question {
+            font-size: 13px;
           }
         }
       `}</style>

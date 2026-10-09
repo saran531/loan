@@ -1001,6 +1001,13 @@ function Contact() {
         }
 
         @media (max-width: 768px) {
+          .contact-container {
+            padding: 0 16px;
+          }
+          .contact-breadcrumb {
+            flex-wrap: wrap;
+            row-gap: 4px;
+          }
           .contact-top-cards-row {
             grid-template-columns: 1fr;
           }
@@ -1008,6 +1015,9 @@ function Contact() {
             grid-template-columns: 1fr;
           }
           .contact-forms-grid {
+            grid-template-columns: 1fr;
+          }
+          .contact-form-row-2col {
             grid-template-columns: 1fr;
           }
           .contact-process-section {
@@ -1037,9 +1047,74 @@ function Contact() {
           }
         }
 
-        @media (max-width: 520px) {
-          .contact-form-row-2col {
-            grid-template-columns: 1fr;
+        @media (max-width: 480px) {
+          .contact-hero-title {
+            font-size: 24px;
+            line-height: 1.25;
+          }
+
+          .contact-hero-img-box {
+            min-height: 250px;
+            padding: 16px;
+          }
+
+          .contact-hero-float-card {
+            padding: 6px 10px;
+            font-size: 10px;
+          }
+
+          .contact-float-loan {
+            top: 10px;
+            right: 10px;
+          }
+
+          .contact-float-insurance {
+            top: 54px;
+            right: 10px;
+          }
+
+          .contact-float-enquiry {
+            top: 98px;
+            right: 10px;
+          }
+
+          .contact-float-madurai {
+            bottom: 10px;
+            right: 10px;
+          }
+
+          .contact-top-card {
+            padding: 14px 14px;
+          }
+
+          .contact-top-card-number {
+            font-size: 16.5px;
+          }
+
+          .contact-form-card {
+            padding: 18px 14px;
+            border-radius: 14px;
+          }
+
+          .contact-form-heading {
+            font-size: 20px;
+          }
+
+          .contact-input,
+          .contact-select,
+          .contact-textarea {
+            font-size: 13.5px;
+            padding: 10px 12px;
+          }
+
+          .contact-btn-submit-loan,
+          .contact-btn-submit-insurance {
+            min-height: 44px;
+            font-size: 14px;
+          }
+
+          .contact-bottom-cta-card {
+            padding: 24px 16px;
           }
         }
       `}</style>

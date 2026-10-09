@@ -900,6 +900,15 @@ function MortgageLAP() {
         }
 
         @media (max-width: 640px) {
+          .lap-container {
+            padding: 0 16px;
+          }
+
+          .lap-breadcrumb {
+            flex-wrap: wrap;
+            row-gap: 4px;
+          }
+
           .lap-cards-row-3,
           .lap-cards-row-2,
           .lap-applicant-cards,
@@ -919,6 +928,96 @@ function MortgageLAP() {
 
           .lap-bottom-cta-card {
             padding: 28px 20px;
+          }
+
+          .lap-disclaimer-strip {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .lap-section {
+            padding: 32px 0;
+          }
+
+          .lap-hero-title {
+            font-size: 24px;
+            line-height: 1.25;
+          }
+
+          .lap-hero-actions {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .lap-btn-primary,
+          .lap-btn-secondary {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .lap-heading {
+            font-size: 22px;
+          }
+
+          .lap-header-row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 18px;
+          }
+
+          .lap-hero-visual-card {
+            min-height: 260px;
+          }
+
+          .lap-floating-card {
+            padding: 8px 10px;
+            font-size: 10px;
+          }
+
+          .lap-float-1 {
+            top: 14px;
+            left: 14px;
+          }
+
+          .lap-float-2 {
+            top: 50%;
+            left: 14px;
+          }
+
+          .lap-float-3 {
+            bottom: 14px;
+            right: 14px;
+          }
+
+          .lap-bottom-cta-card {
+            padding: 24px 16px;
+          }
+
+          .lap-bottom-cta-buttons {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .lap-btn-cta-gold,
+          .lap-btn-cta-outline {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .lap-faq-header {
+            padding: 12px 14px;
+          }
+
+          .lap-faq-question {
+            font-size: 13px;
           }
         }
       `}</style>

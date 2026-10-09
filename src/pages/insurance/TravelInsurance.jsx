@@ -931,12 +931,21 @@ function TravelInsurance() {
         }
 
         @media (max-width: 640px) {
+          .ti-container {
+            padding: 0 16px;
+          }
+
+          .ti-breadcrumb {
+            flex-wrap: wrap;
+            row-gap: 4px;
+          }
+
           .ti-consider-5-grid {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr;
           }
 
           .ti-check-10-grid {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr;
           }
 
           .ti-policy-note-banner {
@@ -950,6 +959,96 @@ function TravelInsurance() {
 
           .ti-bottom-cta-content {
             padding: 24px 20px;
+          }
+
+          .ti-disclaimer-strip {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .ti-section {
+            padding: 32px 0;
+          }
+
+          .ti-hero-title {
+            font-size: 24px;
+            line-height: 1.25;
+          }
+
+          .ti-hero-actions {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .ti-btn-primary,
+          .ti-btn-secondary {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .ti-heading {
+            font-size: 22px;
+          }
+
+          .ti-header-row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 18px;
+          }
+
+          .ti-hero-visual-card {
+            min-height: 260px;
+          }
+
+          .ti-floating-card {
+            padding: 8px 10px;
+            font-size: 10px;
+          }
+
+          .ti-float-1 {
+            top: 14px;
+            left: 14px;
+          }
+
+          .ti-float-2 {
+            top: 50%;
+            left: 14px;
+          }
+
+          .ti-float-3 {
+            bottom: 14px;
+            right: 14px;
+          }
+
+          .ti-bottom-cta-card {
+            padding: 24px 16px;
+          }
+
+          .ti-bottom-cta-buttons {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .ti-btn-cta-gold,
+          .ti-btn-cta-outline {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .ti-faq-header {
+            padding: 12px 14px;
+          }
+
+          .ti-faq-question {
+            font-size: 13px;
           }
         }
       `}</style>

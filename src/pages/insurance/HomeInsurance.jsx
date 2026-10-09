@@ -930,12 +930,21 @@ function HomeInsurance() {
         }
 
         @media (max-width: 640px) {
+          .home-container {
+            padding: 0 16px;
+          }
+
+          .home-breadcrumb {
+            flex-wrap: wrap;
+            row-gap: 4px;
+          }
+
           .home-insured-4-grid {
             grid-template-columns: 1fr;
           }
 
           .home-check-10-grid {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr;
           }
 
           .home-risks-subgrid,
@@ -950,6 +959,96 @@ function HomeInsurance() {
           .home-bottom-cta-center {
             flex-direction: column;
             text-align: center;
+          }
+
+          .home-disclaimer-strip {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .home-section {
+            padding: 32px 0;
+          }
+
+          .home-hero-title {
+            font-size: 24px;
+            line-height: 1.25;
+          }
+
+          .home-hero-actions {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .home-btn-primary,
+          .home-btn-secondary {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .home-heading {
+            font-size: 22px;
+          }
+
+          .home-header-row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 18px;
+          }
+
+          .home-hero-visual-card {
+            min-height: 260px;
+          }
+
+          .home-floating-card {
+            padding: 8px 10px;
+            font-size: 10px;
+          }
+
+          .home-float-1 {
+            top: 14px;
+            left: 14px;
+          }
+
+          .home-float-2 {
+            top: 50%;
+            left: 14px;
+          }
+
+          .home-float-3 {
+            bottom: 14px;
+            right: 14px;
+          }
+
+          .home-bottom-cta-card {
+            padding: 24px 16px;
+          }
+
+          .home-bottom-cta-buttons {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .home-btn-cta-gold,
+          .home-btn-cta-outline {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .home-faq-header {
+            padding: 12px 14px;
+          }
+
+          .home-faq-question {
+            font-size: 13px;
           }
         }
       `}</style>

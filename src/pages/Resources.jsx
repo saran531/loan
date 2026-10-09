@@ -1090,6 +1090,15 @@ function Resources() {
         }
 
         @media (max-width: 768px) {
+          .resources-container {
+            padding: 0 16px;
+          }
+
+          .resources-breadcrumb {
+            flex-wrap: wrap;
+            row-gap: 4px;
+          }
+
           .resources-cards-5col,
           .resources-cards-4col {
             grid-template-columns: repeat(2, 1fr);
@@ -1130,6 +1139,8 @@ function Resources() {
           .resources-filter-pills {
             width: 100%;
             justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 8px;
           }
           .resources-hero-title {
             font-size: 32px;
@@ -1146,13 +1157,52 @@ function Resources() {
         }
 
         @media (max-width: 480px) {
+          .resources-section {
+            padding: 32px 0;
+          }
+
+          .resources-hero-title {
+            font-size: 24px;
+            line-height: 1.25;
+          }
+
+          .resources-hero-img-box {
+            min-height: 250px;
+            padding: 16px;
+          }
+
+          .resources-hero-float-card {
+            padding: 6px 10px;
+            font-size: 10px;
+          }
+
+          .resources-hero-float-search {
+            top: 10px;
+            right: 10px;
+          }
+
+          .resources-hero-float-docs {
+            bottom: 10px;
+            left: 10px;
+          }
+
+          .resources-hero-float-tag {
+            top: 50%;
+            right: 10px;
+          }
+
           .resources-cards-5col,
           .resources-cards-4col {
             grid-template-columns: 1fr;
           }
+
           .resources-related-grid-loans,
           .resources-related-grid-insurance {
             grid-template-columns: 1fr;
+          }
+
+          .resources-bottom-cta-card {
+            padding: 24px 16px;
           }
         }
       `}</style>

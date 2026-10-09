@@ -787,6 +787,15 @@ function HomePropertyLoans() {
         }
 
         @media (max-width: 640px) {
+          .hpl-container {
+            padding: 0 16px;
+          }
+
+          .hpl-breadcrumb {
+            flex-wrap: wrap;
+            row-gap: 4px;
+          }
+
           .hpl-cards-row-3,
           .hpl-evaluate-cards-wrap,
           .hpl-related-cards {
@@ -808,6 +817,96 @@ function HomePropertyLoans() {
 
           .hpl-bottom-cta-card {
             padding: 28px 20px;
+          }
+
+          .hpl-disclaimer-strip {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .hpl-section {
+            padding: 32px 0;
+          }
+
+          .hpl-hero-title {
+            font-size: 24px;
+            line-height: 1.25;
+          }
+
+          .hpl-hero-actions {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .hpl-btn-primary,
+          .hpl-btn-secondary {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .hpl-heading {
+            font-size: 22px;
+          }
+
+          .hpl-header-row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 18px;
+          }
+
+          .hpl-hero-visual-card {
+            min-height: 260px;
+          }
+
+          .hpl-floating-card {
+            padding: 8px 10px;
+            font-size: 10px;
+          }
+
+          .hpl-float-1 {
+            top: 14px;
+            left: 14px;
+          }
+
+          .hpl-float-2 {
+            top: 50%;
+            left: 14px;
+          }
+
+          .hpl-float-3 {
+            bottom: 14px;
+            right: 14px;
+          }
+
+          .hpl-bottom-cta-card {
+            padding: 24px 16px;
+          }
+
+          .hpl-bottom-cta-buttons {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .hpl-btn-cta-gold,
+          .hpl-btn-cta-outline {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .hpl-faq-header {
+            padding: 12px 14px;
+          }
+
+          .hpl-faq-question {
+            font-size: 13px;
           }
         }
       `}</style>

@@ -939,12 +939,21 @@ function MotorInsurance() {
         }
 
         @media (max-width: 640px) {
+          .mi-container {
+            padding: 0 16px;
+          }
+
+          .mi-breadcrumb {
+            flex-wrap: wrap;
+            row-gap: 4px;
+          }
+
           .mi-vs-card {
             grid-template-columns: 1fr;
           }
 
           .mi-review-10-grid {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr;
           }
 
           .mi-helps-card {
@@ -962,6 +971,96 @@ function MotorInsurance() {
 
           .mi-bottom-cta-card {
             padding: 26px 20px;
+          }
+
+          .mi-disclaimer-strip {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .mi-section {
+            padding: 32px 0;
+          }
+
+          .mi-hero-title {
+            font-size: 24px;
+            line-height: 1.25;
+          }
+
+          .mi-hero-actions {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .mi-btn-primary,
+          .mi-btn-secondary {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .mi-heading {
+            font-size: 22px;
+          }
+
+          .mi-header-row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 18px;
+          }
+
+          .mi-hero-visual-card {
+            min-height: 260px;
+          }
+
+          .mi-floating-card {
+            padding: 8px 10px;
+            font-size: 10px;
+          }
+
+          .mi-float-1 {
+            top: 14px;
+            left: 14px;
+          }
+
+          .mi-float-2 {
+            top: 50%;
+            left: 14px;
+          }
+
+          .mi-float-3 {
+            bottom: 14px;
+            right: 14px;
+          }
+
+          .mi-bottom-cta-card {
+            padding: 24px 16px;
+          }
+
+          .mi-bottom-cta-buttons {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .mi-btn-cta-gold,
+          .mi-btn-cta-outline {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .mi-faq-header {
+            padding: 12px 14px;
+          }
+
+          .mi-faq-question {
+            font-size: 13px;
           }
         }
       `}</style>

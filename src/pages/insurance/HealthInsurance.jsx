@@ -965,12 +965,21 @@ function HealthInsurance() {
         }
 
         @media (max-width: 640px) {
+          .hi-container {
+            padding: 0 16px;
+          }
+
+          .hi-breadcrumb {
+            flex-wrap: wrap;
+            row-gap: 4px;
+          }
+
           .hi-need-cards-grid {
             grid-template-columns: 1fr;
           }
 
           .hi-compare-10-grid {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr;
           }
 
           .hi-comp-vis-right-grid {
@@ -997,6 +1006,96 @@ function HealthInsurance() {
 
           .hi-bottom-cta-card {
             padding: 26px 20px;
+          }
+
+          .hi-disclaimer-strip {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .hi-section {
+            padding: 32px 0;
+          }
+
+          .hi-hero-title {
+            font-size: 24px;
+            line-height: 1.25;
+          }
+
+          .hi-hero-actions {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .hi-btn-primary,
+          .hi-btn-secondary {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .hi-heading {
+            font-size: 22px;
+          }
+
+          .hi-header-row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 18px;
+          }
+
+          .hi-hero-visual-card {
+            min-height: 260px;
+          }
+
+          .hi-floating-card {
+            padding: 8px 10px;
+            font-size: 10px;
+          }
+
+          .hi-float-1 {
+            top: 14px;
+            left: 14px;
+          }
+
+          .hi-float-2 {
+            top: 50%;
+            left: 14px;
+          }
+
+          .hi-float-3 {
+            bottom: 14px;
+            right: 14px;
+          }
+
+          .hi-bottom-cta-card {
+            padding: 24px 16px;
+          }
+
+          .hi-bottom-cta-buttons {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .hi-btn-cta-gold,
+          .hi-btn-cta-outline {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .hi-faq-header {
+            padding: 12px 14px;
+          }
+
+          .hi-faq-question {
+            font-size: 13px;
           }
         }
       `}</style>

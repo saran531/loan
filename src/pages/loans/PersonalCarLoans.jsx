@@ -911,6 +911,15 @@ function PersonalCarLoans() {
         }
 
         @media (max-width: 640px) {
+          .pcl-container {
+            padding: 0 16px;
+          }
+
+          .pcl-breadcrumb {
+            flex-wrap: wrap;
+            row-gap: 4px;
+          }
+
           .pcl-cards-2-row,
           .pcl-related-cards {
             grid-template-columns: 1fr;
@@ -921,7 +930,7 @@ function PersonalCarLoans() {
           }
 
           .pcl-eval-cards-wrap {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr;
           }
 
           .pcl-process-flow-3 {
@@ -935,6 +944,96 @@ function PersonalCarLoans() {
 
           .pcl-bottom-cta-card {
             padding: 28px 20px;
+          }
+
+          .pcl-disclaimer-strip {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .pcl-section {
+            padding: 32px 0;
+          }
+
+          .pcl-hero-title {
+            font-size: 24px;
+            line-height: 1.25;
+          }
+
+          .pcl-hero-actions {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .pcl-btn-primary,
+          .pcl-btn-secondary {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .pcl-heading {
+            font-size: 22px;
+          }
+
+          .pcl-header-row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 18px;
+          }
+
+          .pcl-hero-visual-card {
+            min-height: 260px;
+          }
+
+          .pcl-floating-card {
+            padding: 8px 10px;
+            font-size: 10px;
+          }
+
+          .pcl-float-1 {
+            top: 14px;
+            left: 14px;
+          }
+
+          .pcl-float-2 {
+            top: 50%;
+            left: 14px;
+          }
+
+          .pcl-float-3 {
+            bottom: 14px;
+            right: 14px;
+          }
+
+          .pcl-bottom-cta-card {
+            padding: 24px 16px;
+          }
+
+          .pcl-bottom-cta-buttons {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .pcl-btn-cta-gold,
+          .pcl-btn-cta-outline {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .pcl-faq-header {
+            padding: 12px 14px;
+          }
+
+          .pcl-faq-question {
+            font-size: 13px;
           }
         }
       `}</style>

@@ -912,12 +912,21 @@ function SMEBusinessInsurance() {
         }
 
         @media (max-width: 640px) {
+          .sme-container {
+            padding: 0 16px;
+          }
+
+          .sme-breadcrumb {
+            flex-wrap: wrap;
+            row-gap: 4px;
+          }
+
           .sme-biz-types-grid {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr;
           }
 
           .sme-risk-strip-grid {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr;
           }
 
           .sme-protect-8-grid {
@@ -944,6 +953,96 @@ function SMEBusinessInsurance() {
 
           .sme-bottom-cta-card {
             padding: 26px 20px;
+          }
+
+          .sme-disclaimer-strip {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .sme-section {
+            padding: 32px 0;
+          }
+
+          .sme-hero-title {
+            font-size: 24px;
+            line-height: 1.25;
+          }
+
+          .sme-hero-actions {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .sme-btn-primary,
+          .sme-btn-secondary {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .sme-heading {
+            font-size: 22px;
+          }
+
+          .sme-header-row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 18px;
+          }
+
+          .sme-hero-visual-card {
+            min-height: 260px;
+          }
+
+          .sme-floating-card {
+            padding: 8px 10px;
+            font-size: 10px;
+          }
+
+          .sme-float-1 {
+            top: 14px;
+            left: 14px;
+          }
+
+          .sme-float-2 {
+            top: 50%;
+            left: 14px;
+          }
+
+          .sme-float-3 {
+            bottom: 14px;
+            right: 14px;
+          }
+
+          .sme-bottom-cta-card {
+            padding: 24px 16px;
+          }
+
+          .sme-bottom-cta-buttons {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .sme-btn-cta-gold,
+          .sme-btn-cta-outline {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .sme-faq-header {
+            padding: 12px 14px;
+          }
+
+          .sme-faq-question {
+            font-size: 13px;
           }
         }
       `}</style>

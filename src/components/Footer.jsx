@@ -1,9 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { MapPin, Phone, MessageSquare } from 'lucide-react';
 import { loansDropdown, insuranceDropdown } from '../data/navigation';
 
 function Footer() {
+  const location = useLocation();
+
+  // Normalize path by removing trailing slash for consistent route matching (except root '/')
+  const normalize = (path) => {
+    if (!path) return '';
+    const trimmed = path.trim();
+    return trimmed.length > 1 && trimmed.endsWith('/') ? trimmed.slice(0, -1) : trimmed;
+  };
+
+  const currentNormalized = normalize(location.pathname);
+
+  // Exact route match helper
+  const isPathActive = (targetPath) => {
+    return normalize(targetPath) === currentNormalized;
+  };
+
   return (
     <footer className="site-footer">
       <div className="container footer-container">
@@ -33,11 +49,16 @@ function Footer() {
         <div className="footer-col">
           <h4 className="footer-col-title">Loan Services</h4>
           <ul className="footer-nav-list">
-            {loansDropdown.map((item, index) => (
-              <li key={index}>
-                <Link to={item.path}>{item.label}</Link>
-              </li>
-            ))}
+            {loansDropdown.map((item, index) => {
+              const isActive = normalize(item.path) === currentNormalized;
+              return (
+                <li key={index}>
+                  <Link to={item.path} className={isActive ? 'active' : ''}>
+                    {item.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
 
@@ -45,11 +66,16 @@ function Footer() {
         <div className="footer-col">
           <h4 className="footer-col-title">Insurance Services</h4>
           <ul className="footer-nav-list">
-            {insuranceDropdown.map((item, index) => (
-              <li key={index}>
-                <Link to={item.path}>{item.label}</Link>
-              </li>
-            ))}
+            {insuranceDropdown.map((item, index) => {
+              const isActive = normalize(item.path) === currentNormalized;
+              return (
+                <li key={index}>
+                  <Link to={item.path} className={isActive ? 'active' : ''}>
+                    {item.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
 
@@ -57,10 +83,31 @@ function Footer() {
         <div className="footer-col">
           <h4 className="footer-col-title">Quick Links</h4>
           <ul className="footer-nav-list">
-            <li><Link to="/about/">About</Link></li>
-            <li><Link to="/resources/">Resources</Link></li>
-            <li><Link to="/faq/">FAQs</Link></li>
-            <li><Link to="/contact/">Contact</Link></li>
+            <li>
+              <Link to="/" className={isPathActive('/') ? 'active' : ''}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about/" className={isPathActive('/about/') ? 'active' : ''}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/resources/" className={isPathActive('/resources/') ? 'active' : ''}>
+                Resources
+              </Link>
+            </li>
+            <li>
+              <Link to="/faq/" className={isPathActive('/faq/') ? 'active' : ''}>
+                FAQs
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact/" className={isPathActive('/contact/') ? 'active' : ''}>
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -109,11 +156,11 @@ function Footer() {
         <div className="container footer-bottom-container">
           <p className="copyright">&copy; 2024 Balaji Associates. All rights reserved.</p>
           <div className="footer-legal-links">
-            <Link to="/privacy-policy/">Privacy Policy</Link>
+            <Link to="/privacy-policy/" className={isPathActive('/privacy-policy/') ? 'active' : ''}>Privacy Policy</Link>
             <span className="divider">|</span>
-            <Link to="/terms/">Terms</Link>
+            <Link to="/terms/" className={isPathActive('/terms/') ? 'active' : ''}>Terms</Link>
             <span className="divider">|</span>
-            <Link to="/disclaimer/">Disclaimer</Link>
+            <Link to="/disclaimer/" className={isPathActive('/disclaimer/') ? 'active' : ''}>Disclaimer</Link>
           </div>
         </div>
       </div>

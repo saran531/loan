@@ -978,9 +978,19 @@ function WorkingCapitalFinance() {
         }
 
         @media (max-width: 640px) {
+          .wcf-container {
+            padding: 0 16px;
+          }
+
+          .wcf-breadcrumb {
+            flex-wrap: wrap;
+            row-gap: 4px;
+          }
+
           .wcf-cards-4-row,
           .wcf-takeover-cards-row,
           .wcf-cards-3-row,
+          .wcf-eval-cards-wrap,
           .wcf-related-cards {
             grid-template-columns: 1fr;
           }
@@ -990,18 +1000,110 @@ function WorkingCapitalFinance() {
           }
 
           .wcf-process-flow-4,
-          .wcf-takeover-flow-card {
+          .wcf-takeover-flow-card,
+          .wcf-cycle-card {
             flex-direction: column;
             gap: 14px;
           }
 
           .wcf-flow-arrow,
-          .wcf-flow-arrow-orange {
+          .wcf-flow-arrow-orange,
+          .wcf-cycle-arrow {
             transform: rotate(90deg);
           }
 
           .wcf-bottom-cta-card {
             padding: 28px 20px;
+          }
+
+          .wcf-disclaimer-strip {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .wcf-section {
+            padding: 32px 0;
+          }
+
+          .wcf-hero-title {
+            font-size: 24px;
+            line-height: 1.25;
+          }
+
+          .wcf-hero-actions {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .wcf-btn-primary,
+          .wcf-btn-secondary {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .wcf-heading {
+            font-size: 22px;
+          }
+
+          .wcf-header-row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 18px;
+          }
+
+          .wcf-hero-visual-card {
+            min-height: 260px;
+          }
+
+          .wcf-floating-card {
+            padding: 8px 10px;
+            font-size: 10px;
+          }
+
+          .wcf-float-1 {
+            top: 14px;
+            left: 14px;
+          }
+
+          .wcf-float-2 {
+            top: 50%;
+            left: 14px;
+          }
+
+          .wcf-float-3 {
+            bottom: 14px;
+            right: 14px;
+          }
+
+          .wcf-bottom-cta-card {
+            padding: 24px 16px;
+          }
+
+          .wcf-bottom-cta-buttons {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .wcf-btn-cta-gold,
+          .wcf-btn-cta-outline {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .wcf-faq-header {
+            padding: 12px 14px;
+          }
+
+          .wcf-faq-question {
+            font-size: 13px;
           }
         }
       `}</style>

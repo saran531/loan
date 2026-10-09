@@ -917,8 +917,18 @@ function MachineryEquipmentFinance() {
         }
 
         @media (max-width: 640px) {
+          .mef-container {
+            padding: 0 16px;
+          }
+
+          .mef-breadcrumb {
+            flex-wrap: wrap;
+            row-gap: 4px;
+          }
+
           .mef-cards-2x2,
           .mef-mortgage-cards-row,
+          .mef-eval-cards-wrap,
           .mef-related-cards {
             grid-template-columns: 1fr;
           }
@@ -934,6 +944,96 @@ function MachineryEquipmentFinance() {
 
           .mef-bottom-cta-card {
             padding: 28px 20px;
+          }
+
+          .mef-disclaimer-strip {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .mef-section {
+            padding: 32px 0;
+          }
+
+          .mef-hero-title {
+            font-size: 24px;
+            line-height: 1.25;
+          }
+
+          .mef-hero-actions {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .mef-btn-primary,
+          .mef-btn-secondary {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .mef-heading {
+            font-size: 22px;
+          }
+
+          .mef-header-row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 18px;
+          }
+
+          .mef-hero-visual-card {
+            min-height: 260px;
+          }
+
+          .mef-floating-card {
+            padding: 8px 10px;
+            font-size: 10px;
+          }
+
+          .mef-float-1 {
+            top: 14px;
+            left: 14px;
+          }
+
+          .mef-float-2 {
+            top: 50%;
+            left: 14px;
+          }
+
+          .mef-float-3 {
+            bottom: 14px;
+            right: 14px;
+          }
+
+          .mef-bottom-cta-card {
+            padding: 24px 16px;
+          }
+
+          .mef-bottom-cta-buttons {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .mef-btn-cta-gold,
+          .mef-btn-cta-outline {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .mef-faq-header {
+            padding: 12px 14px;
+          }
+
+          .mef-faq-question {
+            font-size: 13px;
           }
         }
       `}</style>

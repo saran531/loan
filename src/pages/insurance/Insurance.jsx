@@ -1125,12 +1125,21 @@ function Insurance() {
         }
 
         @media (max-width: 640px) {
+          .ins-container {
+            padding: 0 16px;
+          }
+
+          .ins-breadcrumb {
+            flex-wrap: wrap;
+            row-gap: 4px;
+          }
+
           .ins-categories-grid {
             grid-template-columns: 1fr;
           }
 
           .ins-risk-5-grid {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr;
           }
 
           .ins-keys-layout {
@@ -1159,6 +1168,96 @@ function Insurance() {
 
           .ins-bottom-cta-card {
             padding: 26px 20px;
+          }
+
+          .ins-disclaimer-strip {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .ins-section {
+            padding: 32px 0;
+          }
+
+          .ins-hero-title {
+            font-size: 24px;
+            line-height: 1.25;
+          }
+
+          .ins-hero-actions {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .ins-btn-primary,
+          .ins-btn-secondary {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .ins-heading {
+            font-size: 22px;
+          }
+
+          .ins-header-row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 18px;
+          }
+
+          .ins-hero-visual-card {
+            min-height: 260px;
+          }
+
+          .ins-floating-card {
+            padding: 8px 10px;
+            font-size: 10px;
+          }
+
+          .ins-float-1 {
+            top: 14px;
+            left: 14px;
+          }
+
+          .ins-float-2 {
+            top: 50%;
+            left: 14px;
+          }
+
+          .ins-float-3 {
+            bottom: 14px;
+            right: 14px;
+          }
+
+          .ins-bottom-cta-card {
+            padding: 24px 16px;
+          }
+
+          .ins-bottom-cta-buttons {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .ins-btn-cta-gold,
+          .ins-btn-cta-outline {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .ins-faq-header {
+            padding: 12px 14px;
+          }
+
+          .ins-faq-question {
+            font-size: 13px;
           }
         }
       `}</style>

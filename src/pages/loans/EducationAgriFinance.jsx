@@ -1116,8 +1116,18 @@ function EducationAgriFinance() {
         }
 
         @media (max-width: 640px) {
+          .eaf-container {
+            padding: 0 16px;
+          }
+
+          .eaf-breadcrumb {
+            flex-wrap: wrap;
+            row-gap: 4px;
+          }
+
           .eaf-cards-3-row,
           .eaf-cards-2-row,
+          .eaf-eval-cards-wrap,
           .eaf-related-cards {
             grid-template-columns: 1fr;
           }
@@ -1128,10 +1138,6 @@ function EducationAgriFinance() {
 
           .eaf-helps-images-row {
             grid-template-columns: 1fr;
-          }
-
-          .eaf-eval-cards-wrap {
-            grid-template-columns: repeat(2, 1fr);
           }
 
           .eaf-journey-steps-wrap {
@@ -1149,6 +1155,96 @@ function EducationAgriFinance() {
 
           .eaf-bottom-cta-card {
             padding: 28px 20px;
+          }
+
+          .eaf-disclaimer-strip {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .eaf-section {
+            padding: 32px 0;
+          }
+
+          .eaf-hero-title {
+            font-size: 24px;
+            line-height: 1.25;
+          }
+
+          .eaf-hero-actions {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .eaf-btn-primary,
+          .eaf-btn-secondary {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .eaf-heading {
+            font-size: 22px;
+          }
+
+          .eaf-header-row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 18px;
+          }
+
+          .eaf-hero-visual-card {
+            min-height: 260px;
+          }
+
+          .eaf-floating-card {
+            padding: 8px 10px;
+            font-size: 10px;
+          }
+
+          .eaf-float-1 {
+            top: 14px;
+            left: 14px;
+          }
+
+          .eaf-float-2 {
+            top: 50%;
+            left: 14px;
+          }
+
+          .eaf-float-3 {
+            bottom: 14px;
+            right: 14px;
+          }
+
+          .eaf-bottom-cta-card {
+            padding: 24px 16px;
+          }
+
+          .eaf-bottom-cta-buttons {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+          }
+
+          .eaf-btn-cta-gold,
+          .eaf-btn-cta-outline {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+          }
+
+          .eaf-faq-header {
+            padding: 12px 14px;
+          }
+
+          .eaf-faq-question {
+            font-size: 13px;
           }
         }
       `}</style>

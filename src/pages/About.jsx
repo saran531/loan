@@ -918,6 +918,15 @@ function About() {
         }
 
         @media (max-width: 768px) {
+          .about-container {
+            padding: 0 16px;
+          }
+
+          .about-breadcrumb {
+            flex-wrap: wrap;
+            row-gap: 4px;
+          }
+
           .about-hero-title {
             font-size: 32px;
           }
@@ -956,6 +965,10 @@ function About() {
         }
 
         @media (max-width: 520px) {
+          .about-section {
+            padding: 32px 0;
+          }
+
           .about-approach-cards-grid {
             grid-template-columns: 1fr;
           }
@@ -967,23 +980,90 @@ function About() {
           .about-hero-cta-group {
             flex-direction: column;
             align-items: stretch;
+            width: 100%;
+            gap: 10px;
           }
 
           .about-btn-primary,
           .about-btn-secondary {
             justify-content: center;
             width: 100%;
+            text-align: center;
           }
 
           .about-bottom-cta-buttons {
             flex-direction: column;
             width: 100%;
+            gap: 10px;
           }
 
           .about-bottom-cta-btn-gold,
           .about-bottom-cta-btn-outline {
             width: 100%;
             justify-content: center;
+            text-align: center;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .about-hero-title {
+            font-size: 24px;
+            line-height: 1.25;
+          }
+
+          .about-heading {
+            font-size: 22px;
+          }
+
+          .about-header-row {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 18px;
+          }
+
+          .about-hero-img-container {
+            min-height: 260px;
+            max-height: none;
+          }
+
+          .about-float-card {
+            padding: 6px 10px;
+            font-size: 10px;
+          }
+
+          .about-float-home {
+            top: 10px;
+            left: 10px;
+          }
+
+          .about-float-business {
+            top: 50%;
+            left: 10px;
+          }
+
+          .about-float-insurance {
+            top: 10px;
+            right: 10px;
+          }
+
+          .about-float-docs {
+            bottom: 10px;
+            right: 10px;
+          }
+
+          .about-office-card {
+            padding: 20px 16px;
+          }
+
+          .about-bottom-cta-card {
+            padding: 24px 16px;
+          }
+        }
+
+        @media (max-width: 380px) {
+          .about-who-grid {
+            grid-template-columns: 1fr;
           }
         }
       `}</style>
