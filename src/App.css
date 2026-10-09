@@ -1,0 +1,1304 @@
+/* ==========================================================================
+   BALAJI ASSOCIATES - COMPLETE HOME PAGE STYLESHEET
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. SITE HEADER & NAVIGATION
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  border-bottom: 1px solid #E2E8F0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+/* Brand Logo */
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-logo-mark {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #003B73 0%, #0A1B3A 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 8px rgba(0, 59, 115, 0.25);
+  border: 2px solid #ECA822;
+}
+
+.logo-b {
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0A1B3A;
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+}
+
+.brand-tagline {
+  font-size: 11px;
+  color: #64748B;
+  font-weight: 500;
+}
+
+/* Navigation List */
+.site-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 15px;
+  font-weight: 600;
+  color: #334155;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #003B73;
+  background-color: #F1F5F9;
+}
+
+.nav-link.active {
+  font-weight: 700;
+  color: #003B73;
+  border-bottom: 2px solid #ECA822;
+}
+
+/* Dropdown Navigation */
+.nav-item-dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #334155;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.dropdown-toggle:hover {
+  color: #003B73;
+  background-color: #F1F5F9;
+}
+
+.chevron-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.chevron-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background-color: #ffffff;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  padding: 8px;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.2s ease;
+  z-index: 100;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(4px);
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #F8FAFC;
+  color: #003B73;
+  font-weight: 600;
+}
+
+/* Header Action Buttons */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-header-call {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  border-radius: 50px;
+  border: 1.5px solid #003B73;
+  color: #003B73;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  background-color: #FFFFFF;
+}
+
+.btn-header-call:hover {
+  background-color: #003B73;
+  color: #FFFFFF;
+}
+
+.btn-header-whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  border-radius: 50px;
+  background-color: #25D366;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
+}
+
+.btn-header-whatsapp:hover {
+  background-color: #1eb857;
+  transform: translateY(-1px);
+}
+
+.mobile-toggle-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #0A1B3A;
+  padding: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   2. HERO SECTION
+   -------------------------------------------------------------------------- */
+.hero-section {
+  padding: 48px 0 64px;
+  background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+  overflow: hidden;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-location-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #FEF3C7;
+  border: 1px solid #FDE68A;
+  color: #92400E;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.badge-icon {
+  width: 15px;
+  height: 15px;
+  color: #D97706;
+}
+
+.hero-title {
+  font-size: 40px;
+  font-weight: 800;
+  color: #0A1B3A;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.hero-description p {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.65;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-hero-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #ECA822 0%, #D97706 100%);
+  color: #FFFFFF;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
+  transition: all 0.25 ease;
+}
+
+.btn-hero-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.4);
+}
+
+.btn-hero-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #FFFFFF;
+  border: 2px solid #003B73;
+  color: #003B73;
+  padding: 13px 26px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.btn-hero-secondary:hover {
+  background-color: #003B73;
+  color: #FFFFFF;
+}
+
+/* Hero Visual Right Side Composition */
+/* Hero Visual Right Side Composition (Single Unified Graphic) */
+.hero-visual-composition {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-right-side-img {
+  width: 100%;
+  max-width: 580px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.hero-right-side-img:hover {
+  transform: translateY(-3px);
+}
+
+/* --------------------------------------------------------------------------
+   3. KEY BENEFITS / TRUST STRIP
+   -------------------------------------------------------------------------- */
+.benefits-strip-section {
+  padding: 24px 0 48px;
+}
+
+.benefits-strip-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 24px 28px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.benefit-item:not(:last-child) {
+  border-right: 1px solid #F1F5F9;
+  padding-right: 14px;
+}
+
+.benefit-icon-wrap {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: transparent;
+}
+
+.benefit-img-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  display: block;
+}
+
+.benefit-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0A1B3A;
+  line-height: 1.35;
+}
+
+/* --------------------------------------------------------------------------
+   4. LOAN SOLUTIONS & 5. INSURANCE SOLUTIONS
+   -------------------------------------------------------------------------- */
+.loan-solutions-section {
+  padding: 60px 0;
+}
+
+.insurance-solutions-section {
+  padding: 60px 0;
+  background-color: #EEF7F6;
+  border-top: 1px solid #E0F2F1;
+  border-bottom: 1px solid #E0F2F1;
+}
+
+.section-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+
+.section-title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #0A1B3A;
+  letter-spacing: -0.3px;
+}
+
+.gold-accent-line {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ECA822 0%, #D97706 100%);
+  border-radius: 2px;
+}
+
+.section-header-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #003B73;
+  transition: color 0.2s ease;
+}
+
+.section-header-link:hover {
+  color: #D97706;
+}
+
+/* Card Grids */
+.loan-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.insurance-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+/* Service Card Component Styles */
+.service-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+.service-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.service-card-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #EFF6FF;
+  color: #003B73;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.service-card-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.service-card-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0A1B3A;
+  line-height: 1.3;
+}
+
+.service-card-desc {
+  font-size: 14px;
+  color: #64748B;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.service-card-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background-color: #F1F5F9;
+  border: 1px solid #E2E8F0;
+}
+
+.service-card-img,
+.service-card-img-placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-card-img-placeholder {
+  background-color: #F1F5F9;
+}
+
+.service-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #003B73;
+  margin-top: auto;
+}
+
+.service-card-link:hover .link-arrow {
+  transform: translateX(4px);
+}
+
+.link-arrow {
+  transition: transform 0.2s ease;
+}
+
+/* --------------------------------------------------------------------------
+   6. WHY BALAJI ASSOCIATES?
+   -------------------------------------------------------------------------- */
+.why-balaji-section {
+  padding: 64px 0;
+}
+
+.mb-8 {
+  margin-bottom: 32px;
+}
+
+.why-balaji-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.why-balaji-image-wrap {
+  width: 100%;
+  height: 460px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  background-color: #F1F5F9;
+  border: 1px solid #E2E8F0;
+}
+
+.why-balaji-img,
+.why-balaji-img-placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #F1F5F9;
+}
+
+.why-balaji-paragraph {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.why-balaji-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.why-balaji-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #0A1B3A;
+  line-height: 1.4;
+}
+
+.check-icon {
+  width: 20px;
+  height: 20px;
+  color: #D97706;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   7 & 8. PROCESS ASSISTANCE SECTIONS
+   -------------------------------------------------------------------------- */
+.process-assistance-section {
+  padding: 60px 0;
+  background-color: #F8FAFC;
+}
+
+.process-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.process-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+}
+
+.process-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.process-badge-bar {
+  width: 6px;
+  height: 28px;
+  border-radius: 3px;
+}
+
+.orange-bar { background-color: #D97706; }
+.green-bar { background-color: #10B981; }
+
+.process-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0A1B3A;
+}
+
+.process-steps-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.process-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.step-number-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.blue-circle { background: linear-gradient(135deg, #003B73 0%, #0A1B3A 100%); }
+.green-circle { background: linear-gradient(135deg, #10B981 0%, #047857 100%); }
+
+.step-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0A1B3A;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.step-desc {
+  font-size: 13px;
+  color: #64748B;
+  line-height: 1.5;
+}
+
+.step-arrow {
+  font-size: 20px;
+  font-weight: 700;
+  color: #D97706;
+  margin-top: 10px;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   9. MADURAI FIRST. TAMIL NADU NEXT.
+   -------------------------------------------------------------------------- */
+.madurai-banner-section {
+  padding: 60px 0;
+}
+
+.madurai-banner-card {
+  background: linear-gradient(135deg, #0A1B3A 0%, #002D62 100%);
+  border-radius: 24px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  color: #FFFFFF;
+  box-shadow: 0 15px 35px rgba(10, 27, 58, 0.25);
+}
+
+.madurai-banner-left {
+  height: 100%;
+  min-height: 260px;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.madurai-banner-img,
+.madurai-banner-img-placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.madurai-banner-content {
+  padding: 40px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.madurai-banner-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.location-pin-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(236, 168, 34, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.madurai-banner-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.3px;
+}
+
+.madurai-banner-desc {
+  font-size: 15px;
+  color: #CBD5E1;
+  line-height: 1.75;
+}
+
+/* --------------------------------------------------------------------------
+   10. HOMEPAGE FAQs
+   -------------------------------------------------------------------------- */
+.homepage-faqs-section {
+  padding: 60px 0;
+}
+
+.faqs-grid {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.faqs-visual-wrap {
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+.faq-bubbles-img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.faq-bubbles-img-placeholder {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  min-height: 270px;
+  border-radius: 20px;
+  background-color: #F1F5F9;
+  border: 1px solid #E2E8F0;
+}
+
+/* FAQ Accordion Component Styles */
+.faq-accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faq-accordion-item {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.faq-accordion-item.active {
+  border-color: #003B73;
+}
+
+.faq-accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-accordion-question {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0A1B3A;
+}
+
+.faq-chevron {
+  width: 18px;
+  height: 18px;
+  color: #64748B;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.faq-chevron.rotate {
+  transform: rotate(180deg);
+  color: #003B73;
+}
+
+.faq-accordion-body {
+  padding: 0 24px 20px;
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.65;
+}
+
+/* --------------------------------------------------------------------------
+   11. FINAL CTA
+   -------------------------------------------------------------------------- */
+.final-cta-section {
+  padding: 48px 0 64px;
+}
+
+.final-cta-card {
+  background: linear-gradient(135deg, #0A1B3A 0%, #002D62 100%);
+  border-radius: 24px;
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  color: #FFFFFF;
+  box-shadow: 0 20px 40px rgba(10, 27, 58, 0.3);
+}
+
+.final-cta-title {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 28px;
+  color: #FFFFFF;
+}
+
+.final-cta-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-cta-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #ECA822 0%, #D97706 100%);
+  color: #FFFFFF;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(217, 119, 6, 0.4);
+}
+
+.btn-cta-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  padding: 13px 26px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.final-cta-visual {
+  width: 100%;
+  height: 220px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cta-img,
+.cta-img-placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* --------------------------------------------------------------------------
+   12. FOOTER
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background-color: #07152B;
+  color: #94A3B8;
+  padding-top: 64px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
+  gap: 32px;
+  padding-bottom: 48px;
+}
+
+.footer-col-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.footer-brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.footer-brand-logo .brand-name {
+  color: #FFFFFF;
+}
+
+.footer-brand-logo .brand-tagline {
+  color: #94A3B8;
+}
+
+.footer-address {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #CBD5E1;
+}
+
+.address-icon {
+  width: 18px;
+  height: 18px;
+  color: #ECA822;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.footer-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-nav-list li a {
+  font-size: 14px;
+  color: #CBD5E1;
+  transition: color 0.2s ease;
+}
+
+.footer-nav-list li a:hover {
+  color: #ECA822;
+}
+
+.footer-contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.footer-contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #CBD5E1;
+}
+
+.contact-icon {
+  width: 16px;
+  height: 16px;
+  color: #ECA822;
+}
+
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  color: #94A3B8;
+  transition: color 0.2s ease;
+}
+
+.social-icon:hover {
+  color: #ECA822;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 24px 0;
+  background-color: #040E1E;
+}
+
+.footer-bottom-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #94A3B8;
+}
+
+.footer-legal-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-legal-links a:hover {
+  color: #FFFFFF;
+}
+
+.divider {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* --------------------------------------------------------------------------
+   13. FLOATING CONTACT BUTTONS
+   -------------------------------------------------------------------------- */
+.floating-contact-group {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.floating-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+}
+
+.floating-whatsapp {
+  background-color: #25D366;
+}
+
+.floating-phone {
+  background-color: #003B73;
+}
+
+.btn-header-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+}
+
+.floating-btn-img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  display: block;
+}
+
+.btn-hero-call-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+}
+
+.btn-cta-call-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+
+/* --------------------------------------------------------------------------
+   14. RESPONSIVE BREAKPOINTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+  }
+
+  .loan-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .insurance-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .benefits-strip-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .benefit-item:not(:last-child) {
+    border-right: none;
+  }
+
+  .why-balaji-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .madurai-banner-card {
+    grid-template-columns: 1fr;
+  }
+
+  .faqs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .final-cta-card {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .site-nav {
+    display: none;
+  }
+
+  .mobile-toggle-btn {
+    display: block;
+  }
+
+  .site-nav.nav-open {
+    display: block;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #E2E8F0;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+
+  .site-nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .loan-cards-grid,
+  .insurance-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-strip-container {
+    grid-template-columns: 1fr;
+  }
+
+  .process-steps-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .step-arrow {
+    transform: rotate(90deg);
+    align-self: center;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom-container {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+
+  .benefit-item:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid #F1F5F9;
+    padding-bottom: 12px;
+    padding-right: 0;
+  }
+
+  .benefit-icon-wrap {
+    width: 44px;
+    height: 44px;
+  }
+
+  .benefit-img-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
