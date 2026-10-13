@@ -27,9 +27,23 @@ import {
   Compass,
   Clock,
   Building2,
-  MessageSquare,
-  Image as ImageIcon
+  MessageSquare
 } from 'lucide-react';
+
+// Images for Education & Agri Finance
+import heroImg from '../../assets/images/loan/Education&Agri/01_hero-education-agri-finance.png';
+import eduStudentImg from '../../assets/images/loan/Education&Agri/02_education-loan-student.png';
+import eduDocsImg from '../../assets/images/loan/Education&Agri/03_education-documents.png';
+import agriFarmerImg from '../../assets/images/loan/Education&Agri/04_agri-finance-farmer.png';
+import studentStudyImg from '../../assets/images/loan/Education&Agri/05_student-study.png';
+import agriFinanceImg from '../../assets/images/loan/Education&Agri/Agricultural-finance.png';
+import eduFinanceConsultImg from '../../assets/images/loan/Education&Agri/Education finance.png';
+import agriODConsultImg from '../../assets/images/loan/Education&Agri/Agri-OD.png';
+import relatedPersonalCar from '../../assets/images/loan/Education&Agri/33_related-personal-car-loan.png';
+import relatedBusinessMsme from '../../assets/images/loan/Education&Agri/34_business-msme-loans.png';
+import relatedContact from '../../assets/images/loan/Education&Agri/35_related-contact.png';
+import bottomCtaImg from '../../assets/images/loan/Education&Agri/36_bottom-cta-education-agri.png';
+import documentReview from '../../assets/images/loan/Workingcapital/04_document-review.png';
 
 const faqList = [
   {
@@ -122,6 +136,13 @@ function EducationAgriFinance() {
           justify-content: center;
           position: relative;
           overflow: hidden;
+        }
+
+        .eaf-section-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         .eaf-placeholder-icon {
@@ -297,6 +318,13 @@ function EducationAgriFinance() {
           display: flex;
           align-items: center;
           justify-content: center;
+        }
+
+        .eaf-hero-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         .eaf-floating-card {
@@ -572,7 +600,8 @@ function EducationAgriFinance() {
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          padding: 16px;
+          padding: 0;
+          overflow: hidden;
         }
 
         .eaf-req-bullets {
@@ -725,11 +754,21 @@ function EducationAgriFinance() {
           align-items: center;
           justify-content: center;
           flex-shrink: 0;
+          overflow: hidden;
+        }
+
+        .eaf-journey-thumb-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         /* 8. SECTION — WHAT LENDERS EVALUATE (Dark Navy) */
         .eaf-eval-dark-section {
-          background: linear-gradient(135deg, #0A1B3A 0%, #002D62 100%);
+          background: linear-gradient(90deg, #0A1B3A 0%, rgba(10, 27, 58, 0.88) 55%, rgba(10, 27, 58, 0.5) 100%), url(${documentReview}) no-repeat right center;
+          background-size: cover;
           color: #FFFFFF;
           border-radius: 24px;
           padding: 40px 44px;
@@ -924,6 +963,14 @@ function EducationAgriFinance() {
           display: flex;
           align-items: center;
           justify-content: center;
+          overflow: hidden;
+        }
+
+        .eaf-related-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         .eaf-related-footer {
@@ -1070,13 +1117,16 @@ function EducationAgriFinance() {
           background-color: rgba(255, 255, 255, 0.05);
           border: 1px solid rgba(255, 255, 255, 0.12);
           border-radius: 18px;
-          min-height: 200px;
-          height: 100%;
+          height: 180px;
           width: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
+          overflow: hidden;
+        }
+
+        .eaf-bottom-cta-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         /* Responsive Breakpoints */
@@ -1308,28 +1358,11 @@ function EducationAgriFinance() {
 
             <div className="eaf-hero-right">
               <div className="eaf-hero-visual-card">
-                <ImageIcon className="eaf-placeholder-icon" />
-                <span className="eaf-placeholder-label">Student &amp; Farmer Montage</span>
-
-                <div className="eaf-floating-card eaf-float-1">
-                  <GraduationCap className="eaf-floating-card-icon blue" />
-                  <span className="eaf-floating-card-label">Education Loan</span>
-                </div>
-
-                <div className="eaf-floating-card eaf-float-2">
-                  <Users className="eaf-floating-card-icon blue" />
-                  <span className="eaf-floating-card-label">Student / Family</span>
-                </div>
-
-                <div className="eaf-floating-card eaf-float-3">
-                  <Sprout className="eaf-floating-card-icon green" />
-                  <span className="eaf-floating-card-label">Agri OD</span>
-                </div>
-
-                <div className="eaf-floating-card eaf-float-4">
-                  <Tractor className="eaf-floating-card-icon green" />
-                  <span className="eaf-floating-card-label">Agricultural Finance</span>
-                </div>
+                <img
+                  src={heroImg}
+                  alt="Education Loan and Agri OD Assistance in Madurai"
+                  className="eaf-hero-img"
+                />
               </div>
             </div>
           </div>
@@ -1341,8 +1374,11 @@ function EducationAgriFinance() {
         <div className="eaf-container">
           <div className="eaf-edu-grid">
             <div className="eaf-img-placeholder">
-              <ImageIcon className="eaf-placeholder-icon" />
-              <span className="eaf-placeholder-label">Education / Student Study</span>
+              <img
+                src={eduStudentImg}
+                alt="Student studying for higher education"
+                className="eaf-section-img"
+              />
             </div>
 
             <div className="eaf-edu-content">
@@ -1402,8 +1438,11 @@ function EducationAgriFinance() {
 
           <div className="eaf-docs-grid">
             <div className="eaf-img-placeholder">
-              <ImageIcon className="eaf-placeholder-icon" />
-              <span className="eaf-placeholder-label">Passport, Books &amp; Study Materials</span>
+              <img
+                src={eduDocsImg}
+                alt="Education loan documents and study materials"
+                className="eaf-section-img"
+              />
             </div>
 
             <div className="eaf-docs-content">
@@ -1466,8 +1505,11 @@ function EducationAgriFinance() {
         <div className="eaf-container">
           <div className="eaf-agri-grid">
             <div className="eaf-img-placeholder">
-              <ImageIcon className="eaf-placeholder-icon" />
-              <span className="eaf-placeholder-label">Farmer in Field with Tractor</span>
+              <img
+                src={agriFarmerImg}
+                alt="Farmer working in agricultural field"
+                className="eaf-section-img"
+              />
             </div>
 
             <div className="eaf-agri-content">
@@ -1522,8 +1564,11 @@ function EducationAgriFinance() {
 
               <div className="eaf-req-split">
                 <div className="eaf-req-img-holder">
-                  <ImageIcon className="eaf-placeholder-icon" style={{ opacity: 0.4 }} />
-                  <span className="eaf-placeholder-label">Student Desk</span>
+                  <img
+                    src={studentStudyImg}
+                    alt="Student studying at desk"
+                    className="eaf-section-img"
+                  />
                 </div>
 
                 <ul className="eaf-req-bullets">
@@ -1588,8 +1633,11 @@ function EducationAgriFinance() {
 
               <div className="eaf-req-split">
                 <div className="eaf-req-img-holder">
-                  <ImageIcon className="eaf-placeholder-icon" style={{ opacity: 0.4 }} />
-                  <span className="eaf-placeholder-label">Farmer Crop</span>
+                  <img
+                    src={agriFinanceImg}
+                    alt="Farmer inspecting crops in field"
+                    className="eaf-section-img"
+                  />
                 </div>
 
                 <ul className="eaf-req-bullets">
@@ -1685,8 +1733,11 @@ function EducationAgriFinance() {
             </div>
 
             <div className="eaf-journey-thumb">
-              <ImageIcon className="w-6 h-6 text-slate-300" />
-              <span style={{ fontSize: '10px', color: '#94A3B8', marginTop: '4px' }}>Student</span>
+              <img
+                src={studentStudyImg}
+                alt="Education loan student"
+                className="eaf-journey-thumb-img"
+              />
             </div>
           </div>
 
@@ -1734,8 +1785,11 @@ function EducationAgriFinance() {
             </div>
 
             <div className="eaf-journey-thumb">
-              <ImageIcon className="w-6 h-6 text-slate-300" />
-              <span style={{ fontSize: '10px', color: '#94A3B8', marginTop: '4px' }}>Farmer</span>
+              <img
+                src={agriFinanceImg}
+                alt="Agri OD and agricultural finance"
+                className="eaf-journey-thumb-img"
+              />
             </div>
           </div>
         </div>
@@ -1818,7 +1872,11 @@ function EducationAgriFinance() {
 
             <div className="eaf-helps-images-row">
               <div className="eaf-help-img-box">
-                <ImageIcon className="eaf-placeholder-icon" />
+                <img
+                  src={eduFinanceConsultImg}
+                  alt="Education finance consultation"
+                  className="eaf-section-img"
+                />
                 <div className="eaf-help-img-badge blue">
                   <GraduationCap className="w-3 h-3" />
                   <span>Education Finance</span>
@@ -1826,7 +1884,11 @@ function EducationAgriFinance() {
               </div>
 
               <div className="eaf-help-img-box">
-                <ImageIcon className="eaf-placeholder-icon" />
+                <img
+                  src={agriODConsultImg}
+                  alt="Agri OD consultation"
+                  className="eaf-section-img"
+                />
                 <div className="eaf-help-img-badge green">
                   <Sprout className="w-3 h-3" />
                   <span>Agri OD</span>
@@ -1891,7 +1953,11 @@ function EducationAgriFinance() {
               <div className="eaf-related-cards">
                 <Link to="/personal-car-loans/" className="eaf-related-card">
                   <div className="eaf-related-img-holder">
-                    <Car className="w-7 h-7 text-amber-600" />
+                    <img
+                      src={relatedPersonalCar}
+                      alt="Personal & Car Loans"
+                      className="eaf-related-img"
+                    />
                   </div>
                   <div className="eaf-related-footer">
                     <span className="eaf-related-title">Personal &amp; Car Loans</span>
@@ -1901,7 +1967,11 @@ function EducationAgriFinance() {
 
                 <Link to="/business-msme-loans/" className="eaf-related-card">
                   <div className="eaf-related-img-holder">
-                    <Briefcase className="w-7 h-7 text-blue-700" />
+                    <img
+                      src={relatedBusinessMsme}
+                      alt="Business & MSME Loans"
+                      className="eaf-related-img"
+                    />
                   </div>
                   <div className="eaf-related-footer">
                     <span className="eaf-related-title">Business &amp; MSME Loans</span>
@@ -1910,8 +1980,12 @@ function EducationAgriFinance() {
                 </Link>
 
                 <Link to="/contact/" className="eaf-related-card">
-                  <div className="eaf-related-img-holder" style={{ background: '#EFF6FF' }}>
-                    <MessageSquare className="w-7 h-7 text-blue-900" />
+                  <div className="eaf-related-img-holder">
+                    <img
+                      src={relatedContact}
+                      alt="Contact Balaji Associates"
+                      className="eaf-related-img"
+                    />
                   </div>
                   <div className="eaf-related-footer">
                     <span className="eaf-related-title">Contact</span>
@@ -1957,8 +2031,11 @@ function EducationAgriFinance() {
 
             <div className="eaf-bottom-cta-visual">
               <div className="eaf-bottom-cta-img-placeholder">
-                <ImageIcon className="eaf-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="eaf-placeholder-label" style={{ color: 'rgba(255,255,255,0.5)' }}>Madurai Temple &amp; Finance</span>
+                <img
+                  src={bottomCtaImg}
+                  alt="Education Loan and Agri OD in Madurai"
+                  className="eaf-bottom-cta-img"
+                />
               </div>
             </div>
           </div>

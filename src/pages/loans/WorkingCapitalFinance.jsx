@@ -30,9 +30,18 @@ import {
   Wallet,
   FileCheck,
   MessageSquare,
-  FileSpreadsheet,
-  Image as ImageIcon
+  FileSpreadsheet
 } from 'lucide-react';
+
+import heroWorkingCapitalFinance from '../../assets/images/loan/Workingcapital/01_hero-working-capital-finance.png';
+import overdraftFinance from '../../assets/images/loan/Workingcapital/02_overdraft-finance.png';
+import cashCreditFinance from '../../assets/images/loan/Workingcapital/03_cash-credit-finance.png';
+import documentReview from '../../assets/images/loan/Workingcapital/04_document-review.png';
+import relatedBusinessMsmeLoans from '../../assets/images/loan/Workingcapital/26_business-msme-loans.png';
+import consultationBusiness from '../../assets/images/loan/Workingcapital/27_consultation-business.png';
+import relatedMachineryFinance from '../../assets/images/loan/Workingcapital/28_machinery-finance.png';
+import relatedMortgageLap from '../../assets/images/loan/Workingcapital/29_mortgage-lap.png';
+import bottomCtaIndustrial from '../../assets/images/loan/Workingcapital/30_bottom-cta-industrial.png';
 
 const faqList = [
   {
@@ -123,6 +132,14 @@ function WorkingCapitalFinance() {
           justify-content: center;
           position: relative;
           overflow: hidden;
+        }
+
+        .wcf-section-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         .wcf-placeholder-icon {
@@ -288,6 +305,14 @@ function WorkingCapitalFinance() {
           display: flex;
           align-items: center;
           justify-content: center;
+        }
+
+        .wcf-hero-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         .wcf-floating-card {
@@ -805,6 +830,15 @@ function WorkingCapitalFinance() {
           display: flex;
           align-items: center;
           justify-content: center;
+          overflow: hidden;
+        }
+
+        .wcf-related-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         .wcf-related-footer {
@@ -900,12 +934,17 @@ function WorkingCapitalFinance() {
           background-color: rgba(255, 255, 255, 0.05);
           border: 1px solid rgba(255, 255, 255, 0.12);
           border-radius: 16px;
-          min-height: 200px;
-          height: 100%;
+          height: 180px;
           width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          overflow: hidden;
+        }
+
+        .wcf-bottom-cta-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         /* 13. DISCLAIMER / INFORMATION BAR */
@@ -1167,27 +1206,11 @@ function WorkingCapitalFinance() {
 
             <div className="wcf-hero-right">
               <div className="wcf-hero-visual-card">
-                <ImageIcon className="wcf-placeholder-icon" />
-
-                <div className="wcf-floating-card wcf-float-1">
-                  <Database className="wcf-floating-card-icon" />
-                  <span className="wcf-floating-card-label">Overdraft (OD)</span>
-                </div>
-
-                <div className="wcf-floating-card wcf-float-2">
-                  <CreditCard className="wcf-floating-card-icon" />
-                  <span className="wcf-floating-card-label">Cash Credit (CC)</span>
-                </div>
-
-                <div className="wcf-floating-card wcf-float-3">
-                  <RefreshCw className="wcf-floating-card-icon" />
-                  <span className="wcf-floating-card-label">OD Takeover</span>
-                </div>
-
-                <div className="wcf-floating-card wcf-float-4">
-                  <TrendingUp className="wcf-floating-card-icon" />
-                  <span className="wcf-floating-card-label">Working Capital</span>
-                </div>
+                <img
+                  src={heroWorkingCapitalFinance}
+                  alt="OD, OD Takeover & Cash Credit Assistance in Madurai"
+                  className="wcf-hero-img"
+                />
               </div>
             </div>
           </div>
@@ -1204,7 +1227,11 @@ function WorkingCapitalFinance() {
 
           <div className="wcf-od-grid">
             <div className="wcf-img-placeholder">
-              <ImageIcon className="wcf-placeholder-icon" />
+              <img
+                src={overdraftFinance}
+                alt="Overdraft (OD) facility assistance"
+                className="wcf-section-img"
+              />
             </div>
 
             <div className="wcf-od-content">
@@ -1318,7 +1345,11 @@ function WorkingCapitalFinance() {
 
           <div className="wcf-cc-grid">
             <div className="wcf-img-placeholder">
-              <ImageIcon className="wcf-placeholder-icon" />
+              <img
+                src={cashCreditFinance}
+                alt="Cash Credit (CC) facility assistance"
+                className="wcf-section-img"
+              />
             </div>
 
             <div className="wcf-cc-content">
@@ -1483,7 +1514,11 @@ function WorkingCapitalFinance() {
               </div>
 
               <div className="wcf-img-placeholder" style={{ backgroundColor: 'rgba(255,255,255,0.05)', borderColor: 'rgba(255,255,255,0.12)' }}>
-                <ImageIcon className="wcf-placeholder-icon" style={{ opacity: 0.3 }} />
+                <img
+                  src={documentReview}
+                  alt="Working capital documentation and lender evaluation"
+                  className="wcf-section-img"
+                />
               </div>
             </div>
           </div>
@@ -1507,7 +1542,11 @@ function WorkingCapitalFinance() {
 
               <div className="wcf-docs-inner-grid">
                 <div className="wcf-img-placeholder" style={{ minHeight: '180px' }}>
-                  <ImageIcon className="wcf-placeholder-icon" />
+                  <img
+                    src={consultationBusiness}
+                    alt="Working capital documents and business consultation"
+                    className="wcf-section-img"
+                  />
                 </div>
 
                 <ul className="wcf-docs-list">
@@ -1640,7 +1679,11 @@ function WorkingCapitalFinance() {
               <div className="wcf-related-cards">
                 <Link to="/business-msme-loans/" className="wcf-related-card">
                   <div className="wcf-related-img-holder">
-                    <ImageIcon className="wcf-placeholder-icon" style={{ width: '22px', height: '22px' }} />
+                    <img
+                      src={relatedBusinessMsmeLoans}
+                      alt="Business & MSME Loans"
+                      className="wcf-related-img"
+                    />
                   </div>
                   <div className="wcf-related-footer">
                     <span className="wcf-related-title">Business &amp; MSME Loans</span>
@@ -1650,7 +1693,11 @@ function WorkingCapitalFinance() {
 
                 <Link to="/machinery-equipment-finance/" className="wcf-related-card">
                   <div className="wcf-related-img-holder">
-                    <ImageIcon className="wcf-placeholder-icon" style={{ width: '22px', height: '22px' }} />
+                    <img
+                      src={relatedMachineryFinance}
+                      alt="Machinery Finance"
+                      className="wcf-related-img"
+                    />
                   </div>
                   <div className="wcf-related-footer">
                     <span className="wcf-related-title">Machinery Finance</span>
@@ -1660,7 +1707,11 @@ function WorkingCapitalFinance() {
 
                 <Link to="/mortgage-loan-against-property/" className="wcf-related-card">
                   <div className="wcf-related-img-holder">
-                    <ImageIcon className="wcf-placeholder-icon" style={{ width: '22px', height: '22px' }} />
+                    <img
+                      src={relatedMortgageLap}
+                      alt="Mortgage & LAP"
+                      className="wcf-related-img"
+                    />
                   </div>
                   <div className="wcf-related-footer">
                     <span className="wcf-related-title">Mortgage &amp; LAP</span>
@@ -1706,7 +1757,11 @@ function WorkingCapitalFinance() {
 
             <div className="wcf-bottom-cta-visual">
               <div className="wcf-bottom-cta-img-placeholder">
-                <ImageIcon className="wcf-placeholder-icon" style={{ opacity: 0.3 }} />
+                <img
+                  src={bottomCtaIndustrial}
+                  alt="Working capital consultation in industrial facility"
+                  className="wcf-bottom-cta-img"
+                />
               </div>
             </div>
           </div>

@@ -27,9 +27,20 @@ import {
   HelpCircle,
   ShieldAlert,
   MessageSquare,
-  GraduationCap,
-  Image as ImageIcon
+  GraduationCap
 } from 'lucide-react';
+
+import heroPersonalCarLoan from '../../assets/images/loan/Personal&car/01_hero-personal-car-loan.png';
+import personalLoanConsultation from '../../assets/images/loan/Personal&car/02_personal-loan-consultation.png';
+import carVehicleFinanceFamily from '../../assets/images/loan/Personal&car/03_car-vehicle-finance-family.png';
+import carLoanDocuments from '../../assets/images/loan/Personal&car/04_car-loan-documents.png';
+import howBalajiAssociatesHelps from '../../assets/images/loan/Personal&car/25_how-balaji-associates-helps.png';
+import bottomCtaCar from '../../assets/images/loan/Personal&car/26_bottom-cta-car.png';
+import relatedHomeLoan from '../../assets/images/loan/Personal&car/27_related-home-loan.png';
+import relatedEducationAgri from '../../assets/images/loan/Personal&car/28_related-education-agri.png';
+import carVehicleFinance from '../../assets/images/loan/Personal&car/Car-vehicle-finance.png';
+import personalLoan from '../../assets/images/loan/Personal&car/Personal-loan.png';
+import documentReview from '../../assets/images/loan/Workingcapital/04_document-review.png';
 
 const faqList = [
   {
@@ -120,6 +131,14 @@ function PersonalCarLoans() {
           justify-content: center;
           position: relative;
           overflow: hidden;
+        }
+
+        .pcl-section-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         .pcl-placeholder-icon {
@@ -285,6 +304,14 @@ function PersonalCarLoans() {
           display: flex;
           align-items: center;
           justify-content: center;
+        }
+
+        .pcl-hero-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         .pcl-floating-card {
@@ -487,11 +514,21 @@ function PersonalCarLoans() {
           display: flex;
           align-items: center;
           justify-content: center;
+          overflow: hidden;
+        }
+
+        .pcl-convo-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         /* 7. SECTION — WHAT LENDERS EVALUATE (Dark Navy) */
         .pcl-eval-dark-section {
-          background: linear-gradient(135deg, #0A1B3A 0%, #002D62 100%);
+          background: linear-gradient(90deg, #0A1B3A 0%, rgba(10, 27, 58, 0.88) 55%, rgba(10, 27, 58, 0.5) 100%), url(${documentReview}) no-repeat right center;
+          background-size: cover;
           color: #FFFFFF;
           border-radius: 20px;
           padding: 36px 40px;
@@ -743,6 +780,15 @@ function PersonalCarLoans() {
           display: flex;
           align-items: center;
           justify-content: center;
+          overflow: hidden;
+        }
+
+        .pcl-related-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         .pcl-related-footer {
@@ -838,12 +884,17 @@ function PersonalCarLoans() {
           background-color: rgba(255, 255, 255, 0.05);
           border: 1px solid rgba(255, 255, 255, 0.12);
           border-radius: 16px;
-          min-height: 200px;
-          height: 100%;
+          height: 180px;
           width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          overflow: hidden;
+        }
+
+        .pcl-bottom-cta-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         /* 13. DISCLAIMER / INFORMATION BAR */
@@ -1096,27 +1147,11 @@ function PersonalCarLoans() {
 
             <div className="pcl-hero-right">
               <div className="pcl-hero-visual-card">
-                <ImageIcon className="pcl-placeholder-icon" />
-
-                <div className="pcl-floating-card pcl-float-1">
-                  <User className="pcl-floating-card-icon" />
-                  <span className="pcl-floating-card-label">Personal Loan</span>
-                </div>
-
-                <div className="pcl-floating-card pcl-float-2">
-                  <Car className="pcl-floating-card-icon" />
-                  <span className="pcl-floating-card-label">Car Finance</span>
-                </div>
-
-                <div className="pcl-floating-card pcl-float-3">
-                  <Users className="pcl-floating-card-icon" />
-                  <span className="pcl-floating-card-label">Eligible Applicants</span>
-                </div>
-
-                <div className="pcl-floating-card pcl-float-4">
-                  <Landmark className="pcl-floating-card-icon" />
-                  <span className="pcl-floating-card-label">Bank / NBFC</span>
-                </div>
+                <img
+                  src={heroPersonalCarLoan}
+                  alt="Personal & Car Loan Assistance in Madurai"
+                  className="pcl-hero-img"
+                />
               </div>
             </div>
           </div>
@@ -1133,7 +1168,11 @@ function PersonalCarLoans() {
 
           <div className="pcl-personal-grid">
             <div className="pcl-img-placeholder">
-              <ImageIcon className="pcl-placeholder-icon" />
+              <img
+                src={personalLoanConsultation}
+                alt="Personal Loan assistance"
+                className="pcl-section-img"
+              />
             </div>
 
             <div className="pcl-personal-content">
@@ -1201,7 +1240,11 @@ function PersonalCarLoans() {
             </div>
 
             <div className="pcl-img-placeholder">
-              <ImageIcon className="pcl-placeholder-icon" />
+              <img
+                src={carVehicleFinanceFamily}
+                alt="Car and vehicle finance assistance"
+                className="pcl-section-img"
+              />
             </div>
           </div>
         </div>
@@ -1249,7 +1292,11 @@ function PersonalCarLoans() {
               </div>
 
               <div className="pcl-convo-img-holder">
-                <ImageIcon className="pcl-placeholder-icon" style={{ opacity: 0.35 }} />
+                <img
+                  src={personalLoan}
+                  alt="Personal Loan Discussion"
+                  className="pcl-convo-img"
+                />
               </div>
             </div>
 
@@ -1286,7 +1333,11 @@ function PersonalCarLoans() {
               </div>
 
               <div className="pcl-convo-img-holder">
-                <ImageIcon className="pcl-placeholder-icon" style={{ opacity: 0.35 }} />
+                <img
+                  src={carVehicleFinance}
+                  alt="Car and vehicle finance discussion"
+                  className="pcl-convo-img"
+                />
               </div>
             </div>
           </div>
@@ -1367,7 +1418,11 @@ function PersonalCarLoans() {
 
           <div className="pcl-docs-grid">
             <div className="pcl-img-placeholder">
-              <ImageIcon className="pcl-placeholder-icon" />
+              <img
+                src={carLoanDocuments}
+                alt="Personal and car loan documentation"
+                className="pcl-section-img"
+              />
             </div>
 
             <div className="pcl-docs-content">
@@ -1420,7 +1475,11 @@ function PersonalCarLoans() {
 
           <div className="pcl-helps-grid">
             <div className="pcl-img-placeholder">
-              <ImageIcon className="pcl-placeholder-icon" />
+              <img
+                src={howBalajiAssociatesHelps}
+                alt="How Balaji Associates Helps with Personal & Car Loans"
+                className="pcl-section-img"
+              />
             </div>
 
             <div className="pcl-helps-content">
@@ -1512,7 +1571,11 @@ function PersonalCarLoans() {
               <div className="pcl-related-cards">
                 <Link to="/home-property-loans/" className="pcl-related-card">
                   <div className="pcl-related-img-holder">
-                    <ImageIcon className="pcl-placeholder-icon" style={{ width: '22px', height: '22px' }} />
+                    <img
+                      src={relatedHomeLoan}
+                      alt="Home & Property Loans"
+                      className="pcl-related-img"
+                    />
                   </div>
                   <div className="pcl-related-footer">
                     <span className="pcl-related-title">Home &amp; Property Loans</span>
@@ -1522,7 +1585,11 @@ function PersonalCarLoans() {
 
                 <Link to="/education-agri-finance/" className="pcl-related-card">
                   <div className="pcl-related-img-holder">
-                    <ImageIcon className="pcl-placeholder-icon" style={{ width: '22px', height: '22px' }} />
+                    <img
+                      src={relatedEducationAgri}
+                      alt="Education & Agri Finance"
+                      className="pcl-related-img"
+                    />
                   </div>
                   <div className="pcl-related-footer">
                     <span className="pcl-related-title">Education &amp; Agri Finance</span>
@@ -1578,7 +1645,11 @@ function PersonalCarLoans() {
 
             <div className="pcl-bottom-cta-visual">
               <div className="pcl-bottom-cta-img-placeholder">
-                <ImageIcon className="pcl-placeholder-icon" style={{ opacity: 0.3 }} />
+                <img
+                  src={bottomCtaCar}
+                  alt="Car finance assistance banner"
+                  className="pcl-bottom-cta-img"
+                />
               </div>
             </div>
           </div>

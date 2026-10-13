@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Home as HomeIcon,
-  ChevronRight,
   Plus,
   Phone,
   ArrowRight,
@@ -29,9 +28,22 @@ import {
   CarFront,
   BriefcaseBusiness,
   Plane,
-  Sparkles,
-  Image as ImageIcon
+  Sparkles
 } from 'lucide-react';
+
+// Home Insurance image assets
+import heroRightImg from '../../assets/images/Insurance/Home/Home_Insurance_Hero_section.png';
+import buildingStructureImg from '../../assets/images/Insurance/Home/Building_structure.png';
+import householdContentsImg from '../../assets/images/Insurance/Home/Household_contents.png';
+import specifiedValuablesImg from '../../assets/images/Insurance/Home/Specified_valuables.png';
+import otherInsuredImg from '../../assets/images/Insurance/Home/Other_insured.png';
+import risksExclusionsImg from '../../assets/images/Insurance/Home/Risks_Exclusions.png';
+import ownersImg from '../../assets/images/Insurance/Home/Owners.png';
+import tenantsImg from '../../assets/images/Insurance/Home/Tenants.png';
+import howBalajiImg from '../../assets/images/Insurance/Home/How_Balaji.png';
+import importantPolicyLeftImg from '../../assets/images/Insurance/Home/important_policynote_leftside.png';
+import ctaRequirementsLeftImg from '../../assets/images/Insurance/Home/Imsurance_Requirements_leftside.png';
+import ctaRequirementsRightImg from '../../assets/images/Insurance/Home/Imsurance_Requirements_rightside.png';
 
 const faqList = [
   {
@@ -189,13 +201,13 @@ function HomeInsurance() {
         /* 2. HERO SECTION */
         .home-hero-section {
           padding: 24px 0 44px;
-          background: linear-gradient(180deg, rgba(240, 249, 255, 0.5) 0%, rgba(255, 255, 255, 1) 100%);
+          background: #FFFFFF;
         }
 
         .home-hero-grid {
           display: grid;
-          grid-template-columns: 1.05fr 0.95fr;
-          gap: 40px;
+          grid-template-columns: 1.02fr 1fr;
+          gap: 36px;
           align-items: center;
         }
 
@@ -273,52 +285,20 @@ function HomeInsurance() {
           box-shadow: 0 6px 18px rgba(217, 119, 6, 0.45);
         }
 
-        .home-hero-visual-card {
+        .home-hero-img-wrap {
           position: relative;
-          min-height: 420px;
-          height: 100%;
-          background: linear-gradient(135deg, #F1F5F9 0%, #E2E8F0 100%);
-          border: 2px solid #FCD34D;
-          border-radius: 28px;
-          overflow: hidden;
-          box-shadow: 0 16px 36px rgba(0, 0, 0, 0.06);
+          width: 100%;
           display: flex;
           align-items: center;
           justify-content: center;
         }
 
-        .home-floating-stack {
-          position: absolute;
-          top: 24px;
-          right: 20px;
-          display: flex;
-          flex-direction: column;
-          gap: 9px;
-          z-index: 2;
-        }
-
-        .home-floating-card {
-          background: #FFFFFF;
-          border: 1px solid #E2E8F0;
-          border-radius: 12px;
-          padding: 8px 14px;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
-        }
-
-        .home-floating-icon {
-          width: 17px;
-          height: 17px;
-          color: #003B73;
-        }
-
-        .home-floating-label {
-          font-size: 11px;
-          font-weight: 700;
-          color: #0A1B3A;
-          white-space: nowrap;
+        .home-hero-img {
+          width: 100%;
+          height: auto;
+          max-height: 480px;
+          object-fit: contain;
+          display: block;
         }
 
         /* 3. SECTION — WHAT CAN BE INSURED */
@@ -373,13 +353,25 @@ function HomeInsurance() {
         }
 
         .home-insured-img-box {
-          height: 130px;
+          height: 140px;
           background: #F8FAFC;
           border-top: 1px solid #E2E8F0;
+          overflow: hidden;
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
+        }
+
+        .home-insured-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          transition: transform 0.3s ease;
+        }
+
+        .home-insured-card:hover .home-insured-img {
+          transform: scale(1.04);
         }
 
         /* 4. SECTION — RISKS & EXCLUSIONS & OWNERS VS TENANTS */
@@ -408,6 +400,21 @@ function HomeInsurance() {
           margin-top: 14px;
         }
 
+        .home-risks-img-wrap {
+          height: 160px;
+          border-radius: 14px;
+          overflow: hidden;
+          background: #F8FAFC;
+          border: 1px solid #E2E8F0;
+        }
+
+        .home-risks-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
         .home-owners-imgs-row {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -418,7 +425,7 @@ function HomeInsurance() {
 
         .home-owner-img-box {
           position: relative;
-          height: 130px;
+          height: 140px;
           background: #F8FAFC;
           border: 1px solid #E2E8F0;
           border-radius: 14px;
@@ -427,6 +434,13 @@ function HomeInsurance() {
           align-items: center;
           justify-content: center;
           overflow: hidden;
+        }
+
+        .home-owner-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         .home-overlay-badge {
@@ -512,6 +526,21 @@ function HomeInsurance() {
           gap: 16px;
           align-items: center;
           margin-top: 14px;
+        }
+
+        .home-helps-img-wrap {
+          height: 160px;
+          border-radius: 14px;
+          overflow: hidden;
+          background: #F8FAFC;
+          border: 1px solid #E2E8F0;
+        }
+
+        .home-helps-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         .home-faq-list {
@@ -609,10 +638,17 @@ function HomeInsurance() {
           border-radius: 12px;
           background: #FFFFFF;
           border: 1px solid #CBD5E1;
+          overflow: hidden;
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
+        }
+
+        .home-infographic-house-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         .home-info-pills-col {
@@ -769,7 +805,7 @@ function HomeInsurance() {
           border-radius: 24px;
           padding: 0;
           display: grid;
-          grid-template-columns: 0.8fr 1.4fr 0.8fr;
+          grid-template-columns: 0.9fr 1.3fr 0.9fr;
           align-items: center;
           box-shadow: 0 16px 36px rgba(10, 27, 58, 0.25);
           position: relative;
@@ -779,10 +815,17 @@ function HomeInsurance() {
         .home-bottom-cta-img-col {
           height: 180px;
           background: #1E293B;
+          overflow: hidden;
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
+        }
+
+        .home-bottom-cta-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         .home-bottom-cta-center {
@@ -1002,45 +1045,12 @@ function HomeInsurance() {
             margin-bottom: 18px;
           }
 
-          .home-hero-visual-card {
-            min-height: 260px;
+          .home-hero-img {
+            max-height: 280px;
           }
 
-          .home-floating-card {
-            padding: 8px 10px;
-            font-size: 10px;
-          }
-
-          .home-float-1 {
-            top: 14px;
-            left: 14px;
-          }
-
-          .home-float-2 {
-            top: 50%;
-            left: 14px;
-          }
-
-          .home-float-3 {
-            bottom: 14px;
-            right: 14px;
-          }
-
-          .home-bottom-cta-card {
-            padding: 24px 16px;
-          }
-
-          .home-bottom-cta-buttons {
-            flex-direction: column;
-            width: 100%;
-            gap: 10px;
-          }
-
-          .home-btn-cta-gold,
-          .home-btn-cta-outline {
-            width: 100%;
-            justify-content: center;
-            text-align: center;
+          .home-bottom-cta-img-col {
+            height: 140px;
           }
 
           .home-faq-header {
@@ -1107,37 +1117,12 @@ function HomeInsurance() {
             </div>
 
             <div className="home-hero-right">
-              <div className="home-hero-visual-card">
-                <ImageIcon className="home-placeholder-icon" />
-                <span className="home-placeholder-label">Family &amp; Home with Madurai Temple</span>
-
-                {/* 5 Floating Cards */}
-                <div className="home-floating-stack">
-                  <div className="home-floating-card">
-                    <House className="home-floating-icon" />
-                    <span className="home-floating-label">Home Insurance</span>
-                  </div>
-
-                  <div className="home-floating-card">
-                    <Building2 className="home-floating-icon" />
-                    <span className="home-floating-label">Building Structure</span>
-                  </div>
-
-                  <div className="home-floating-card">
-                    <Sofa className="home-floating-icon" />
-                    <span className="home-floating-label">Household Contents</span>
-                  </div>
-
-                  <div className="home-floating-card">
-                    <ShieldCheck className="home-floating-icon" />
-                    <span className="home-floating-label">Insured Risks</span>
-                  </div>
-
-                  <div className="home-floating-card">
-                    <FileText className="home-floating-icon" />
-                    <span className="home-floating-label">Policy Questions</span>
-                  </div>
-                </div>
+              <div className="home-hero-img-wrap">
+                <img
+                  src={heroRightImg}
+                  alt="Home Insurance Assistance in Madurai - House, Family, and Coverage"
+                  className="home-hero-img"
+                />
               </div>
             </div>
           </div>
@@ -1165,8 +1150,11 @@ function HomeInsurance() {
                 <h3 className="home-insured-label">Building structure where eligible</h3>
               </div>
               <div className="home-insured-img-box">
-                <ImageIcon className="home-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="home-placeholder-label">Modern House Exterior</span>
+                <img
+                  src={buildingStructureImg}
+                  alt="Building structure where eligible"
+                  className="home-insured-img"
+                />
               </div>
             </div>
 
@@ -1179,8 +1167,11 @@ function HomeInsurance() {
                 <h3 className="home-insured-label">Household contents where included</h3>
               </div>
               <div className="home-insured-img-box">
-                <ImageIcon className="home-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="home-placeholder-label">Modern Living Room</span>
+                <img
+                  src={householdContentsImg}
+                  alt="Household contents where included"
+                  className="home-insured-img"
+                />
               </div>
             </div>
 
@@ -1193,8 +1184,11 @@ function HomeInsurance() {
                 <h3 className="home-insured-label">Specified valuables or additional items where specifically covered</h3>
               </div>
               <div className="home-insured-img-box">
-                <ImageIcon className="home-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="home-placeholder-label">Jewellery &amp; Valuables</span>
+                <img
+                  src={specifiedValuablesImg}
+                  alt="Specified valuables or additional items where specifically covered"
+                  className="home-insured-img"
+                />
               </div>
             </div>
 
@@ -1207,8 +1201,11 @@ function HomeInsurance() {
                 <h3 className="home-insured-label">Other insured property according to the policy</h3>
               </div>
               <div className="home-insured-img-box">
-                <ImageIcon className="home-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="home-placeholder-label">Insured Residential Property</span>
+                <img
+                  src={otherInsuredImg}
+                  alt="Other insured property according to the policy"
+                  className="home-insured-img"
+                />
               </div>
             </div>
           </div>
@@ -1228,9 +1225,12 @@ function HomeInsurance() {
                 </div>
 
                 <div className="home-risks-subgrid">
-                  <div className="home-img-placeholder" style={{ minHeight: '170px' }}>
-                    <ImageIcon className="home-placeholder-icon" />
-                    <span className="home-placeholder-label">House &amp; Policy Shield</span>
+                  <div className="home-risks-img-wrap">
+                    <img
+                      src={risksExclusionsImg}
+                      alt="Risks and Exclusions - Home Insurance Policy"
+                      className="home-risks-img"
+                    />
                   </div>
 
                   <div>
@@ -1252,7 +1252,11 @@ function HomeInsurance() {
 
                 <div className="home-owners-imgs-row">
                   <div className="home-owner-img-box">
-                    <ImageIcon className="home-placeholder-icon" style={{ opacity: 0.35 }} />
+                    <img
+                      src={ownersImg}
+                      alt="Home Insurance for Owners"
+                      className="home-owner-img"
+                    />
                     <div className="home-overlay-badge">
                       <House className="w-3.5 h-3.5" />
                       <span>Owners</span>
@@ -1260,7 +1264,11 @@ function HomeInsurance() {
                   </div>
 
                   <div className="home-owner-img-box">
-                    <ImageIcon className="home-placeholder-icon" style={{ opacity: 0.35 }} />
+                    <img
+                      src={tenantsImg}
+                      alt="Home Contents Insurance for Tenants"
+                      className="home-owner-img"
+                    />
                     <div className="home-overlay-badge">
                       <Users className="w-3.5 h-3.5" />
                       <span>Tenants</span>
@@ -1375,9 +1383,12 @@ function HomeInsurance() {
                 </div>
 
                 <div className="home-helps-subgrid">
-                  <div className="home-img-placeholder" style={{ minHeight: '170px' }}>
-                    <ImageIcon className="home-placeholder-icon" />
-                    <span className="home-placeholder-label">Adviser Consultation</span>
+                  <div className="home-helps-img-wrap">
+                    <img
+                      src={howBalajiImg}
+                      alt="Balaji Associates Insurance Consultation"
+                      className="home-helps-img"
+                    />
                   </div>
 
                   <div>
@@ -1442,8 +1453,11 @@ function HomeInsurance() {
             {/* Left: Home Infographic */}
             <div className="home-infographic-card">
               <div className="home-infographic-house-thumb">
-                <House className="w-8 h-8 text-slate-400 mb-1" />
-                <span className="home-placeholder-label">Home Visual</span>
+                <img
+                  src={importantPolicyLeftImg}
+                  alt="Insured Home Property"
+                  className="home-infographic-house-img"
+                />
               </div>
 
               {/* Left 4 connected pills */}
@@ -1568,29 +1582,19 @@ function HomeInsurance() {
               <span className="home-related-arrow">→</span>
             </Link>
           </div>
-
-          {/* 10. DISCLAIMER / INFORMATION BAR */}
-          <div className="home-disclaimer-strip">
-            <div className="home-disclaimer-left-badge">
-              <div className="home-disclaimer-icon-wrap">
-                <ShieldCheck className="home-disclaimer-icon" />
-              </div>
-              <span className="home-disclaimer-badge-title">Insurance Disclaimer</span>
-            </div>
-            <p className="home-disclaimer-text">
-              Insurance is the subject matter of solicitation. Balaji Associates' exact insurance intermediary/agent status, licence/registration number and authorised insurer relationships must be displayed as legally required. Coverage, premium, underwriting, exclusions, waiting periods, deductibles, add-ons and claims are governed by the respective insurer and policy wording. Read the policy document carefully before purchase.
-            </p>
-          </div>
         </div>
       </section>
 
-      {/* 9. BOTTOM CTA BANNER */}
+      {/* 9. BOTTOM CTA BANNER & DISCLAIMER */}
       <section className="home-bottom-cta-section">
         <div className="home-container">
           <div className="home-bottom-cta-card">
             <div className="home-bottom-cta-img-col">
-              <ImageIcon className="home-placeholder-icon" style={{ opacity: 0.35 }} />
-              <span className="home-placeholder-label" style={{ color: 'rgba(255,255,255,0.5)' }}>Home Exterior</span>
+              <img
+                src={ctaRequirementsLeftImg}
+                alt="Home Insurance Requirement"
+                className="home-bottom-cta-img"
+              />
             </div>
 
             <div className="home-bottom-cta-center">
@@ -1604,15 +1608,32 @@ function HomeInsurance() {
                 </h3>
               </div>
 
-              <a href="tel:9842817644" className="home-btn-cta-circle">
+              <a href="tel:9842817644" className="home-btn-cta-circle" aria-label="Call Balaji Associates">
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
 
             <div className="home-bottom-cta-img-col">
-              <ImageIcon className="home-placeholder-icon" style={{ opacity: 0.35 }} />
-              <span className="home-placeholder-label" style={{ color: 'rgba(255,255,255,0.5)' }}>Adviser &amp; Temple</span>
+              <img
+                src={ctaRequirementsRightImg}
+                alt="Adviser Consultation and Madurai Temple"
+                className="home-bottom-cta-img"
+              />
             </div>
+          </div>
+
+          {/* 10. DISCLAIMER / INFORMATION BAR */}
+          <div className="home-disclaimer-strip">
+            <div className="home-disclaimer-left-badge">
+              <div className="home-disclaimer-icon-wrap">
+                <ShieldCheck className="home-disclaimer-icon" />
+              </div>
+              <FileText className="w-5 h-5 text-blue-700" />
+              <span className="home-disclaimer-badge-title">Insurance Disclaimer</span>
+            </div>
+            <p className="home-disclaimer-text">
+              Insurance is the subject matter of solicitation. Balaji Associates' exact insurance intermediary/agent status, licence/registration number and authorised insurer relationships must be displayed as legally required. Coverage, premium, underwriting, exclusions, waiting periods, deductibles, add-ons and claims are governed by the respective insurer and policy wording. Read the policy document carefully before purchase.
+            </p>
           </div>
         </div>
       </section>

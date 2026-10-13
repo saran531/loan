@@ -20,10 +20,14 @@ import {
   Building2,
   Lightbulb,
   Building,
-  UsersRound,
-  ChartNoAxesCombined,
-  Image as ImageIcon
+  UsersRound
 } from 'lucide-react';
+
+// About Page Image Assets
+import heroRightImg from '../assets/images/About/About_hero_section_right_side.png';
+import approachImg from '../assets/images/About/Our_Approach.png';
+import headOfficeImg from '../assets/images/About/file_00000000e8288211a04eb5eac54eedb0.png';
+import bottomCtaImg from '../assets/images/About/Financial_need.png';
 
 const approachCards = [
   {
@@ -309,10 +313,10 @@ function About() {
           position: relative;
           width: 100%;
           min-height: 380px;
-          max-height: 420px;
+          max-height: 440px;
           border-radius: 28px;
           overflow: hidden;
-          background: linear-gradient(145deg, #EFF6FF 0%, #F1F5F9 100%);
+          background: #EFF6FF;
           border: 1px solid #E2E8F0;
           box-shadow: 0 12px 36px rgba(10, 27, 58, 0.08);
           display: flex;
@@ -321,86 +325,12 @@ function About() {
           z-index: 2;
         }
 
-        .about-hero-img-placeholder {
+        .about-hero-img {
           width: 100%;
           height: 100%;
-          min-height: 380px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          padding: 30px;
-          background: linear-gradient(135deg, rgba(241, 245, 249, 0.9) 0%, rgba(226, 232, 240, 0.7) 100%);
-        }
-
-        .about-hero-img-caption {
-          font-size: 13px;
-          font-weight: 600;
-          color: #475569;
-          margin-top: 10px;
-          max-width: 280px;
-        }
-
-        .about-hero-img-subcaption {
-          font-size: 11.5px;
-          color: #94A3B8;
-          margin-top: 4px;
-          max-width: 260px;
-        }
-
-        /* Floating Info Cards */
-        .about-float-card {
-          position: absolute;
-          z-index: 5;
-          background-color: #FFFFFF;
-          border: 1px solid rgba(226, 232, 240, 0.9);
-          border-radius: 14px;
-          padding: 10px 14px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 5px;
-          box-shadow: 0 8px 24px rgba(10, 27, 58, 0.12);
-          transition: transform 0.2s ease;
-        }
-
-        .about-float-card:hover {
-          transform: translateY(-2px);
-        }
-
-        .about-float-card-icon {
-          width: 22px;
-          height: 22px;
-          color: #0A1B3A;
-        }
-
-        .about-float-card-label {
-          font-size: 11px;
-          font-weight: 700;
-          color: #0A1B3A;
-          letter-spacing: 0.2px;
-        }
-
-        .about-float-home {
-          top: 14px;
-          left: 18px;
-        }
-
-        .about-float-business {
-          top: 45%;
-          left: -12px;
-          transform: translateY(-50%);
-        }
-
-        .about-float-insurance {
-          top: 16px;
-          right: 20px;
-        }
-
-        .about-float-docs {
-          bottom: 22px;
-          right: 20px;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         /* OUR APPROACH SECTION */
@@ -469,18 +399,25 @@ function About() {
         }
 
         .about-approach-img-container {
-          background: linear-gradient(145deg, #F8FAFC 0%, #EFF6FF 100%);
+          background: #F8FAFC;
           border: 1px solid #E2E8F0;
           border-radius: 18px;
           box-shadow: 0 6px 20px rgba(10, 27, 58, 0.04);
           overflow: hidden;
-          min-height: 260px;
+          min-height: 280px;
+          height: 100%;
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
-          padding: 24px;
-          text-align: center;
+          padding: 0;
+        }
+
+        .about-approach-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         /* WHO WE ASSIST SECTION */
@@ -653,56 +590,25 @@ function About() {
 
         .about-city-img-container {
           position: relative;
-          background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+          background: #F8FAFC;
           border: 1px solid #E2E8F0;
           border-radius: 18px;
           box-shadow: 0 4px 16px rgba(10, 27, 58, 0.03);
           overflow: hidden;
           min-height: 200px;
+          height: 100%;
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
-          padding: 24px;
+          padding: 0;
         }
 
-        .about-city-badge {
-          position: absolute;
-          top: 20px;
-          right: 20px;
-          background-color: #FFFFFF;
-          border: 1px solid #E2E8F0;
-          border-radius: 12px;
-          padding: 8px 14px;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          box-shadow: 0 4px 14px rgba(10, 27, 58, 0.08);
-          z-index: 3;
-        }
-
-        .about-city-badge-pin {
-          width: 18px;
-          height: 18px;
-          color: #D97706;
-        }
-
-        .about-city-badge-text {
-          display: flex;
-          flex-direction: column;
-        }
-
-        .about-city-name {
-          font-size: 13px;
-          font-weight: 700;
-          color: #0A1B3A;
-          line-height: 1.2;
-        }
-
-        .about-state-name {
-          font-size: 11px;
-          color: #64748B;
-          line-height: 1.2;
+        .about-city-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         /* TRUST & TRANSPARENCY SECTION */
@@ -768,14 +674,14 @@ function About() {
         .about-bottom-cta-card {
           background: linear-gradient(135deg, #071329 0%, #0A1B3A 55%, #0F2856 100%);
           border-radius: 20px;
-          padding: 36px 40px;
+          padding: 24px 32px;
           position: relative;
           overflow: hidden;
           box-shadow: 0 16px 40px rgba(10, 27, 58, 0.2);
           display: grid;
-          grid-template-columns: 1.1fr 1.3fr 0.9fr;
+          grid-template-columns: 1.05fr 1.25fr 1.1fr;
           align-items: center;
-          gap: 28px;
+          gap: 24px;
         }
 
         .about-bottom-cta-left {
@@ -850,17 +756,25 @@ function About() {
         }
 
         .about-bottom-cta-img-container {
-          background: rgba(255, 255, 255, 0.06);
-          border: 1px dashed rgba(255, 255, 255, 0.25);
-          border-radius: 14px;
-          min-height: 120px;
+          border-radius: 16px;
+          overflow: hidden;
           height: 100%;
+          max-height: 160px;
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
-          text-align: center;
-          padding: 16px;
+          padding: 0;
+          background: transparent;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+        }
+
+        .about-bottom-cta-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
+          border-radius: 16px;
         }
 
         /* Generic Placeholder Styling */
@@ -958,10 +872,6 @@ function About() {
           .about-trust-divider {
             display: none;
           }
-
-          .about-float-business {
-            left: 10px;
-          }
         }
 
         @media (max-width: 520px) {
@@ -1023,33 +933,16 @@ function About() {
           }
 
           .about-hero-img-container {
-            min-height: 260px;
+            min-height: 240px;
             max-height: none;
           }
 
-          .about-float-card {
-            padding: 6px 10px;
-            font-size: 10px;
+          .about-approach-img-container {
+            min-height: 240px;
           }
 
-          .about-float-home {
-            top: 10px;
-            left: 10px;
-          }
-
-          .about-float-business {
-            top: 50%;
-            left: 10px;
-          }
-
-          .about-float-insurance {
-            top: 10px;
-            right: 10px;
-          }
-
-          .about-float-docs {
-            bottom: 10px;
-            right: 10px;
+          .about-city-img-container {
+            min-height: 180px;
           }
 
           .about-office-card {
@@ -1118,46 +1011,17 @@ function About() {
               </div>
             </div>
 
-            {/* Right Column: Hero Visual with 4 Floating Cards */}
+            {/* Right Column: Hero Visual with embedded floating cards */}
             <div className="about-hero-right">
               <div className="about-hero-pattern-dots about-dots-top" aria-hidden="true"></div>
               <div className="about-hero-pattern-dots about-dots-bottom" aria-hidden="true"></div>
 
-              {/* Floating Card 1: Home */}
-              <div className="about-float-card about-float-home">
-                <House className="about-float-card-icon" />
-                <span className="about-float-card-label">Home</span>
-              </div>
-
-              {/* Floating Card 2: Business */}
-              <div className="about-float-card about-float-business">
-                <ChartNoAxesCombined className="about-float-card-icon" />
-                <span className="about-float-card-label">Business</span>
-              </div>
-
-              {/* Floating Card 3: Insurance */}
-              <div className="about-float-card about-float-insurance">
-                <ShieldCheck className="about-float-card-icon" />
-                <span className="about-float-card-label">Insurance</span>
-              </div>
-
-              {/* Floating Card 4: Documents */}
-              <div className="about-float-card about-float-docs">
-                <FileText className="about-float-card-icon" />
-                <span className="about-float-card-label">Documents</span>
-              </div>
-
-              {/* Dedicated Hero Image Placeholder */}
               <div className="about-hero-img-container">
-                <div className="about-hero-img-placeholder">
-                  <ImageIcon className="about-placeholder-icon" style={{ opacity: 0.5 }} />
-                  <span className="about-hero-img-caption">
-                    Financial Adviser Consultation
-                  </span>
-                  <span className="about-hero-img-subcaption">
-                    Office setting with Madurai temple tower window backdrop
-                  </span>
-                </div>
+                <img
+                  src={heroRightImg}
+                  alt="Financial Guidance Consultation - Balaji Associates Madurai"
+                  className="about-hero-img"
+                />
               </div>
             </div>
           </div>
@@ -1198,11 +1062,13 @@ function About() {
               })}
             </div>
 
-            {/* Right Approach Image Placeholder */}
+            {/* Right Approach Image */}
             <div className="about-approach-img-container">
-              <ImageIcon className="about-placeholder-icon" style={{ opacity: 0.5 }} />
-              <span className="about-placeholder-label">Home Model &amp; Financial Paperwork</span>
-              <span className="about-placeholder-sublabel">Adviser Consultation Setup</span>
+              <img
+                src={approachImg}
+                alt="Balaji Associates Approach - Financial Consultation & Documentation"
+                className="about-approach-img"
+              />
             </div>
           </div>
         </div>
@@ -1304,18 +1170,13 @@ function About() {
               </div>
             </div>
 
-            {/* Right Column: Madurai Location Image Placeholder */}
+            {/* Right Column: Madurai Location Image */}
             <div className="about-city-img-container">
-              <div className="about-city-badge">
-                <MapPin className="about-city-badge-pin" />
-                <div className="about-city-badge-text">
-                  <span className="about-city-name">Madurai</span>
-                  <span className="about-state-name">Tamil Nadu</span>
-                </div>
-              </div>
-              <ImageIcon className="about-placeholder-icon" style={{ opacity: 0.5 }} />
-              <span className="about-placeholder-label">Madurai Temple Towers &amp; Cityscape</span>
-              <span className="about-placeholder-sublabel">Warm sunset lighting with Tamil Nadu map illustration</span>
+              <img
+                src={headOfficeImg}
+                alt="Balaji Associates Head Office - Madurai, Tamil Nadu"
+                className="about-city-img"
+              />
             </div>
           </div>
         </div>
@@ -1367,15 +1228,13 @@ function About() {
               </a>
             </div>
 
-            {/* Right: Dedicated Property & Shield Image Placeholder */}
+            {/* Right: Dedicated Property & Shield Image */}
             <div className="about-bottom-cta-img-container">
-              <ImageIcon className="about-placeholder-icon" style={{ opacity: 0.5, color: '#FFFFFF' }} />
-              <span className="about-placeholder-label" style={{ color: 'rgba(255,255,255,0.7)' }}>
-                Property &amp; Vehicle Protection
-              </span>
-              <span className="about-placeholder-sublabel" style={{ color: 'rgba(255,255,255,0.45)' }}>
-                Gold Shield Emblem
-              </span>
+              <img
+                src={bottomCtaImg}
+                alt="Your Financial Need - The Right Guidance"
+                className="about-bottom-cta-img"
+              />
             </div>
           </div>
         </div>

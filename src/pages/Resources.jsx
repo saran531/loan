@@ -35,104 +35,154 @@ import {
   Image as ImageIcon
 } from 'lucide-react';
 
+// Resources Page Image Assets - Main / Banners
+import heroImg from '../assets/images/Resources/Resources_right_side.png';
+import loanGuidesImg from '../assets/images/Resources/Loan_Guides.png';
+import insuranceGuidesImg from '../assets/images/Resources/Insurance_Guides.png';
+import processBannerImg from '../assets/images/Resources/Documents.png';
+import requirementCtaImg from '../assets/images/Resources/Requirement.png';
+
+// Priority Loan Topics Images
+import loanImg1 from '../assets/images/Resources/file_00000000ea1c82119a8bae0ca0989bf6.png'; // Home Loan Eligibility
+import loanImg2 from '../assets/images/Resources/file_00000000d3788207b6587d4ea3685806.png'; // Documents Required for a Home Loan
+import loanImg3 from '../assets/images/Resources/file_000000009df082118c288270777599fd.png'; // Home Loan vs LAP
+import loanImg4 from '../assets/images/Resources/file_00000000b9248211980122d6624a218a.png'; // Land Purchase Loan vs Land + Construction
+import loanImg5 from '../assets/images/Resources/file_00000000891c8230b37572b11336f59c.png'; // Mortgage Loan Documents Checklist
+import loanImg6 from '../assets/images/Resources/file_00000000c72481f9810e497b093ae8f7.png'; // Business Loan vs OD vs CC
+import loanImg7 from '../assets/images/Resources/file_000000007d9c821187413c4daf490008.png'; // Working Capital Finance for MSMEs
+import loanImg8 from '../assets/images/Resources/file_0000000074c48246b90c382be0bfd861.png'; // OD Takeover
+import loanImg9 from '../assets/images/Resources/file_0000000002e48211a2895b535fd6d392.png'; // Machinery Finance
+import loanImg10 from '../assets/images/Resources/file_000000006c9481f5bcca99895faff5b5.png'; // CGTMSE Explained
+import loanImg11 from '../assets/images/Resources/file_00000000f7488211a1a8ca98b2be3898.png'; // Secured vs Unsecured Business Finance
+import loanImg12 from '../assets/images/Resources/file_00000000e47881f49c13c70d9ec3cd95.png'; // How Existing EMIs Affect Loan Eligibility
+import loanImg13 from '../assets/images/Resources/file_00000000fe448210928de645416db917.png'; // Questions to Ask Before Accepting
+import loanImg14 from '../assets/images/Resources/file_000000008a9081f4926e536a404fab30.png'; // Education Loan Documents
+
+// Priority Insurance Topics Images
+import insImg1 from '../assets/images/Resources/file_00000000ee1c8207ac14332b1a1a2ae6.png'; // How to Compare Health Insurance
+import insImg2 from '../assets/images/Resources/file_0000000091288208a0305f6386c570a0.png'; // Health Insurance Waiting Periods
+import insImg3 from '../assets/images/Resources/file_00000000b4d48211815ba929fcd5fc49.png'; // Family Floater vs Individual Health
+import insImg4 from '../assets/images/Resources/file_00000000a7b48208b922cf131ba97cd0.png'; // Third-Party vs Comprehensive Motor
+import insImg5 from '../assets/images/Resources/file_000000002ba88208aadb5248c3fafb7f.png'; // What Is IDV in Motor Insurance
+import insImg6 from '../assets/images/Resources/file_00000000cacc821194423fd8cc0ce64b.png'; // Motor Insurance Renewal Checklist
+import insImg7 from '../assets/images/Resources/file_00000000338882088926ffaf5a54b0e6.png'; // Business Insurance Checklist
+import insImg8 from '../assets/images/Resources/file_000000000cd88211b02e15ab644689f0.png'; // What Risks Should an SME Discuss
+import insImg9 from '../assets/images/Resources/Travel Insurance Passport and Airplane.png'; // Travel Insurance Checklist
+import insImg10 from '../assets/images/Resources/Blue and Black Luggage at Airport.png'; // Flight Delay or Baggage Loss
+import insImg11 from '../assets/images/Resources/Twilight Luxury Villa Entrance.png'; // Home Insurance Structure vs Contents
+
 const loanArticles = [
   {
     id: 'loan-1',
     title: 'Home Loan Eligibility in Madurai: What Lenders Commonly Check',
     icon: House,
     badgeColor: '#16A34A',
-    placeholder: 'Home / Residential Property'
+    placeholder: 'Home / Residential Property',
+    image: loanImg1
   },
   {
     id: 'loan-2',
     title: 'Documents Required for a Home Loan in Tamil Nadu',
     icon: FileText,
     badgeColor: '#D97706',
-    placeholder: 'Documents & Financial Paperwork'
+    placeholder: 'Documents & Financial Paperwork',
+    image: loanImg2
   },
   {
     id: 'loan-3',
     title: 'Home Loan vs Loan Against Property',
     icon: ArrowLeftRight,
     badgeColor: '#16A34A',
-    placeholder: 'Residential Property'
+    placeholder: 'Residential Property',
+    image: loanImg3
   },
   {
     id: 'loan-4',
     title: 'Land Purchase Loan vs Land + Construction Loan',
     icon: Map,
     badgeColor: '#16A34A',
-    placeholder: 'Land / Residential Plot'
+    placeholder: 'Land / Residential Plot',
+    image: loanImg4
   },
   {
     id: 'loan-5',
     title: 'Mortgage Loan Documents: A Practical Checklist',
     icon: ClipboardList,
     badgeColor: '#16A34A',
-    placeholder: 'Property Documents & House Model'
+    placeholder: 'Property Documents & House Model',
+    image: loanImg5
   },
   {
     id: 'loan-6',
     title: 'Business Loan vs OD vs Cash Credit',
     icon: SquarePen,
     badgeColor: '#0284C7',
-    placeholder: 'Business Financial Consultation'
+    placeholder: 'Business Financial Consultation',
+    image: loanImg6
   },
   {
     id: 'loan-7',
     title: 'Working Capital Finance for MSMEs Explained',
     icon: RefreshCw,
     badgeColor: '#16A34A',
-    placeholder: 'Working Capital Documents'
+    placeholder: 'Working Capital Documents',
+    image: loanImg7
   },
   {
     id: 'loan-8',
     title: 'OD Takeover: What to Compare Before Switching',
     icon: ArrowLeftRight,
     badgeColor: '#0284C7',
-    placeholder: 'Financial Documents & Review'
+    placeholder: 'Financial Documents & Review',
+    image: loanImg8
   },
   {
     id: 'loan-9',
     title: 'Machinery Finance for MSMEs: What Lenders Evaluate',
     icon: Settings,
     badgeColor: '#16A34A',
-    placeholder: 'Industrial Machinery & Equipment'
+    placeholder: 'Industrial Machinery & Equipment',
+    image: loanImg9
   },
   {
     id: 'loan-10',
     title: 'CGTMSE Explained: What Business Owners Should Know',
     icon: ShieldCheck,
     badgeColor: '#16A34A',
-    placeholder: 'Business Finance & Savings'
+    placeholder: 'Business Finance & Savings',
+    image: loanImg10
   },
   {
     id: 'loan-11',
     title: 'Secured vs Unsecured Business Finance',
     icon: LockKeyhole,
     badgeColor: '#16A34A',
-    placeholder: 'Business Financial Documents'
+    placeholder: 'Business Financial Documents',
+    image: loanImg11
   },
   {
     id: 'loan-12',
     title: 'How Existing EMIs Affect Loan Eligibility',
     icon: CreditCard,
     badgeColor: '#16A34A',
-    placeholder: 'Calculator & Financial Paperwork'
+    placeholder: 'Calculator & Financial Paperwork',
+    image: loanImg12
   },
   {
     id: 'loan-13',
     title: 'Questions to Ask Before Accepting a Loan Offer',
     icon: ClipboardCheck,
     badgeColor: '#16A34A',
-    placeholder: 'Person Reviewing Documents'
+    placeholder: 'Person Reviewing Documents',
+    image: loanImg13
   },
   {
     id: 'loan-14',
     title: 'Education Loan Documents for Study in India and Abroad',
     icon: GraduationCap,
     badgeColor: '#0284C7',
-    placeholder: 'Graduation Cap & Documents'
+    placeholder: 'Graduation Cap & Documents',
+    image: loanImg14
   }
 ];
 
@@ -142,77 +192,88 @@ const insuranceArticles = [
     title: 'How to Compare Health Insurance Beyond the Premium',
     icon: Heart,
     badgeColor: '#16A34A',
-    placeholder: 'Insurance Paperwork'
+    placeholder: 'Insurance Paperwork',
+    image: insImg1
   },
   {
     id: 'ins-2',
     title: 'Health Insurance Waiting Periods Explained',
     icon: Clock,
     badgeColor: '#16A34A',
-    placeholder: 'Family Discussing Health Insurance'
+    placeholder: 'Family Discussing Health Insurance',
+    image: insImg2
   },
   {
     id: 'ins-3',
     title: 'Family Floater vs Individual Health Insurance: Questions to Consider',
     icon: Users,
     badgeColor: '#16A34A',
-    placeholder: 'Family Consultation'
+    placeholder: 'Family Consultation',
+    image: insImg3
   },
   {
     id: 'ins-4',
     title: 'Third-Party vs Comprehensive Motor Insurance',
     icon: CarFront,
     badgeColor: '#16A34A',
-    placeholder: 'Motor Vehicle'
+    placeholder: 'Motor Vehicle',
+    image: insImg4
   },
   {
     id: 'ins-5',
     title: 'What Is IDV in Motor Insurance?',
     icon: ShieldCheck,
     badgeColor: '#0284C7',
-    placeholder: 'Insurance Policy & Document'
+    placeholder: 'Insurance Policy & Document',
+    image: insImg5
   },
   {
     id: 'ins-6',
     title: 'Motor Insurance Renewal Checklist',
     icon: RefreshCw,
     badgeColor: '#0284C7',
-    placeholder: 'Car & Renewal Paperwork'
+    placeholder: 'Car & Renewal Paperwork',
+    image: insImg6
   },
   {
     id: 'ins-7',
     title: 'Business Insurance Checklist for Small Businesses',
     icon: BriefcaseBusiness,
     badgeColor: '#0284C7',
-    placeholder: 'Business Consultation'
+    placeholder: 'Business Consultation',
+    image: insImg7
   },
   {
     id: 'ins-8',
     title: 'What Risks Should an SME Discuss Before Buying Insurance?',
     icon: ShieldCheck,
     badgeColor: '#16A34A',
-    placeholder: 'Industrial SME Consultation'
+    placeholder: 'Industrial SME Consultation',
+    image: insImg8
   },
   {
     id: 'ins-9',
     title: 'Travel Insurance Checklist Before an International Trip',
     icon: Plane,
     badgeColor: '#0284C7',
-    placeholder: 'Passport & Aircraft'
+    placeholder: 'Passport & Aircraft',
+    image: insImg9
   },
   {
     id: 'ins-10',
     title: 'Does Travel Insurance Cover Flight Delay or Baggage Loss?',
     icon: Luggage,
     badgeColor: '#0284C7',
-    placeholder: 'Airport Luggage'
+    placeholder: 'Airport Luggage',
+    image: insImg10
   },
   {
     id: 'ins-11',
     title: 'Home Insurance: Structure vs Contents Cover',
     icon: House,
     badgeColor: '#16A34A',
-    placeholder: 'Residential House'
+    placeholder: 'Residential House',
+    image: insImg11
   }
 ];
 
@@ -417,81 +478,31 @@ function Resources() {
           max-width: 580px;
         }
 
-        /* Hero Right Visual with Floating Cards */
+        /* Hero Right Visual */
         .resources-hero-right {
           position: relative;
           display: flex;
-          justify-content: center;
+          justify-content: flex-end;
           align-items: center;
         }
 
         .resources-hero-img-box {
           position: relative;
           width: 100%;
-          min-height: 320px;
+          max-width: 580px;
           border-radius: 20px;
           overflow: hidden;
-          background: rgba(255, 255, 255, 0.05);
-          border: 1px solid rgba(255, 255, 255, 0.15);
-          box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          padding: 24px;
+          box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          line-height: 0;
         }
 
-        .resources-hero-float-card {
-          position: absolute;
-          z-index: 5;
-          background-color: #FFFFFF;
-          border: 1px solid rgba(226, 232, 240, 0.9);
-          border-radius: 12px;
-          padding: 8px 14px;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
-          white-space: nowrap;
-          font-size: 12px;
-          font-weight: 700;
-          color: #0A1B3A;
-          transition: transform 0.2s ease;
-        }
-
-        .resources-hero-float-card:hover {
-          transform: translateY(-2px);
-        }
-
-        .resources-hero-float-search {
-          top: 14px;
-          right: 20px;
-          background-color: #FFFFFF;
-          border-radius: 9999px;
-          padding: 7px 16px;
-          color: #64748B;
-          font-weight: 500;
-        }
-
-        .resources-hero-float-loan {
-          top: 60px;
-          right: 20px;
-        }
-
-        .resources-hero-float-insurance {
-          top: 106px;
-          right: 20px;
-        }
-
-        .resources-hero-float-resources {
-          top: 152px;
-          right: 20px;
-        }
-
-        .resources-hero-float-madurai {
-          bottom: 24px;
-          right: 20px;
+        .resources-hero-img {
+          width: 100%;
+          height: auto;
+          max-height: 380px;
+          object-fit: cover;
+          display: block;
         }
 
         /* CATEGORY NAVIGATION & SEARCH BAR */
@@ -641,9 +652,16 @@ function Resources() {
         /* TOPIC SECTIONS & PROMO PANELS */
         .resources-content-layout {
           display: grid;
-          grid-template-columns: 1fr 200px;
           gap: 20px;
           align-items: stretch;
+        }
+
+        .resources-content-layout-loan {
+          grid-template-columns: 1fr 290px;
+        }
+
+        .resources-content-layout-insurance {
+          grid-template-columns: 1fr 320px;
         }
 
         .resources-cards-5col {
@@ -677,24 +695,29 @@ function Resources() {
           box-shadow: 0 6px 18px rgba(10, 27, 58, 0.08);
         }
 
-        .resources-card-img-placeholder {
-          background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+        .resources-card-img-box {
           height: 110px;
           width: 100%;
           position: relative;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          overflow: hidden;
+          background: #F1F5F9;
+          overflow: visible;
+        }
+
+        .resources-card-img {
+          width: 100%;
+          height: 110px;
+          object-fit: cover;
+          display: block;
+          border-top-left-radius: 11px;
+          border-top-right-radius: 11px;
         }
 
         .resources-card-icon-badge {
           position: absolute;
           bottom: -14px;
           left: 12px;
-          width: 32px;
-          height: 32px;
+          width: 30px;
+          height: 30px;
           border-radius: 50%;
           background-color: #FFFFFF;
           border: 1px solid #E2E8F0;
@@ -706,7 +729,7 @@ function Resources() {
         }
 
         .resources-card-body {
-          padding: 20px 12px 14px 12px;
+          padding: 22px 12px 14px 12px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -714,7 +737,7 @@ function Resources() {
         }
 
         .resources-card-title {
-          font-size: 12.5px;
+          font-size: 12px;
           font-weight: 700;
           color: #0A1B3A;
           line-height: 1.35;
@@ -744,113 +767,47 @@ function Resources() {
 
         /* Tall Promo Panels (Right side) */
         .resources-promo-panel {
-          background: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 100%);
-          border: 1px solid #E2E8F0;
-          border-radius: 16px;
-          padding: 16px 12px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          position: relative;
+          border-radius: 14px;
           overflow: hidden;
-          box-shadow: 0 4px 16px rgba(10, 27, 58, 0.03);
-        }
-
-        .resources-promo-badge {
-          background-color: #0A1B3A;
-          color: #FFFFFF;
-          font-size: 11px;
-          font-weight: 800;
-          letter-spacing: 0.5px;
-          padding: 6px 14px;
-          border-radius: 9999px;
-          text-align: center;
-          margin-bottom: 16px;
-          box-shadow: 0 2px 8px rgba(10, 27, 58, 0.2);
-        }
-
-        .resources-promo-categories {
-          display: flex;
-          flex-direction: column;
-          gap: 8px;
-          width: 100%;
-          margin-top: auto;
-          z-index: 2;
-        }
-
-        .resources-promo-cat-pill {
-          background-color: #FFFFFF;
+          box-shadow: 0 4px 16px rgba(10, 27, 58, 0.05);
           border: 1px solid #E2E8F0;
-          border-radius: 8px;
-          padding: 7px 10px;
+          background: #FFFFFF;
           display: flex;
           align-items: center;
-          gap: 8px;
-          box-shadow: 0 2px 6px rgba(10, 27, 58, 0.04);
-          font-size: 10.5px;
-          font-weight: 700;
-          color: #0A1B3A;
-          letter-spacing: 0.2px;
+          justify-content: center;
+          line-height: 0;
+          height: 100%;
+          box-sizing: border-box;
+          padding: 0;
+        }
+
+        .resources-promo-img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: center;
+          display: block;
+          border-radius: 13px;
         }
 
         /* RESOURCE PROCESS BANNER */
         .resources-process-banner {
-          background: linear-gradient(135deg, #F8FAFC 0%, #FFFFFF 100%);
+          border-radius: 14px;
+          overflow: hidden;
+          box-shadow: 0 4px 16px rgba(10, 27, 58, 0.04);
+          margin: 18px 0 24px 0;
           border: 1px solid #E2E8F0;
-          border-radius: 16px;
-          padding: 20px 24px;
-          box-shadow: 0 4px 16px rgba(10, 27, 58, 0.03);
-          display: grid;
-          grid-template-columns: 1fr auto 1fr;
-          align-items: center;
-          gap: 24px;
-          margin: 16px 0;
+          background: #FFFFFF;
+          line-height: 0;
         }
 
-        .resources-process-img-left,
-        .resources-process-img-right {
-          background: linear-gradient(135deg, #F1F5F9 0%, #E2E8F0 100%);
-          border: 1px solid #E2E8F0;
-          border-radius: 12px;
-          height: 120px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          padding: 12px;
-        }
-
-        .resources-process-icons-row {
-          display: flex;
-          align-items: center;
-          gap: 16px;
-        }
-
-        .resources-process-circle {
-          width: 44px;
-          height: 44px;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          box-shadow: 0 4px 12px rgba(10, 27, 58, 0.1);
-        }
-
-        .resources-process-circle-navy {
-          background-color: #0A1B3A;
-          color: #FFFFFF;
-        }
-
-        .resources-process-circle-green {
-          background-color: #16A34A;
-          color: #FFFFFF;
-        }
-
-        .resources-process-arrow {
-          width: 18px;
-          height: 18px;
-          color: #0284C7;
+        .resources-process-banner-img {
+          width: 100%;
+          height: auto;
+          max-height: 190px;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         /* RELATED SERVICE PAGES */
@@ -925,9 +882,9 @@ function Resources() {
         .resources-bottom-cta-card {
           background: linear-gradient(135deg, #071329 0%, #0A1B3A 55%, #0F2856 100%);
           border-radius: 18px;
-          padding: 24px 32px;
+          padding: 16px 20px 16px 32px;
           display: grid;
-          grid-template-columns: auto 1fr auto 240px;
+          grid-template-columns: auto 1fr auto minmax(280px, 490px);
           align-items: center;
           gap: 24px;
           box-shadow: 0 16px 40px rgba(10, 27, 58, 0.2);
@@ -951,11 +908,12 @@ function Resources() {
         .resources-bottom-cta-text-wrap {
           display: flex;
           flex-direction: column;
+          min-width: 0;
         }
 
         .resources-bottom-cta-title {
           font-family: 'DM Serif Display', Georgia, serif;
-          font-size: 22px;
+          font-size: 21px;
           line-height: 1.3;
           color: #FFFFFF;
           margin: 0;
@@ -989,17 +947,26 @@ function Resources() {
           transform: scale(1.05);
         }
 
-        .resources-bottom-cta-img-placeholder {
-          background: rgba(255, 255, 255, 0.08);
-          border: 1px dashed rgba(255, 255, 255, 0.25);
-          border-radius: 12px;
-          height: 90px;
+        .resources-bottom-cta-img-box {
+          height: 88px;
+          width: 100%;
+          max-width: 490px;
+          overflow: hidden;
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
-          text-align: center;
-          padding: 8px;
+          line-height: 0;
+          border-radius: 12px;
+          background: rgba(255, 255, 255, 0.04);
+        }
+
+        .resources-bottom-cta-img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: center;
+          display: block;
+          border-radius: 12px;
         }
 
         /* DISCLAIMER STRIPS */
@@ -1059,23 +1026,46 @@ function Resources() {
           .resources-related-grid-insurance {
             grid-template-columns: repeat(3, 1fr);
           }
+          .resources-content-layout-loan {
+            grid-template-columns: 1fr 270px;
+          }
+          .resources-content-layout-insurance {
+            grid-template-columns: 1fr 290px;
+          }
+          .resources-bottom-cta-card {
+            grid-template-columns: auto 1fr auto minmax(240px, 380px);
+            padding: 16px 20px 16px 24px;
+            gap: 16px;
+          }
+          .resources-bottom-cta-img-box {
+            max-width: 380px;
+            height: 70px;
+          }
+          .resources-bottom-cta-title {
+            font-size: 19px;
+          }
         }
 
         @media (max-width: 1024px) {
           .resources-hero-grid {
             grid-template-columns: 1fr;
           }
-          .resources-content-layout {
+          .resources-content-layout,
+          .resources-content-layout-loan,
+          .resources-content-layout-insurance {
             grid-template-columns: 1fr;
+            gap: 24px;
           }
           .resources-promo-panel {
-            flex-direction: row;
-            justify-content: space-between;
+            display: flex;
+            max-width: 340px;
+            width: 100%;
+            margin: 0 auto;
             min-height: auto;
           }
-          .resources-promo-categories {
-            flex-direction: row;
-            flex-wrap: wrap;
+          .resources-promo-img {
+            max-height: 540px;
+            object-fit: contain;
           }
           .resources-cards-5col,
           .resources-cards-4col {
@@ -1083,9 +1073,15 @@ function Resources() {
           }
           .resources-bottom-cta-card {
             grid-template-columns: auto 1fr auto;
+            padding: 20px 24px;
+            gap: 16px;
           }
-          .resources-bottom-cta-img-placeholder {
-            display: none;
+          .resources-bottom-cta-img-box {
+            grid-column: 1 / -1;
+            max-width: 100%;
+            height: auto;
+            max-height: 90px;
+            margin: 8px auto 0 auto;
           }
         }
 
@@ -1106,13 +1102,6 @@ function Resources() {
           .resources-related-grid-loans,
           .resources-related-grid-insurance {
             grid-template-columns: repeat(2, 1fr);
-          }
-          .resources-process-banner {
-            grid-template-columns: 1fr;
-            text-align: center;
-          }
-          .resources-process-icons-row {
-            justify-content: center;
           }
           .resources-disclaimers-row {
             grid-template-columns: 1fr;
@@ -1149,9 +1138,16 @@ function Resources() {
             grid-template-columns: 1fr;
             text-align: center;
             gap: 16px;
+            padding: 24px 16px;
           }
           .resources-bottom-cta-phone-icon,
           .resources-bottom-cta-arrow-btn {
+            margin: 0 auto;
+          }
+          .resources-bottom-cta-img-box {
+            max-width: 100%;
+            height: auto;
+            max-height: 80px;
             margin: 0 auto;
           }
         }
@@ -1166,31 +1162,6 @@ function Resources() {
             line-height: 1.25;
           }
 
-          .resources-hero-img-box {
-            min-height: 250px;
-            padding: 16px;
-          }
-
-          .resources-hero-float-card {
-            padding: 6px 10px;
-            font-size: 10px;
-          }
-
-          .resources-hero-float-search {
-            top: 10px;
-            right: 10px;
-          }
-
-          .resources-hero-float-docs {
-            bottom: 10px;
-            left: 10px;
-          }
-
-          .resources-hero-float-tag {
-            top: 50%;
-            right: 10px;
-          }
-
           .resources-cards-5col,
           .resources-cards-4col {
             grid-template-columns: 1fr;
@@ -1202,7 +1173,11 @@ function Resources() {
           }
 
           .resources-bottom-cta-card {
-            padding: 24px 16px;
+            padding: 20px 14px;
+          }
+
+          .resources-bottom-cta-title {
+            font-size: 18px;
           }
         }
       `}</style>
@@ -1240,47 +1215,14 @@ function Resources() {
               </p>
             </div>
 
-            {/* Right Column: Hero Visual with 5 Floating Cards */}
+            {/* Right Column: Hero Visual */}
             <div className="resources-hero-right">
-              {/* Floating Card 1: Search resources */}
-              <div className="resources-hero-float-card resources-hero-float-search">
-                <Search className="w-3.5 h-3.5 text-slate-500" />
-                <span>Search resources</span>
-              </div>
-
-              {/* Floating Card 2: Loan Guides */}
-              <div className="resources-hero-float-card resources-hero-float-loan">
-                <Coins className="w-4 h-4 text-amber-500" />
-                <span>Loan Guides</span>
-              </div>
-
-              {/* Floating Card 3: Insurance Guides */}
-              <div className="resources-hero-float-card resources-hero-float-insurance">
-                <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                <span>Insurance Guides</span>
-              </div>
-
-              {/* Floating Card 4: Resources */}
-              <div className="resources-hero-float-card resources-hero-float-resources">
-                <FileText className="w-4 h-4 text-blue-600" />
-                <span>Resources</span>
-              </div>
-
-              {/* Floating Card 5: Madurai */}
-              <div className="resources-hero-float-card resources-hero-float-madurai">
-                <MapPin className="w-4 h-4 text-red-500" />
-                <span>Madurai</span>
-              </div>
-
-              {/* Dedicated Hero Image Placeholder */}
               <div className="resources-hero-img-box">
-                <ImageIcon className="w-10 h-10 text-slate-400 mb-2 opacity-50" />
-                <span className="text-white text-xs font-semibold">
-                  Professional Financial Consultation
-                </span>
-                <span className="text-slate-300 text-[11px] mt-1">
-                  Reviewing laptop with Madurai temple backdrop
-                </span>
+                <img
+                  src={heroImg}
+                  alt="Practical Loan & Insurance Guides - Balaji Associates"
+                  className="resources-hero-img"
+                />
               </div>
             </div>
           </div>
@@ -1378,22 +1320,24 @@ function Resources() {
               <div className="resources-gold-line"></div>
             </div>
 
-            <div className="resources-content-layout">
+            <div className="resources-content-layout resources-content-layout-loan">
               {/* Left: Loan Articles Grid (5 columns on desktop) */}
               <div className="resources-cards-5col">
                 {filteredLoanArticles.map((article) => {
                   const IconComp = article.icon;
                   return (
                     <div key={article.id} className="resources-article-card">
-                      {/* Top Image Placeholder */}
-                      <div className="resources-card-img-placeholder">
-                        <ImageIcon className="w-6 h-6 text-slate-400 opacity-40 mb-1" />
-                        <span className="text-[10px] text-slate-400 text-center px-1 font-medium">
-                          {article.placeholder}
-                        </span>
+                      {/* Top Card Image */}
+                      <div className="resources-card-img-box">
+                        <img
+                          src={article.image}
+                          alt={article.title}
+                          className="resources-card-img"
+                          loading="lazy"
+                        />
                         {/* Overlapping Icon Badge */}
                         <div className="resources-card-icon-badge">
-                          <IconComp className="w-4 h-4 text-slate-800" />
+                          <IconComp className="w-4 h-4 text-emerald-600" />
                         </div>
                       </div>
 
@@ -1411,29 +1355,11 @@ function Resources() {
 
               {/* Right: Tall Loan Guides Promotional Image Panel */}
               <div className="resources-promo-panel">
-                <div className="resources-promo-badge">LOAN GUIDES</div>
-
-                <div className="flex flex-col items-center justify-center my-auto py-4 text-center">
-                  <ImageIcon className="w-8 h-8 text-slate-400 opacity-40 mb-2" />
-                  <span className="text-[11px] text-slate-500 font-semibold px-2">
-                    Property &amp; Madurai Temple
-                  </span>
-                  <span className="text-[9.5px] text-slate-400 mt-1">
-                    Financial Protection
-                  </span>
-                </div>
-
-                <div className="resources-promo-categories">
-                  {loanCategoriesPromo.map((cat) => {
-                    const CatIcon = cat.icon;
-                    return (
-                      <div key={cat.label} className="resources-promo-cat-pill">
-                        <CatIcon className="w-3.5 h-3.5" style={{ color: cat.color }} />
-                        <span>{cat.label}</span>
-                      </div>
-                    );
-                  })}
-                </div>
+                <img
+                  src={loanGuidesImg}
+                  alt="Balaji Associates Loan Guides"
+                  className="resources-promo-img"
+                />
               </div>
             </div>
           </div>
@@ -1449,22 +1375,24 @@ function Resources() {
               <div className="resources-gold-line"></div>
             </div>
 
-            <div className="resources-content-layout">
+            <div className="resources-content-layout resources-content-layout-insurance">
               {/* Left: Insurance Articles Grid (4 columns on desktop) */}
               <div className="resources-cards-4col">
                 {filteredInsuranceArticles.map((article) => {
                   const IconComp = article.icon;
                   return (
                     <div key={article.id} className="resources-article-card">
-                      {/* Top Image Placeholder */}
-                      <div className="resources-card-img-placeholder">
-                        <ImageIcon className="w-6 h-6 text-slate-400 opacity-40 mb-1" />
-                        <span className="text-[10px] text-slate-400 text-center px-1 font-medium">
-                          {article.placeholder}
-                        </span>
+                      {/* Top Card Image */}
+                      <div className="resources-card-img-box">
+                        <img
+                          src={article.image}
+                          alt={article.title}
+                          className="resources-card-img"
+                          loading="lazy"
+                        />
                         {/* Overlapping Icon Badge */}
                         <div className="resources-card-icon-badge">
-                          <IconComp className="w-4 h-4 text-slate-800" />
+                          <IconComp className="w-4 h-4 text-emerald-600" />
                         </div>
                       </div>
 
@@ -1482,29 +1410,11 @@ function Resources() {
 
               {/* Right: Tall Insurance Guides Promotional Image Panel */}
               <div className="resources-promo-panel">
-                <div className="resources-promo-badge">INSURANCE GUIDES</div>
-
-                <div className="flex flex-col items-center justify-center my-auto py-4 text-center">
-                  <ImageIcon className="w-8 h-8 text-slate-400 opacity-40 mb-2" />
-                  <span className="text-[11px] text-slate-500 font-semibold px-2">
-                    Insurance Protection
-                  </span>
-                  <span className="text-[9.5px] text-slate-400 mt-1">
-                    Shield &amp; Temple Backdrop
-                  </span>
-                </div>
-
-                <div className="resources-promo-categories">
-                  {insuranceCategoriesPromo.map((cat) => {
-                    const CatIcon = cat.icon;
-                    return (
-                      <div key={cat.label} className="resources-promo-cat-pill">
-                        <CatIcon className="w-3.5 h-3.5" style={{ color: cat.color }} />
-                        <span>{cat.label}</span>
-                      </div>
-                    );
-                  })}
-                </div>
+                <img
+                  src={insuranceGuidesImg}
+                  alt="Balaji Associates Insurance Guides"
+                  className="resources-promo-img"
+                />
               </div>
             </div>
           </div>
@@ -1514,41 +1424,11 @@ function Resources() {
       {/* 6. RESOURCE PROCESS BANNER */}
       <section className="resources-container">
         <div className="resources-process-banner">
-          {/* Left Photograph Placeholder */}
-          <div className="resources-process-img-left">
-            <ImageIcon className="w-6 h-6 text-slate-400 opacity-50 mb-1" />
-            <span className="text-[11px] text-slate-600 font-semibold">
-              Desk &amp; Financial Paperwork
-            </span>
-          </div>
-
-          {/* Central Connecting Icons */}
-          <div className="resources-process-icons-row">
-            <div className="resources-process-circle resources-process-circle-navy">
-              <CircleHelp className="w-5 h-5 text-white" />
-            </div>
-
-            <ArrowRight className="resources-process-arrow" />
-
-            <div className="resources-process-circle resources-process-circle-green">
-              <FileText className="w-5 h-5 text-white" />
-            </div>
-
-            <ArrowRight className="resources-process-arrow" />
-
-            <div className="resources-process-circle resources-process-circle-green">
-              <FolderKanban className="w-5 h-5 text-white" />
-            </div>
-          </div>
-
-          {/* Right Photograph Placeholder */}
-          <div className="resources-process-img-right">
-            <ImageIcon className="w-6 h-6 text-slate-400 opacity-50 mb-1" />
-            <span className="text-[11px] text-slate-600 font-semibold">
-              Professional on Laptop
-            </span>
-            <span className="text-[9.5px] text-slate-400">Madurai backdrop</span>
-          </div>
+          <img
+            src={processBannerImg}
+            alt="Balaji Associates Consultation and Documentation Process"
+            className="resources-process-banner-img"
+          />
         </div>
       </section>
 
@@ -1622,13 +1502,13 @@ function Resources() {
               <ArrowRight className="w-5 h-5" />
             </a>
 
-            {/* Right-Side Photo Placeholder */}
-            <div className="resources-bottom-cta-img-placeholder">
-              <ImageIcon className="w-6 h-6 text-white opacity-40 mb-1" />
-              <span className="text-[10px] text-white/70 font-semibold">
-                Financial Consultation
-              </span>
-              <span className="text-[9px] text-white/40">Madurai Temple Backdrop</span>
+            {/* Right-Side Photo */}
+            <div className="resources-bottom-cta-img-box">
+              <img
+                src={requirementCtaImg}
+                alt="Discuss Your Requirement with Balaji Associates"
+                className="resources-bottom-cta-img"
+              />
             </div>
           </div>
         </div>
@@ -1639,7 +1519,7 @@ function Resources() {
         <div className="resources-disclaimers-row">
           {/* Loan Disclaimer */}
           <div className="resources-disclaimer-card">
-            <ShieldCheck className="resources-disclaimer-shield" />
+            <ShieldCheck className="resources-disclaimer-shield text-sky-600" />
             <div className="resources-disclaimer-content">
               <h4 className="resources-disclaimer-heading">Loan Disclaimer</h4>
               <p className="resources-disclaimer-text">
@@ -1650,7 +1530,7 @@ function Resources() {
 
           {/* Insurance Disclaimer */}
           <div className="resources-disclaimer-card">
-            <ShieldCheck className="resources-disclaimer-shield" />
+            <ShieldCheck className="resources-disclaimer-shield text-slate-800" />
             <div className="resources-disclaimer-content">
               <h4 className="resources-disclaimer-heading">Insurance Disclaimer</h4>
               <p className="resources-disclaimer-text">

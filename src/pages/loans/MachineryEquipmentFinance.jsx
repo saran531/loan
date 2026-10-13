@@ -21,9 +21,19 @@ import {
   Cpu,
   Wallet,
   Users,
-  Scale,
-  Image as ImageIcon
+  Scale
 } from 'lucide-react';
+
+import heroMachineryFinance from '../../assets/images/loan/Machinery&Equipment/01_hero-machinery-finance.png';
+import machineryPurchaseFinance from '../../assets/images/loan/Machinery&Equipment/02_machinery-purchase-finance.png';
+import assetBackedFinance from '../../assets/images/loan/Machinery&Equipment/03_asset-backed-finance.png';
+import documentsMachinery from '../../assets/images/loan/Machinery&Equipment/04_documents-machinery.png';
+import lenderEvaluationBackground from '../../assets/images/loan/Machinery&Equipment/05_lender-evaluation-background.png';
+import consultationMeeting from '../../assets/images/loan/Machinery&Equipment/16_consultation-meeting.png';
+import relatedBusinessMsmeLoans from '../../assets/images/loan/Machinery&Equipment/18_related-business-msme-loans.png';
+import relatedWorkingCapitalFinance from '../../assets/images/loan/Machinery&Equipment/19_related-working-capital-finance.png';
+import relatedMortgageLap from '../../assets/images/loan/Machinery&Equipment/20_related-mortgage-lap.png';
+import footerFactory from '../../assets/images/loan/Machinery&Equipment/22_footer-factory.png';
 
 const faqList = [
   {
@@ -114,6 +124,14 @@ function MachineryEquipmentFinance() {
           justify-content: center;
           position: relative;
           overflow: hidden;
+        }
+
+        .mef-section-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         .mef-placeholder-icon {
@@ -279,6 +297,14 @@ function MachineryEquipmentFinance() {
           display: flex;
           align-items: center;
           justify-content: center;
+        }
+
+        .mef-hero-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         .mef-floating-card {
@@ -745,6 +771,15 @@ function MachineryEquipmentFinance() {
           display: flex;
           align-items: center;
           justify-content: center;
+          overflow: hidden;
+        }
+
+        .mef-related-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         .mef-related-footer {
@@ -840,12 +875,17 @@ function MachineryEquipmentFinance() {
           background-color: rgba(255, 255, 255, 0.05);
           border: 1px solid rgba(255, 255, 255, 0.12);
           border-radius: 16px;
-          min-height: 200px;
-          height: 100%;
+          height: 180px;
           width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          overflow: hidden;
+        }
+
+        .mef-bottom-cta-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         /* 12. DISCLAIMER / INFORMATION BAR */
@@ -1097,27 +1137,11 @@ function MachineryEquipmentFinance() {
 
             <div className="mef-hero-right">
               <div className="mef-hero-visual-card">
-                <ImageIcon className="mef-placeholder-icon" />
-
-                <div className="mef-floating-card mef-float-1">
-                  <Settings className="mef-floating-card-icon" />
-                  <span className="mef-floating-card-label">Machinery Finance</span>
-                </div>
-
-                <div className="mef-floating-card mef-float-2">
-                  <Building2 className="mef-floating-card-icon" />
-                  <span className="mef-floating-card-label">MSME</span>
-                </div>
-
-                <div className="mef-floating-card mef-float-3">
-                  <Wrench className="mef-floating-card-icon" />
-                  <span className="mef-floating-card-label">Equipment Finance</span>
-                </div>
-
-                <div className="mef-floating-card mef-float-4">
-                  <FileText className="mef-floating-card-icon" />
-                  <span className="mef-floating-card-label">Asset-Backed Finance</span>
-                </div>
+                <img
+                  src={heroMachineryFinance}
+                  alt="Machinery Purchase & Equipment Finance Assistance in Madurai"
+                  className="mef-hero-img"
+                />
               </div>
             </div>
           </div>
@@ -1134,7 +1158,11 @@ function MachineryEquipmentFinance() {
 
           <div className="mef-purchase-grid">
             <div className="mef-img-placeholder">
-              <ImageIcon className="mef-placeholder-icon" />
+              <img
+                src={machineryPurchaseFinance}
+                alt="Machinery Purchase Finance"
+                className="mef-section-img"
+              />
             </div>
 
             <div className="mef-purchase-content">
@@ -1216,7 +1244,11 @@ function MachineryEquipmentFinance() {
 
             <div className="mef-mortgage-right-wrap">
               <div className="mef-img-placeholder" style={{ borderColor: '#BBF7D0' }}>
-                <ImageIcon className="mef-placeholder-icon" />
+                <img
+                  src={assetBackedFinance}
+                  alt="Machinery Mortgage and Asset-Backed Finance"
+                  className="mef-section-img"
+                />
               </div>
 
               <div className="mef-mortgage-process-card">
@@ -1322,7 +1354,11 @@ function MachineryEquipmentFinance() {
             </div>
 
             <div className="mef-img-placeholder">
-              <ImageIcon className="mef-placeholder-icon" />
+              <img
+                src={lenderEvaluationBackground}
+                alt="What Lenders Evaluate for Machinery Finance"
+                className="mef-section-img"
+              />
             </div>
           </div>
         </div>
@@ -1342,7 +1378,11 @@ function MachineryEquipmentFinance() {
 
           <div className="mef-docs-grid">
             <div className="mef-img-placeholder">
-              <ImageIcon className="mef-placeholder-icon" />
+              <img
+                src={documentsMachinery}
+                alt="Documents required for machinery and equipment finance"
+                className="mef-section-img"
+              />
             </div>
 
             <div className="mef-docs-content">
@@ -1391,7 +1431,11 @@ function MachineryEquipmentFinance() {
 
           <div className="mef-helps-grid">
             <div className="mef-img-placeholder">
-              <ImageIcon className="mef-placeholder-icon" />
+              <img
+                src={consultationMeeting}
+                alt="How Balaji Associates Helps with Machinery Finance"
+                className="mef-section-img"
+              />
             </div>
 
             <div className="mef-helps-content">
@@ -1501,7 +1545,11 @@ function MachineryEquipmentFinance() {
               <div className="mef-related-cards">
                 <Link to="/business-msme-loans/" className="mef-related-card">
                   <div className="mef-related-img-holder">
-                    <ImageIcon className="mef-placeholder-icon" style={{ width: '22px', height: '22px' }} />
+                    <img
+                      src={relatedBusinessMsmeLoans}
+                      alt="Business & MSME Loans"
+                      className="mef-related-img"
+                    />
                   </div>
                   <div className="mef-related-footer">
                     <span className="mef-related-title">Business &amp; MSME Loans</span>
@@ -1511,7 +1559,11 @@ function MachineryEquipmentFinance() {
 
                 <Link to="/working-capital-finance/" className="mef-related-card">
                   <div className="mef-related-img-holder">
-                    <ImageIcon className="mef-placeholder-icon" style={{ width: '22px', height: '22px' }} />
+                    <img
+                      src={relatedWorkingCapitalFinance}
+                      alt="Working Capital Finance"
+                      className="mef-related-img"
+                    />
                   </div>
                   <div className="mef-related-footer">
                     <span className="mef-related-title">Working Capital Finance</span>
@@ -1521,7 +1573,11 @@ function MachineryEquipmentFinance() {
 
                 <Link to="/mortgage-loan-against-property/" className="mef-related-card">
                   <div className="mef-related-img-holder">
-                    <ImageIcon className="mef-placeholder-icon" style={{ width: '22px', height: '22px' }} />
+                    <img
+                      src={relatedMortgageLap}
+                      alt="Mortgage & LAP"
+                      className="mef-related-img"
+                    />
                   </div>
                   <div className="mef-related-footer">
                     <span className="mef-related-title">Mortgage &amp; LAP</span>
@@ -1567,7 +1623,11 @@ function MachineryEquipmentFinance() {
 
             <div className="mef-bottom-cta-visual">
               <div className="mef-bottom-cta-img-placeholder">
-                <ImageIcon className="mef-placeholder-icon" style={{ opacity: 0.3 }} />
+                <img
+                  src={footerFactory}
+                  alt="Machinery finance consultation in industrial setting"
+                  className="mef-bottom-cta-img"
+                />
               </div>
             </div>
           </div>

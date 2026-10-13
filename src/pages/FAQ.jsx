@@ -26,9 +26,15 @@ import {
   Plane,
   Landmark,
   ChartNoAxesCombined,
-  GraduationCap,
-  Image as ImageIcon
+  GraduationCap
 } from 'lucide-react';
+
+// FAQ Page Image Assets
+import heroImg from '../assets/images/FAQs/FAQ_hero_section_image.png';
+import loanQuestionsImg from '../assets/images/FAQs/Loan_Questions.png';
+import insuranceQuestionsImg from '../assets/images/FAQs/Insurance_Questions.png';
+import documentsBannerImg from '../assets/images/FAQs/documents.png';
+import requirementCtaImg from '../assets/images/FAQs/Requirement.png';
 
 const loanFaqs = [
   {
@@ -335,7 +341,7 @@ function FAQ() {
           box-shadow: 0 6px 18px rgba(217, 119, 6, 0.4);
         }
 
-        /* Hero Right Visual with Floating Cards */
+        /* Hero Right Visual */
         .faq-hero-right {
           position: relative;
           display: flex;
@@ -346,60 +352,23 @@ function FAQ() {
         .faq-hero-img-box {
           position: relative;
           width: 100%;
-          min-height: 320px;
           border-radius: 20px;
           overflow: hidden;
-          background: rgba(255, 255, 255, 0.05);
-          border: 1px solid rgba(255, 255, 255, 0.15);
+          background: transparent;
+          border: none;
           box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
-          text-align: center;
-          padding: 24px;
         }
 
-        .faq-hero-float-card {
-          position: absolute;
-          z-index: 5;
-          background-color: #FFFFFF;
-          border: 1px solid rgba(226, 232, 240, 0.9);
-          border-radius: 12px;
-          padding: 8px 14px;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
-          white-space: nowrap;
-          font-size: 12px;
-          font-weight: 700;
-          color: #0A1B3A;
-          transition: transform 0.2s ease;
-        }
-
-        .faq-hero-float-card:hover {
-          transform: translateY(-2px);
-        }
-
-        .faq-float-loan {
-          top: 18px;
-          right: 20px;
-        }
-
-        .faq-float-insurance {
-          top: 72px;
-          right: 20px;
-        }
-
-        .faq-float-answers {
-          top: 126px;
-          right: 20px;
-        }
-
-        .faq-float-madurai {
-          bottom: 24px;
-          right: 20px;
+        .faq-hero-img {
+          width: 100%;
+          height: auto;
+          max-height: 400px;
+          object-fit: cover;
+          display: block;
+          border-radius: 20px;
         }
 
         /* CATEGORY NAVIGATION & SEARCH BAR */
@@ -549,17 +518,24 @@ function FAQ() {
 
         .faq-panel-header-img {
           width: 100%;
-          height: 120px;
+          height: 145px;
           border-radius: 12px;
-          background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+          background: #F8FAFC;
           border: 1px solid #E2E8F0;
+          overflow: hidden;
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
-          text-align: center;
           margin-bottom: 18px;
-          padding: 12px;
+          padding: 0;
+        }
+
+        .faq-panel-top-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         /* Accordion List */
@@ -703,61 +679,22 @@ function FAQ() {
 
         /* RESOURCE PROCESS BANNER */
         .faq-process-banner {
-          background: linear-gradient(135deg, #F8FAFC 0%, #FFFFFF 100%);
+          background: #FFFFFF;
           border: 1px solid #E2E8F0;
           border-radius: 16px;
-          padding: 18px 24px;
+          overflow: hidden;
           box-shadow: 0 4px 16px rgba(10, 27, 58, 0.03);
-          display: grid;
-          grid-template-columns: 1fr auto 1fr;
-          align-items: center;
-          gap: 24px;
           margin: 24px 0 20px 0;
+          padding: 0;
         }
 
-        .faq-process-img-box {
-          background: linear-gradient(135deg, #F1F5F9 0%, #E2E8F0 100%);
-          border: 1px solid #E2E8F0;
-          border-radius: 12px;
-          height: 110px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          padding: 10px;
-        }
-
-        .faq-process-icons-row {
-          display: flex;
-          align-items: center;
-          gap: 16px;
-        }
-
-        .faq-process-circle {
-          width: 44px;
-          height: 44px;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          box-shadow: 0 4px 12px rgba(10, 27, 58, 0.1);
-        }
-
-        .faq-process-circle-navy {
-          background-color: #0A1B3A;
-          color: #FFFFFF;
-        }
-
-        .faq-process-circle-green {
-          background-color: #16A34A;
-          color: #FFFFFF;
-        }
-
-        .faq-process-arrow {
-          width: 18px;
-          height: 18px;
-          color: #0284C7;
+        .faq-process-banner-img {
+          width: 100%;
+          height: auto;
+          max-height: 280px;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         /* DISCLAIMER STRIPS */
@@ -822,9 +759,9 @@ function FAQ() {
         .faq-bottom-cta-card {
           background: linear-gradient(135deg, #071329 0%, #0A1B3A 55%, #0F2856 100%);
           border-radius: 18px;
-          padding: 24px 32px;
+          padding: 0 0 0 32px;
           display: grid;
-          grid-template-columns: auto 1fr auto 240px;
+          grid-template-columns: auto 1fr auto 340px;
           align-items: center;
           gap: 24px;
           box-shadow: 0 16px 40px rgba(10, 27, 58, 0.2);
@@ -887,16 +824,22 @@ function FAQ() {
         }
 
         .faq-bottom-cta-img-box {
-          background: rgba(255, 255, 255, 0.08);
-          border: 1px dashed rgba(255, 255, 255, 0.25);
-          border-radius: 12px;
-          height: 90px;
+          height: 140px;
+          overflow: hidden;
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
-          text-align: center;
-          padding: 8px;
+          border: none;
+          background: transparent;
+          padding: 0;
+        }
+
+        .faq-bottom-cta-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: right center;
+          display: block;
         }
 
         /* RESPONSIVE BREAKPOINTS */
@@ -1063,41 +1006,14 @@ function FAQ() {
               </a>
             </div>
 
-            {/* Right Column: Hero Visual with 4 Floating Cards */}
+            {/* Right Column: Hero Visual with Madurai Consultation Scene */}
             <div className="faq-hero-right">
-              {/* Floating Card 1: Loan Questions */}
-              <div className="faq-hero-float-card faq-float-loan">
-                <CircleHelp className="w-4 h-4 text-emerald-600" />
-                <span>Loan Questions</span>
-              </div>
-
-              {/* Floating Card 2: Insurance Questions */}
-              <div className="faq-hero-float-card faq-float-insurance">
-                <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                <span>Insurance Questions</span>
-              </div>
-
-              {/* Floating Card 3: Clear Answers */}
-              <div className="faq-hero-float-card faq-float-answers">
-                <ClipboardCheck className="w-4 h-4 text-amber-500" />
-                <span>Clear Answers</span>
-              </div>
-
-              {/* Floating Card 4: Madurai */}
-              <div className="faq-hero-float-card faq-float-madurai">
-                <MapPin className="w-4 h-4 text-red-500" />
-                <span>Madurai</span>
-              </div>
-
-              {/* Dedicated Hero Image Placeholder */}
               <div className="faq-hero-img-box">
-                <ImageIcon className="w-10 h-10 text-slate-400 mb-2 opacity-50" />
-                <span className="text-white text-xs font-semibold">
-                  Family &amp; Consultant Financial Discussion
-                </span>
-                <span className="text-slate-300 text-[11px] mt-1">
-                  Laptop and documents with Madurai temple backdrop
-                </span>
+                <img
+                  src={heroImg}
+                  alt="Common Loan & Insurance Questions — Balaji Associates Financial Guidance"
+                  className="faq-hero-img"
+                />
               </div>
             </div>
           </div>
@@ -1177,13 +1093,13 @@ function FAQ() {
             {/* LEFT PANEL: LOAN QUESTIONS */}
             {showLoanColumn && (
               <div className="faq-panel">
-                {/* Header Image Placeholder */}
+                {/* Header Image */}
                 <div className="faq-panel-header-img">
-                  <ImageIcon className="w-7 h-7 text-slate-400 opacity-40 mb-1" />
-                  <span className="text-xs text-slate-600 font-semibold">
-                    Residential House Model &amp; Coins
-                  </span>
-                  <span className="text-[10px] text-slate-400">Financial Documents</span>
+                  <img
+                    src={loanQuestionsImg}
+                    alt="Loan Questions — Residential House Model and Coins"
+                    className="faq-panel-top-img"
+                  />
                 </div>
 
                 {/* Panel Title */}
@@ -1254,13 +1170,13 @@ function FAQ() {
             {/* RIGHT PANEL: INSURANCE QUESTIONS */}
             {showInsuranceColumn && (
               <div className="faq-panel">
-                {/* Header Image Placeholder */}
+                {/* Header Image */}
                 <div className="faq-panel-header-img">
-                  <ImageIcon className="w-7 h-7 text-slate-400 opacity-40 mb-1" />
-                  <span className="text-xs text-slate-600 font-semibold">
-                    Travel, Luggage &amp; Family Protection
-                  </span>
-                  <span className="text-[10px] text-slate-400">Insurance Concepts</span>
+                  <img
+                    src={insuranceQuestionsImg}
+                    alt="Insurance Questions — Family and Travel Protection"
+                    className="faq-panel-top-img"
+                  />
                 </div>
 
                 {/* Panel Title */}
@@ -1331,44 +1247,14 @@ function FAQ() {
         </div>
       </section>
 
-      {/* 5. RESOURCE PROCESS BANNER */}
+      {/* 5. FAQ VISUAL / EXPLANATION BANNER */}
       <section className="faq-container">
         <div className="faq-process-banner">
-          {/* Left Photograph Placeholder */}
-          <div className="faq-process-img-box">
-            <ImageIcon className="w-6 h-6 text-slate-400 opacity-50 mb-1" />
-            <span className="text-[11px] text-slate-600 font-semibold">
-              Laptop Search &amp; House Model
-            </span>
-          </div>
-
-          {/* Central Connecting Icons */}
-          <div className="faq-process-icons-row">
-            <div className="faq-process-circle faq-process-circle-navy">
-              <CircleHelp className="w-5 h-5 text-white" />
-            </div>
-
-            <ArrowRight className="faq-process-arrow" />
-
-            <div className="faq-process-circle faq-process-circle-green">
-              <FileText className="w-5 h-5 text-white" />
-            </div>
-
-            <ArrowRight className="faq-process-arrow" />
-
-            <div className="faq-process-circle faq-process-circle-navy">
-              <House className="w-5 h-5 text-white" />
-            </div>
-          </div>
-
-          {/* Right Photograph Placeholder */}
-          <div className="faq-process-img-box">
-            <ImageIcon className="w-6 h-6 text-slate-400 opacity-50 mb-1" />
-            <span className="text-[11px] text-slate-600 font-semibold">
-              Professional Woman on Laptop
-            </span>
-            <span className="text-[9.5px] text-slate-400">Madurai backdrop</span>
-          </div>
+          <img
+            src={documentsBannerImg}
+            alt="Balaji Associates Loan & Insurance Guidance and Search Process"
+            className="faq-process-banner-img"
+          />
         </div>
       </section>
 
@@ -1427,13 +1313,13 @@ function FAQ() {
               <ArrowRight className="w-5 h-5" />
             </a>
 
-            {/* Right-Side Photo Placeholder */}
+            {/* Right-Side Consultation & Temple Visual Banner */}
             <div className="faq-bottom-cta-img-box">
-              <ImageIcon className="w-6 h-6 text-white opacity-40 mb-1" />
-              <span className="text-[10px] text-white/70 font-semibold">
-                Financial Consultation
-              </span>
-              <span className="text-[9px] text-white/40">Madurai Temple Backdrop</span>
+              <img
+                src={requirementCtaImg}
+                alt="Discuss Your Requirement with Balaji Associates"
+                className="faq-bottom-cta-img"
+              />
             </div>
           </div>
         </div>

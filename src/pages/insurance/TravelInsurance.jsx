@@ -30,6 +30,17 @@ import {
   Image as ImageIcon
 } from 'lucide-react';
 
+// Travel Insurance images
+import heroRightImg from '../../assets/images/Insurance/Travel/Travel_insurance_right_side_image.png';
+import intlTravellersImg from '../../assets/images/Insurance/Travel/International_travellers.png';
+import domesticTravellersImg from '../../assets/images/Insurance/Travel/Domestic_travellers.png';
+import familiesTravellersImg from '../../assets/images/Insurance/Travel/Families_travelling.png';
+import studentsTravellersImg from '../../assets/images/Insurance/Travel/Students_travelling.png';
+import frequentTravellersImg from '../../assets/images/Insurance/Travel/Frequent_travellers.png';
+import destinationImg from '../../assets/images/Insurance/Travel/Destination.png';
+import howBalajiImg from '../../assets/images/Insurance/Travel/How_Balaji.png';
+import ctaRequirementsImg from '../../assets/images/Insurance/Travel/Imsurance_Requirements_leftside.png';
+
 const faqList = [
   {
     question: 'Is travel insurance mandatory for every international trip?',
@@ -185,68 +196,102 @@ function TravelInsurance() {
 
         /* 2. HERO SECTION */
         .ti-hero-section {
-          padding: 24px 0 44px;
-          background: linear-gradient(180deg, rgba(240, 249, 255, 0.5) 0%, rgba(255, 255, 255, 1) 100%);
+          position: relative;
+          background: #041B38;
+          color: #FFFFFF;
+          overflow: hidden;
+          min-height: 460px;
+          display: flex;
+          align-items: center;
         }
 
-        .ti-hero-grid {
-          display: grid;
-          grid-template-columns: 1.05fr 0.95fr;
-          gap: 40px;
+        .ti-hero-visual-wrap {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          height: 100%;
+          width: 58%;
+          min-width: 660px;
+          max-width: 1250px;
+          display: flex;
           align-items: center;
+          justify-content: flex-end;
+          z-index: 1;
+          pointer-events: none;
+        }
+
+        .ti-hero-img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          object-position: right center;
+          display: block;
+        }
+
+        .ti-hero-gradient-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          width: 280px;
+          background: linear-gradient(to right, #041B38 0%, rgba(4, 27, 56, 0.85) 35%, rgba(4, 27, 56, 0) 100%);
+          pointer-events: none;
+          z-index: 2;
+        }
+
+        .ti-hero-container {
+          position: relative;
+          z-index: 3;
+          width: 100%;
+          padding-top: 48px;
+          padding-bottom: 48px;
+        }
+
+        .ti-hero-content {
+          max-width: 520px;
         }
 
         .ti-hero-top-row {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          margin-bottom: 20px;
+          margin-bottom: 18px;
         }
 
         .ti-hero-badge {
           display: inline-flex;
           align-items: center;
           gap: 6px;
-          padding: 6px 14px;
-          background-color: #FFFBEB;
-          border: 1px solid #FCD34D;
-          border-radius: 50px;
-          font-size: 11.5px;
+          font-size: 13px;
           font-weight: 700;
-          color: #B45309;
+          color: #ECA822;
           letter-spacing: 0.5px;
           text-transform: uppercase;
         }
 
-        .ti-hero-dot-grid {
-          display: grid;
-          grid-template-columns: repeat(5, 4px);
-          gap: 6px;
-          opacity: 0.7;
-        }
-
-        .ti-hero-dot {
-          width: 4px;
-          height: 4px;
-          background-color: #FBBF24;
-          border-radius: 50%;
-        }
-
         .ti-hero-title {
-          font-size: 40px;
+          font-size: 38px;
           font-weight: 800;
-          color: #0A1B3A;
-          line-height: 1.15;
-          margin-bottom: 20px;
+          color: #FFFFFF;
+          line-height: 1.18;
+          margin-bottom: 18px;
           letter-spacing: -0.5px;
           font-family: 'DM Serif Display', Georgia, serif;
+        }
+
+        .ti-hero-content .ti-text-p {
+          color: #CBD5E1;
+          font-size: 14.5px;
+          line-height: 1.65;
+          margin-bottom: 14px;
         }
 
         .ti-hero-actions {
           display: flex;
           align-items: center;
           gap: 16px;
-          margin-top: 28px;
+          margin-top: 26px;
           flex-wrap: wrap;
         }
 
@@ -256,9 +301,9 @@ function TravelInsurance() {
           gap: 10px;
           background: linear-gradient(135deg, #ECA822 0%, #D97706 100%);
           color: #FFFFFF;
-          font-size: 14.5px;
+          font-size: 14px;
           font-weight: 700;
-          padding: 13px 26px;
+          padding: 12px 24px;
           border-radius: 50px;
           text-decoration: none;
           box-shadow: 0 4px 14px rgba(217, 119, 6, 0.35);
@@ -268,54 +313,6 @@ function TravelInsurance() {
         .ti-btn-primary:hover {
           transform: translateY(-2px);
           box-shadow: 0 6px 18px rgba(217, 119, 6, 0.45);
-        }
-
-        .ti-hero-visual-card {
-          position: relative;
-          min-height: 420px;
-          height: 100%;
-          background: linear-gradient(135deg, #F1F5F9 0%, #E2E8F0 100%);
-          border: 2px solid #FCD34D;
-          border-radius: 28px;
-          overflow: hidden;
-          box-shadow: 0 16px 36px rgba(0, 0, 0, 0.06);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        .ti-floating-stack {
-          position: absolute;
-          top: 24px;
-          right: 20px;
-          display: flex;
-          flex-direction: column;
-          gap: 9px;
-          z-index: 2;
-        }
-
-        .ti-floating-card {
-          background: #FFFFFF;
-          border: 1px solid #E2E8F0;
-          border-radius: 12px;
-          padding: 8px 14px;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
-        }
-
-        .ti-floating-icon {
-          width: 17px;
-          height: 17px;
-          color: #003B73;
-        }
-
-        .ti-floating-label {
-          font-size: 11px;
-          font-weight: 700;
-          color: #0A1B3A;
-          white-space: nowrap;
         }
 
         /* 3. SECTION — WHO MAY CONSIDER TRAVEL INSURANCE */
@@ -328,7 +325,7 @@ function TravelInsurance() {
         .ti-consider-card {
           background: #FFFFFF;
           border: 1px solid #E2E8F0;
-          border-radius: 16px;
+          border-radius: 14px;
           overflow: hidden;
           display: flex;
           flex-direction: column;
@@ -342,16 +339,16 @@ function TravelInsurance() {
         }
 
         .ti-consider-top {
-          padding: 16px 14px 12px;
+          padding: 14px 12px 10px;
           display: flex;
           align-items: flex-start;
           gap: 10px;
-          min-height: 70px;
+          min-height: 64px;
         }
 
         .ti-consider-icon-badge {
-          width: 34px;
-          height: 34px;
+          width: 32px;
+          height: 32px;
           border-radius: 50%;
           background: #ECFDF5;
           color: #059669;
@@ -362,7 +359,7 @@ function TravelInsurance() {
         }
 
         .ti-consider-title {
-          font-size: 12px;
+          font-size: 11.5px;
           font-weight: 700;
           color: #0A1B3A;
           line-height: 1.35;
@@ -370,13 +367,17 @@ function TravelInsurance() {
         }
 
         .ti-consider-img-box {
-          height: 120px;
+          height: 118px;
+          width: 100%;
+          overflow: hidden;
           background: #F8FAFC;
-          border-top: 1px solid #E2E8F0;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
+        }
+
+        .ti-consider-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         /* 4. SECTION — WHAT TO CHECK */
@@ -511,18 +512,34 @@ function TravelInsurance() {
         .ti-two-col-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 28px;
+          gap: 36px;
+          align-items: center;
         }
 
         .ti-col-card {
-          background: #FFFFFF;
-          border: 1px solid #E2E8F0;
-          border-radius: 18px;
-          padding: 24px;
-          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
+          display: grid;
+          grid-template-columns: 1.15fr 0.85fr;
+          gap: 16px;
+          align-items: center;
+          background: transparent;
+          border: none;
+          padding: 0;
+          box-shadow: none;
+        }
+
+        .ti-col-img-wrap {
+          width: 100%;
+          height: 125px;
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .ti-col-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         /* 7. SECTION — FAQS & RIGHT INFOGRAPHIC */
@@ -761,35 +778,41 @@ function TravelInsurance() {
 
         /* 10. BOTTOM CTA BANNER */
         .ti-bottom-cta-section {
-          padding: 24px 0 16px;
-        }
-
-        .ti-bottom-cta-card {
-          background: linear-gradient(135deg, #0A1B3A 0%, #002D62 100%);
-          border-radius: 24px;
           padding: 0;
-          display: grid;
-          grid-template-columns: 0.9fr 1.1fr;
-          align-items: center;
-          box-shadow: 0 16px 36px rgba(10, 27, 58, 0.25);
-          position: relative;
+          background: #041B38;
           overflow: hidden;
         }
 
-        .ti-bottom-cta-img-col {
-          height: 200px;
-          background: #1E293B;
-          display: flex;
-          flex-direction: column;
+        .ti-bottom-cta-card {
+          background: #041B38;
+          border-radius: 0;
+          padding: 0;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
           align-items: center;
-          justify-content: center;
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+        }
+
+        .ti-bottom-cta-img-col {
+          height: 165px;
+          overflow: hidden;
+          background: #041B38;
+        }
+
+        .ti-bottom-cta-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         .ti-bottom-cta-content {
-          padding: 34px 44px;
+          padding: 24px 44px;
           display: flex;
           flex-direction: column;
-          gap: 16px;
+          gap: 14px;
         }
 
         .ti-bottom-cta-title {
@@ -883,13 +906,70 @@ function TravelInsurance() {
         }
 
         /* Responsive Breakpoints */
+        @media (max-width: 1080px) {
+          .ti-hero-content {
+            max-width: 440px;
+          }
+
+          .ti-hero-visual-wrap {
+            width: 55%;
+            min-width: 540px;
+          }
+        }
+
+        @media (max-width: 860px) {
+          .ti-hero-section {
+            flex-direction: column;
+            align-items: stretch;
+            min-height: auto;
+          }
+
+          .ti-hero-container {
+            padding-top: 36px;
+            padding-bottom: 24px;
+          }
+
+          .ti-hero-content {
+            max-width: 100%;
+          }
+
+          .ti-hero-visual-wrap {
+            position: relative;
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
+            height: auto;
+            aspect-ratio: 1870 / 841;
+          }
+
+          .ti-hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+          }
+
+          .ti-hero-gradient-overlay {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: auto;
+            width: 100%;
+            height: 50px;
+            background: linear-gradient(to bottom, #041B38 0%, rgba(4, 27, 56, 0) 100%);
+          }
+        }
+
         @media (max-width: 992px) {
-          .ti-hero-grid,
           .ti-two-col-grid,
           .ti-faq-split-grid,
           .ti-bottom-cta-card {
             grid-template-columns: 1fr;
             gap: 28px;
+          }
+
+          .ti-bottom-cta-img-col {
+            height: 180px;
           }
 
           .ti-consider-5-grid {
@@ -946,6 +1026,15 @@ function TravelInsurance() {
 
           .ti-check-10-grid {
             grid-template-columns: 1fr;
+          }
+
+          .ti-col-card {
+            grid-template-columns: 1fr;
+            gap: 14px;
+          }
+
+          .ti-col-img-wrap {
+            height: 150px;
           }
 
           .ti-policy-note-banner {
@@ -1068,77 +1157,45 @@ function TravelInsurance() {
       </div>
 
       {/* 2. HERO SECTION */}
-      <section className="ti-section ti-hero-section">
-        <div className="ti-container">
-          <div className="ti-hero-grid">
-            <div className="ti-hero-left">
-              <div className="ti-hero-top-row">
-                <div className="ti-hero-badge">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-                  <span>TRAVEL INSURANCE</span>
-                </div>
-                <div className="ti-hero-dot-grid" aria-hidden="true">
-                  {[...Array(20)].map((_, i) => (
-                    <div key={i} className="ti-hero-dot" />
-                  ))}
-                </div>
-              </div>
+      <section className="ti-hero-section">
+        {/* Right side hero visual spanning to the right edge */}
+        <div className="ti-hero-visual-wrap">
+          <img
+            src={heroRightImg}
+            alt="Travel Insurance Assistance in Madurai"
+            className="ti-hero-img"
+          />
+          <div className="ti-hero-gradient-overlay" />
+        </div>
 
-              <h1 className="ti-hero-title">
-                Travel Insurance<br />
-                Assistance in Madurai
-              </h1>
-
-              <p className="ti-text-p">
-                Travel plans can be disrupted by illness, medical emergencies, baggage issues, delays or other unexpected events. Travel insurance can provide protection for specified risks according to the policy, but coverage varies widely by destination, trip duration and plan.
-              </p>
-
-              <p className="ti-text-p">
-                Balaji Associates helps travellers understand the cover questions to ask before purchasing a domestic or international travel policy.
-              </p>
-
-              <div className="ti-hero-actions">
-                <a href="tel:9842817644" className="ti-btn-primary">
-                  <Phone className="w-4 h-4" />
-                  <span>Discuss Your Insurance Requirement | Call / WhatsApp 98428 17644</span>
-                  <ArrowRight className="w-4 h-4" />
-                </a>
+        {/* Left side text content aligned within the standard page container */}
+        <div className="ti-container ti-hero-container">
+          <div className="ti-hero-content">
+            <div className="ti-hero-top-row">
+              <div className="ti-hero-badge">
+                <span>&gt; TRAVEL INSURANCE</span>
               </div>
             </div>
 
-            <div className="ti-hero-right">
-              <div className="ti-hero-visual-card">
-                <ImageIcon className="ti-placeholder-icon" />
-                <span className="ti-placeholder-label">Traveller in Airport &amp; Madurai Temple</span>
+            <h1 className="ti-hero-title">
+              Travel Insurance<br />
+              Assistance in Madurai
+            </h1>
 
-                {/* 5 Floating Cards */}
-                <div className="ti-floating-stack">
-                  <div className="ti-floating-card">
-                    <Plane className="ti-floating-icon" />
-                    <span className="ti-floating-label">Travel Insurance</span>
-                  </div>
+            <p className="ti-text-p">
+              Travel plans can be disrupted by illness, medical emergencies, baggage issues, delays or other unexpected events. Travel insurance can provide protection for specified risks according to the policy, but coverage varies widely by destination, trip duration and plan.
+            </p>
 
-                  <div className="ti-floating-card">
-                    <Globe className="ti-floating-icon" />
-                    <span className="ti-floating-label">International Travel</span>
-                  </div>
+            <p className="ti-text-p">
+              Balaji Associates helps travellers understand the cover questions to ask before purchasing a domestic or international travel policy.
+            </p>
 
-                  <div className="ti-floating-card">
-                    <MapPin className="ti-floating-icon" />
-                    <span className="ti-floating-label">Domestic Travel</span>
-                  </div>
-
-                  <div className="ti-floating-card">
-                    <ShieldCheck className="ti-floating-icon" />
-                    <span className="ti-floating-label">Medical</span>
-                  </div>
-
-                  <div className="ti-floating-card">
-                    <Luggage className="ti-floating-icon" />
-                    <span className="ti-floating-label">Trip-related Risks</span>
-                  </div>
-                </div>
-              </div>
+            <div className="ti-hero-actions">
+              <a href="tel:9842817644" className="ti-btn-primary">
+                <Phone className="w-4 h-4" />
+                <span>Discuss Your Insurance Requirement | Call / WhatsApp 98428 17644</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </div>
@@ -1165,8 +1222,11 @@ function TravelInsurance() {
                 <h3 className="ti-consider-title">International travellers</h3>
               </div>
               <div className="ti-consider-img-box">
-                <ImageIcon className="ti-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="ti-placeholder-label">Airport Traveller</span>
+                <img
+                  src={intlTravellersImg}
+                  alt="International travellers"
+                  className="ti-consider-img"
+                />
               </div>
             </div>
 
@@ -1179,8 +1239,11 @@ function TravelInsurance() {
                 <h3 className="ti-consider-title">Domestic travellers where applicable</h3>
               </div>
               <div className="ti-consider-img-box">
-                <ImageIcon className="ti-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="ti-placeholder-label">Domestic Trip</span>
+                <img
+                  src={domesticTravellersImg}
+                  alt="Domestic travellers where applicable"
+                  className="ti-consider-img"
+                />
               </div>
             </div>
 
@@ -1193,8 +1256,11 @@ function TravelInsurance() {
                 <h3 className="ti-consider-title">Families travelling together</h3>
               </div>
               <div className="ti-consider-img-box">
-                <ImageIcon className="ti-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="ti-placeholder-label">Family Luggage</span>
+                <img
+                  src={familiesTravellersImg}
+                  alt="Families travelling together"
+                  className="ti-consider-img"
+                />
               </div>
             </div>
 
@@ -1207,8 +1273,11 @@ function TravelInsurance() {
                 <h3 className="ti-consider-title">Students travelling abroad where suitable products are available</h3>
               </div>
               <div className="ti-consider-img-box">
-                <ImageIcon className="ti-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="ti-placeholder-label">Student Abroad</span>
+                <img
+                  src={studentsTravellersImg}
+                  alt="Students travelling abroad where suitable products are available"
+                  className="ti-consider-img"
+                />
               </div>
             </div>
 
@@ -1221,8 +1290,11 @@ function TravelInsurance() {
                 <h3 className="ti-consider-title">Frequent travellers where relevant plans exist</h3>
               </div>
               <div className="ti-consider-img-box">
-                <ImageIcon className="ti-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="ti-placeholder-label">Frequent Business</span>
+                <img
+                  src={frequentTravellersImg}
+                  alt="Frequent travellers where relevant plans exist"
+                  className="ti-consider-img"
+                />
               </div>
             </div>
           </div>
@@ -1379,37 +1451,41 @@ function TravelInsurance() {
           <div className="ti-two-col-grid">
             {/* Left: Destination & Visa Requirements */}
             <div className="ti-col-card">
-              <div>
-                <div className="ti-header-row" style={{ marginBottom: '12px' }}>
-                  <h2 className="ti-heading" style={{ fontSize: '24px' }}>Destination &amp; Visa Requirements</h2>
-                  <div className="ti-gold-line"></div>
+              <div className="ti-col-text-wrap">
+                <div className="ti-header-row" style={{ marginBottom: '10px' }}>
+                  <h2 className="ti-heading" style={{ fontSize: '22px' }}>Destination &amp; Visa Requirements</h2>
                 </div>
-                <p className="ti-text-p" style={{ fontSize: '13.5px', lineHeight: 1.6 }}>
+                <p className="ti-text-p" style={{ fontSize: '13px', lineHeight: 1.6, margin: 0 }}>
                   Some destinations or visa processes may require specific insurance conditions. Customers should verify the latest official destination/visa requirements rather than relying only on generic website copy.
                 </p>
               </div>
 
-              <div className="ti-img-placeholder" style={{ minHeight: '170px', marginTop: '14px' }}>
-                <ImageIcon className="ti-placeholder-icon" />
-                <span className="ti-placeholder-label">Passport, Map &amp; Airplane</span>
+              <div className="ti-col-img-wrap">
+                <img
+                  src={destinationImg}
+                  alt="Destination & Visa Requirements"
+                  className="ti-col-img"
+                />
               </div>
             </div>
 
             {/* Right: How Balaji Associates Helps */}
             <div className="ti-col-card">
-              <div>
-                <div className="ti-header-row" style={{ marginBottom: '12px' }}>
-                  <h2 className="ti-heading" style={{ fontSize: '24px' }}>How Balaji Associates Helps</h2>
-                  <div className="ti-gold-line"></div>
+              <div className="ti-col-text-wrap">
+                <div className="ti-header-row" style={{ marginBottom: '10px' }}>
+                  <h2 className="ti-heading" style={{ fontSize: '22px' }}>How Balaji Associates Helps</h2>
                 </div>
-                <p className="ti-text-p" style={{ fontSize: '13.5px', lineHeight: 1.6 }}>
+                <p className="ti-text-p" style={{ fontSize: '13px', lineHeight: 1.6, margin: 0 }}>
                   We help customers discuss destination, travel dates, traveller age and coverage priorities so the appropriate authorised insurer options can be considered.
                 </p>
               </div>
 
-              <div className="ti-img-placeholder" style={{ minHeight: '170px', marginTop: '14px' }}>
-                <ImageIcon className="ti-placeholder-icon" />
-                <span className="ti-placeholder-label">Travel Consultation &amp; Globe</span>
+              <div className="ti-col-img-wrap">
+                <img
+                  src={howBalajiImg}
+                  alt="How Balaji Associates Helps"
+                  className="ti-col-img"
+                />
               </div>
             </div>
           </div>
@@ -1613,48 +1689,52 @@ function TravelInsurance() {
               <span className="ti-related-arrow">→</span>
             </Link>
           </div>
-
-          {/* 11. DISCLAIMER / INFORMATION BAR */}
-          <div className="ti-disclaimer-strip">
-            <div className="ti-disclaimer-left-badge">
-              <div className="ti-disclaimer-icon-wrap">
-                <ShieldCheck className="ti-disclaimer-icon" />
-              </div>
-              <div className="ti-disclaimer-badge-text">
-                <span className="ti-disclaimer-badge-title">Insurance Disclaimer</span>
-                <span className="ti-disclaimer-badge-sub">Travel Insurance Services</span>
-              </div>
-            </div>
-            <p className="ti-disclaimer-text">
-              Insurance is the subject matter of solicitation. Balaji Associates' exact insurance intermediary/agent status, licence/registration number and authorised insurer relationships must be displayed as legally required. Coverage, premium, underwriting, exclusions, waiting periods, deductibles, add-ons and claims are governed by the respective insurer and policy wording. Read the policy document carefully before purchase.
-            </p>
-          </div>
         </div>
       </section>
 
       {/* 10. BOTTOM CTA BANNER */}
       <section className="ti-bottom-cta-section">
-        <div className="ti-container">
-          <div className="ti-bottom-cta-card">
-            <div className="ti-bottom-cta-img-col">
-              <ImageIcon className="ti-placeholder-icon" style={{ opacity: 0.35 }} />
-              <span className="ti-placeholder-label" style={{ color: 'rgba(255,255,255,0.5)' }}>Traveller, Airport &amp; Skyline</span>
-            </div>
+        <div className="ti-bottom-cta-card">
+          <div className="ti-bottom-cta-img-col">
+            <img
+              src={ctaRequirementsImg}
+              alt="Discuss Your Insurance Requirement"
+              className="ti-bottom-cta-img"
+            />
+          </div>
 
-            <div className="ti-bottom-cta-content">
-              <h3 className="ti-bottom-cta-title">
-                Discuss Your Insurance Requirement | Call / WhatsApp 98428 17644
-              </h3>
+          <div className="ti-bottom-cta-content">
+            <h3 className="ti-bottom-cta-title">
+              Discuss Your Insurance Requirement |<br />
+              Call / WhatsApp 98428 17644
+            </h3>
 
-              <a href="tel:9842817644" className="ti-btn-cta-gold">
-                <Phone className="w-4 h-4" />
-                <span>Discuss Your Insurance Requirement | Call / WhatsApp 98428 17644</span>
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
+            <a href="tel:9842817644" className="ti-btn-cta-gold">
+              <Phone className="w-4 h-4" />
+              <span>Discuss Your Insurance Requirement | Call / WhatsApp 98428 17644</span>
+              <ArrowRight className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </section>
+
+      {/* 11. DISCLAIMER / INFORMATION BAR */}
+      <div className="ti-container">
+        <div className="ti-disclaimer-strip">
+          <div className="ti-disclaimer-left-badge">
+            <div className="ti-disclaimer-icon-wrap">
+              <ShieldCheck className="ti-disclaimer-icon" />
+            </div>
+            <div className="ti-disclaimer-badge-text">
+              <span className="ti-disclaimer-badge-title">Insurance Disclaimer</span>
+              <span className="ti-disclaimer-badge-sub">Travel Insurance Services</span>
+            </div>
+          </div>
+          <p className="ti-disclaimer-text">
+            Insurance is the subject matter of solicitation. Balaji Associates' exact insurance intermediary/agent status, licence/registration number and authorised insurer relationships must be displayed as legally required. Coverage, premium, underwriting, exclusions, waiting periods, deductibles, add-ons and claims are governed by the respective insurer and policy wording. Read the policy document carefully before purchase.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

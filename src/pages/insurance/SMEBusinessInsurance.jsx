@@ -26,9 +26,19 @@ import {
   CarFront,
   Plane,
   HeartPulse,
-  Sparkles,
-  Image as ImageIcon
+  Sparkles
 } from 'lucide-react';
+
+// SME & Business Insurance images
+import heroRightImg from '../../assets/images/Insurance/SME&Business/SME&Business_Insurance_Right_side.png';
+import retailShopImg from '../../assets/images/Insurance/SME&Business/Retail_Shop.png';
+import warehouseImg from '../../assets/images/Insurance/SME&Business/Warehouse.png';
+import manufacturerImg from '../../assets/images/Insurance/SME&Business/Manufacturer.png';
+import officeImg from '../../assets/images/Insurance/SME&Business/Office.png';
+import serviceCompanyImg from '../../assets/images/Insurance/SME&Business/Service_company.png';
+import infoBusinessesImg from '../../assets/images/Insurance/SME&Business/Information_Businesses.png';
+import howBalajiImg from '../../assets/images/Insurance/SME&Business/How_Balaji.png';
+import ctaRequirementsImg from '../../assets/images/Insurance/SME&Business/Imsurance_Requirements.png';
 
 const faqList = [
   {
@@ -288,6 +298,13 @@ function SMEBusinessInsurance() {
           justify-content: center;
         }
 
+        .sme-hero-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
         .sme-floating-stack {
           position: absolute;
           top: 20px;
@@ -344,6 +361,13 @@ function SMEBusinessInsurance() {
           justify-content: center;
         }
 
+        .sme-biz-card-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
         .sme-biz-card-label {
           position: absolute;
           bottom: 10px;
@@ -355,6 +379,7 @@ function SMEBusinessInsurance() {
           font-weight: 700;
           color: #0A1B3A;
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+          z-index: 2;
         }
 
         .sme-risk-strip-grid {
@@ -466,6 +491,32 @@ function SMEBusinessInsurance() {
           overflow: hidden;
         }
 
+        .sme-infographic-bg-grid {
+          position: absolute;
+          inset: 0;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          z-index: 0;
+          overflow: hidden;
+        }
+
+        .sme-infographic-bg-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          opacity: 0.85;
+        }
+
+        .sme-infographic-overlay {
+          position: absolute;
+          inset: 0;
+          background: radial-gradient(circle at center, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.72) 45%, rgba(255, 255, 255, 0.35) 100%);
+          backdrop-filter: blur(1px);
+          z-index: 1;
+        }
+
         .sme-infographic-hub {
           width: 80px;
           height: 80px;
@@ -477,6 +528,7 @@ function SMEBusinessInsurance() {
           align-items: center;
           justify-content: center;
           box-shadow: 0 6px 18px rgba(10, 27, 58, 0.25);
+          position: relative;
           z-index: 2;
         }
 
@@ -525,6 +577,23 @@ function SMEBusinessInsurance() {
           align-items: center;
         }
 
+        .sme-prepare-img-box {
+          border-radius: 14px;
+          overflow: hidden;
+          height: 100%;
+          min-height: 260px;
+          border: 1px solid #E2E8F0;
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+          display: flex;
+        }
+
+        .sme-prepare-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
         .sme-checklist {
           list-style: none;
           padding: 0;
@@ -570,6 +639,23 @@ function SMEBusinessInsurance() {
           display: flex;
           flex-direction: column;
           gap: 14px;
+        }
+
+        .sme-helps-img-box {
+          border-radius: 14px;
+          overflow: hidden;
+          height: 100%;
+          min-height: 220px;
+          border: 1px solid #E2E8F0;
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+          display: flex;
+        }
+
+        .sme-helps-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         .sme-faq-list {
@@ -824,17 +910,15 @@ function SMEBusinessInsurance() {
           transform: scale(1.05);
         }
 
-        .sme-bottom-cta-img-placeholder {
-          background-color: rgba(255, 255, 255, 0.05);
-          border: 1px solid rgba(255, 255, 255, 0.12);
-          border-radius: 18px;
-          min-height: 160px;
-          height: 100%;
+        .sme-bottom-cta-img {
           width: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
+          height: 100%;
+          max-height: 220px;
+          object-fit: cover;
+          border-radius: 18px;
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+          display: block;
         }
 
         /* 10. DISCLAIMER / INFORMATION BAR */
@@ -1102,41 +1186,11 @@ function SMEBusinessInsurance() {
 
             <div className="sme-hero-right">
               <div className="sme-hero-visual-card">
-                <ImageIcon className="sme-placeholder-icon" />
-                <span className="sme-placeholder-label">Business Consultation &amp; Madurai Temple</span>
-
-                {/* 6 Floating Cards */}
-                <div className="sme-floating-stack">
-                  <div className="sme-floating-card">
-                    <Building2 className="sme-floating-icon" />
-                    <span className="sme-floating-label">SME Insurance</span>
-                  </div>
-
-                  <div className="sme-floating-card">
-                    <Building2 className="sme-floating-icon" />
-                    <span className="sme-floating-label">Business Insurance</span>
-                  </div>
-
-                  <div className="sme-floating-card">
-                    <House className="sme-floating-icon" />
-                    <span className="sme-floating-label">Property</span>
-                  </div>
-
-                  <div className="sme-floating-card">
-                    <Package className="sme-floating-icon" />
-                    <span className="sme-floating-label">Stock</span>
-                  </div>
-
-                  <div className="sme-floating-card">
-                    <Settings className="sme-floating-icon" />
-                    <span className="sme-floating-label">Equipment</span>
-                  </div>
-
-                  <div className="sme-floating-card">
-                    <ShieldCheck className="sme-floating-icon" />
-                    <span className="sme-floating-label">Liability</span>
-                  </div>
-                </div>
+                <img
+                  src={heroRightImg}
+                  alt="SME & Business Insurance Assistance in Madurai"
+                  className="sme-hero-img"
+                />
               </div>
             </div>
           </div>
@@ -1158,27 +1212,27 @@ function SMEBusinessInsurance() {
           {/* 5 Business Type Cards */}
           <div className="sme-biz-types-grid">
             <div className="sme-biz-card">
-              <ImageIcon className="sme-placeholder-icon" style={{ opacity: 0.35 }} />
+              <img src={retailShopImg} alt="Retail Shop" className="sme-biz-card-img" />
               <div className="sme-biz-card-label">Retail Shop</div>
             </div>
 
             <div className="sme-biz-card">
-              <ImageIcon className="sme-placeholder-icon" style={{ opacity: 0.35 }} />
+              <img src={warehouseImg} alt="Warehouse" className="sme-biz-card-img" />
               <div className="sme-biz-card-label">Warehouse</div>
             </div>
 
             <div className="sme-biz-card">
-              <ImageIcon className="sme-placeholder-icon" style={{ opacity: 0.35 }} />
+              <img src={manufacturerImg} alt="Manufacturer" className="sme-biz-card-img" />
               <div className="sme-biz-card-label">Manufacturer</div>
             </div>
 
             <div className="sme-biz-card">
-              <ImageIcon className="sme-placeholder-icon" style={{ opacity: 0.35 }} />
+              <img src={officeImg} alt="Office" className="sme-biz-card-img" />
               <div className="sme-biz-card-label">Office</div>
             </div>
 
             <div className="sme-biz-card">
-              <ImageIcon className="sme-placeholder-icon" style={{ opacity: 0.35 }} />
+              <img src={serviceCompanyImg} alt="Service Company" className="sme-biz-card-img" />
               <div className="sme-biz-card-label">Service Company</div>
             </div>
           </div>
@@ -1320,6 +1374,15 @@ function SMEBusinessInsurance() {
               </div>
 
               <div className="sme-infographic-box">
+                {/* 4 Corner Background Images Collage */}
+                <div className="sme-infographic-bg-grid" aria-hidden="true">
+                  <img src={retailShopImg} alt="" className="sme-infographic-bg-img" />
+                  <img src={manufacturerImg} alt="" className="sme-infographic-bg-img" />
+                  <img src={serviceCompanyImg} alt="" className="sme-infographic-bg-img" />
+                  <img src={officeImg} alt="" className="sme-infographic-bg-img" />
+                  <div className="sme-infographic-overlay" />
+                </div>
+
                 {/* Center Hub */}
                 <div className="sme-infographic-hub">
                   <Building2 className="w-6 h-6" />
@@ -1370,9 +1433,12 @@ function SMEBusinessInsurance() {
               </p>
 
               <div className="sme-prepare-subgrid">
-                <div className="sme-img-placeholder" style={{ minHeight: '260px' }}>
-                  <ImageIcon className="sme-placeholder-icon" />
-                  <span className="sme-placeholder-label">Reviewing Business Info</span>
+                <div className="sme-prepare-img-box">
+                  <img
+                    src={infoBusinessesImg}
+                    alt="Information Businesses Should Prepare"
+                    className="sme-prepare-img"
+                  />
                 </div>
 
                 <ul className="sme-checklist">
@@ -1433,9 +1499,12 @@ function SMEBusinessInsurance() {
                 </p>
               </div>
 
-              <div className="sme-img-placeholder" style={{ minHeight: '220px' }}>
-                <ImageIcon className="sme-placeholder-icon" />
-                <span className="sme-placeholder-label">Adviser &amp; Business Owner Consultation</span>
+              <div className="sme-helps-img-box">
+                <img
+                  src={howBalajiImg}
+                  alt="How Balaji Associates Helps"
+                  className="sme-helps-img"
+                />
               </div>
             </div>
 
@@ -1597,10 +1666,11 @@ function SMEBusinessInsurance() {
             </div>
 
             <div className="sme-bottom-cta-visual">
-              <div className="sme-bottom-cta-img-placeholder">
-                <ImageIcon className="sme-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="sme-placeholder-label" style={{ color: 'rgba(255,255,255,0.5)' }}>Business &amp; Madurai Temple</span>
-              </div>
+              <img
+                src={ctaRequirementsImg}
+                alt="Discuss Your Insurance Requirement"
+                className="sme-bottom-cta-img"
+              />
             </div>
           </div>
         </div>

@@ -26,9 +26,29 @@ import {
   Users,
   Search,
   ClipboardList,
-  Award,
-  Image as ImageIcon
+  Award
 } from 'lucide-react';
+
+// Insurance overview images
+import heroImg from '../../assets/images/Insurance/Insurance_overview/Hero_section_Right_Side_Image.png';
+import healthCatImg from '../../assets/images/Insurance/Insurance_overview/Health_Insurance.png';
+import motorCatImg from '../../assets/images/Insurance/Insurance_overview/Motor-Insurance.png';
+import smeCatImg from '../../assets/images/Insurance/Insurance_overview/SME&Business_Insurance.png';
+import travelCatImg from '../../assets/images/Insurance/Insurance_overview/Travel_Insurance.png';
+import homeCatImg from '../../assets/images/Insurance/Insurance_overview/Home_Insurance.png';
+
+import healthRiskImg from '../../assets/images/Insurance/Insurance_overview/Health.png';
+import motorRiskImg from '../../assets/images/Insurance/Insurance_overview/Motor.png';
+import smeRiskImg from '../../assets/images/Insurance/Insurance_overview/SME&Business.png';
+import travelRiskImg from '../../assets/images/Insurance/Insurance_overview/Travel.png';
+import homeRiskImg from '../../assets/images/Insurance/Insurance_overview/Home.png';
+
+import keyPointsPolicyImg from '../../assets/images/Insurance/Insurance_overview/key-points-Policy.png';
+import eduDocsImg from '../../assets/images/Insurance/Insurance_overview/Education_Loan.png';
+import agriODImg from '../../assets/images/Insurance/Insurance_overview/Agri_OD.png';
+import howBalajiLeftImg from '../../assets/images/Insurance/Insurance_overview/How_balaji_Left.png';
+import howBalajiRightImg from '../../assets/images/Insurance/Insurance_overview/How_balaji_Right.png';
+import ctaFamilyImg from '../../assets/images/Insurance/Insurance_overview/Insurance_Requirement.png';
 
 const faqList = [
   {
@@ -298,62 +318,11 @@ function Insurance() {
           justify-content: center;
         }
 
-        .ins-floating-card {
-          position: absolute;
-          background: #FFFFFF;
-          border: 1px solid #E2E8F0;
-          border-radius: 12px;
-          padding: 8px 12px;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-          z-index: 2;
-        }
-
-        .ins-floating-icon-wrap {
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: #EFF6FF;
-          color: #1D4ED8;
-          flex-shrink: 0;
-        }
-
-        .ins-floating-label {
-          font-size: 11px;
-          font-weight: 700;
-          color: #0A1B3A;
-          white-space: nowrap;
-        }
-
-        .ins-hero-float-health {
-          top: 24px;
-          left: 20px;
-        }
-
-        .ins-hero-float-sme {
-          bottom: 24px;
-          left: 20px;
-        }
-
-        .ins-hero-float-motor {
-          top: 24px;
-          right: 20px;
-        }
-
-        .ins-hero-float-travel {
-          top: 48%;
-          right: 18px;
-          transform: translateY(-50%);
-        }
-
-        .ins-hero-float-home {
-          bottom: 24px;
-          right: 20px;
+        .ins-hero-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         /* 3. SECTION — OUR INSURANCE CATEGORIES */
@@ -386,10 +355,22 @@ function Insurance() {
           background-color: #F8FAFC;
           border-bottom: 1px solid #E2E8F0;
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
           position: relative;
+          overflow: hidden;
+        }
+
+        .ins-cat-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          transition: transform 0.3s ease;
+        }
+
+        .ins-cat-card:hover .ins-cat-img {
+          transform: scale(1.05);
         }
 
         .ins-cat-body {
@@ -518,6 +499,14 @@ function Insurance() {
           align-items: center;
           justify-content: center;
           margin-bottom: 10px;
+          overflow: hidden;
+        }
+
+        .ins-risk-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         .ins-risk-bullets {
@@ -588,34 +577,21 @@ function Insurance() {
         }
 
         .ins-policy-clip-box {
-          background: #F8FAFC;
-          border: 2px solid #E2E8F0;
-          border-radius: 16px;
-          padding: 24px 18px;
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
-          min-width: 110px;
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
-          position: relative;
+          min-width: 130px;
+          max-width: 170px;
+          padding: 6px;
         }
 
-        .ins-policy-badge {
-          background: #0A1B3A;
-          color: #FFFFFF;
-          font-size: 11px;
-          font-weight: 800;
-          padding: 3px 8px;
-          border-radius: 4px;
-          letter-spacing: 0.5px;
-          margin-bottom: 8px;
-        }
-
-        .ins-policy-shield-icon {
-          width: 36px;
-          height: 36px;
-          color: #059669;
+        .ins-policy-clip-img {
+          width: 100%;
+          max-width: 160px;
+          height: auto;
+          object-fit: contain;
+          display: block;
+          filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.06));
         }
 
         /* 5. SECTION — EDUCATION LOAN DOCUMENTS & AGRI OD */
@@ -637,8 +613,24 @@ function Insurance() {
           display: grid;
           grid-template-columns: 0.85fr 1.15fr;
           gap: 20px;
-          align-items: center;
+          align-items: stretch;
           margin-top: 14px;
+        }
+
+        .ins-edu-img-wrap {
+          border-radius: 14px;
+          overflow: hidden;
+          border: 1px solid #E2E8F0;
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+          min-height: 200px;
+          display: flex;
+        }
+
+        .ins-edu-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         .ins-checklist {
@@ -678,8 +670,24 @@ function Insurance() {
           display: grid;
           grid-template-columns: 0.85fr 1.15fr;
           gap: 20px;
-          align-items: center;
+          align-items: stretch;
           margin-top: 14px;
+        }
+
+        .ins-agri-img-wrap {
+          border-radius: 14px;
+          overflow: hidden;
+          border: 1px solid #E2E8F0;
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+          min-height: 180px;
+          display: flex;
+        }
+
+        .ins-agri-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         .ins-cards-2-row {
@@ -724,19 +732,24 @@ function Insurance() {
           display: grid;
           grid-template-columns: 0.8fr 1.4fr 0.8fr;
           gap: 24px;
-          align-items: center;
+          align-items: stretch;
         }
 
         .ins-helps-thumb-box {
           background: #F8FAFC;
           border: 1px solid #E2E8F0;
           border-radius: 16px;
-          min-height: 150px;
-          height: 100%;
+          min-height: 140px;
           display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
+          overflow: hidden;
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+        }
+
+        .ins-helps-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         /* 7. SECTION — INSURANCE ASSISTANCE PROCESS & FAQS */
@@ -1049,17 +1062,23 @@ function Insurance() {
           background: rgba(255, 255, 255, 0.1);
         }
 
-        .ins-bottom-cta-img-placeholder {
-          background-color: rgba(255, 255, 255, 0.05);
-          border: 1px solid rgba(255, 255, 255, 0.12);
-          border-radius: 18px;
-          min-height: 180px;
-          height: 100%;
+        .ins-bottom-cta-visual {
           width: 100%;
+          height: 100%;
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
+        }
+
+        .ins-bottom-cta-img {
+          width: 100%;
+          height: 100%;
+          max-height: 220px;
+          object-fit: cover;
+          border-radius: 18px;
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+          display: block;
         }
 
         /* 10. DISCLAIMER / INFORMATION BAR */
@@ -1320,44 +1339,11 @@ function Insurance() {
 
             <div className="ins-hero-right">
               <div className="ins-hero-visual-card">
-                <ImageIcon className="ins-placeholder-icon" />
-                <span className="ins-placeholder-label">Family with Adviser &amp; Madurai Temple</span>
-
-                {/* Floating category cards */}
-                <div className="ins-floating-card ins-hero-float-health">
-                  <div className="ins-floating-icon-wrap">
-                    <HeartPulse className="w-4 h-4" />
-                  </div>
-                  <span className="ins-floating-label">Health Insurance</span>
-                </div>
-
-                <div className="ins-floating-card ins-hero-float-sme">
-                  <div className="ins-floating-icon-wrap">
-                    <Building2 className="w-4 h-4" />
-                  </div>
-                  <span className="ins-floating-label">SME &amp; Business Insurance</span>
-                </div>
-
-                <div className="ins-floating-card ins-hero-float-motor">
-                  <div className="ins-floating-icon-wrap">
-                    <CarFront className="w-4 h-4" />
-                  </div>
-                  <span className="ins-floating-label">Motor Insurance</span>
-                </div>
-
-                <div className="ins-floating-card ins-hero-float-travel">
-                  <div className="ins-floating-icon-wrap">
-                    <Plane className="w-4 h-4" />
-                  </div>
-                  <span className="ins-floating-label">Travel Insurance</span>
-                </div>
-
-                <div className="ins-floating-card ins-hero-float-home">
-                  <div className="ins-floating-icon-wrap">
-                    <House className="w-4 h-4" />
-                  </div>
-                  <span className="ins-floating-label">Home Insurance</span>
-                </div>
+                <img
+                  src={heroImg}
+                  alt="Insurance Assistance in Madurai for Families, Vehicles, Businesses, Travel & Homes"
+                  className="ins-hero-img"
+                />
               </div>
             </div>
           </div>
@@ -1376,8 +1362,7 @@ function Insurance() {
             {/* Card 1: Health Insurance */}
             <Link to="/health-insurance-madurai/" className="ins-cat-card">
               <div className="ins-cat-img-box">
-                <ImageIcon className="ins-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="ins-placeholder-label">Healthcare Professional</span>
+                <img src={healthCatImg} alt="Health Insurance" className="ins-cat-img" />
               </div>
               <div className="ins-cat-body">
                 <div className="ins-cat-icon-badge gold">
@@ -1396,8 +1381,7 @@ function Insurance() {
             {/* Card 2: Motor Insurance */}
             <Link to="/motor-insurance-madurai/" className="ins-cat-card">
               <div className="ins-cat-img-box">
-                <ImageIcon className="ins-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="ins-placeholder-label">Car / Vehicle</span>
+                <img src={motorCatImg} alt="Motor Insurance" className="ins-cat-img" />
               </div>
               <div className="ins-cat-body">
                 <div className="ins-cat-icon-badge">
@@ -1416,8 +1400,7 @@ function Insurance() {
             {/* Card 3: SME & Business Insurance */}
             <Link to="/sme-business-insurance/" className="ins-cat-card">
               <div className="ins-cat-img-box">
-                <ImageIcon className="ins-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="ins-placeholder-label">Commercial Business</span>
+                <img src={smeCatImg} alt="SME & Business Insurance" className="ins-cat-img" />
               </div>
               <div className="ins-cat-body">
                 <div className="ins-cat-icon-badge">
@@ -1436,8 +1419,7 @@ function Insurance() {
             {/* Card 4: Travel Insurance */}
             <Link to="/travel-insurance-madurai/" className="ins-cat-card">
               <div className="ins-cat-img-box">
-                <ImageIcon className="ins-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="ins-placeholder-label">Traveller / Airport</span>
+                <img src={travelCatImg} alt="Travel Insurance" className="ins-cat-img" />
               </div>
               <div className="ins-cat-body">
                 <div className="ins-cat-icon-badge">
@@ -1456,8 +1438,7 @@ function Insurance() {
             {/* Card 5: Home Insurance */}
             <Link to="/home-insurance-madurai/" className="ins-cat-card">
               <div className="ins-cat-img-box">
-                <ImageIcon className="ins-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="ins-placeholder-label">Residential Home</span>
+                <img src={homeCatImg} alt="Home Insurance" className="ins-cat-img" />
               </div>
               <div className="ins-cat-body">
                 <div className="ins-cat-icon-badge">
@@ -1497,7 +1478,7 @@ function Insurance() {
                     <span className="ins-risk-name">HEALTH</span>
                   </div>
                   <div className="ins-risk-thumb">
-                    <ImageIcon className="w-4 h-4 text-slate-300" />
+                    <img src={healthRiskImg} alt="Health Risk" className="ins-risk-img" />
                   </div>
                   <ul className="ins-risk-bullets">
                     <li className="ins-risk-bullet">Eligible medical expenses</li>
@@ -1514,7 +1495,7 @@ function Insurance() {
                     <span className="ins-risk-name">MOTOR</span>
                   </div>
                   <div className="ins-risk-thumb">
-                    <ImageIcon className="w-4 h-4 text-slate-300" />
+                    <img src={motorRiskImg} alt="Motor Risk" className="ins-risk-img" />
                   </div>
                   <ul className="ins-risk-bullets">
                     <li className="ins-risk-bullet">Eligible vehicles</li>
@@ -1532,7 +1513,7 @@ function Insurance() {
                     <span className="ins-risk-name">SME &amp; BUSINESS</span>
                   </div>
                   <div className="ins-risk-thumb">
-                    <ImageIcon className="w-4 h-4 text-slate-300" />
+                    <img src={smeRiskImg} alt="SME & Business Risk" className="ins-risk-img" />
                   </div>
                   <ul className="ins-risk-bullets">
                     <li className="ins-risk-bullet">Property</li>
@@ -1552,7 +1533,7 @@ function Insurance() {
                     <span className="ins-risk-name">TRAVEL</span>
                   </div>
                   <div className="ins-risk-thumb">
-                    <ImageIcon className="w-4 h-4 text-slate-300" />
+                    <img src={travelRiskImg} alt="Travel Risk" className="ins-risk-img" />
                   </div>
                   <ul className="ins-risk-bullets">
                     <li className="ins-risk-bullet">Medical emergencies</li>
@@ -1570,7 +1551,7 @@ function Insurance() {
                     <span className="ins-risk-name">HOME</span>
                   </div>
                   <div className="ins-risk-thumb">
-                    <ImageIcon className="w-4 h-4 text-slate-300" />
+                    <img src={homeRiskImg} alt="Home Risk" className="ins-risk-img" />
                   </div>
                   <ul className="ins-risk-bullets">
                     <li className="ins-risk-bullet">Building structure</li>
@@ -1622,8 +1603,11 @@ function Insurance() {
 
                 {/* Middle Policy Clipboard Graphic */}
                 <div className="ins-policy-clip-box">
-                  <span className="ins-policy-badge">POLICY</span>
-                  <ShieldCheck className="ins-policy-shield-icon" />
+                  <img
+                    src={keyPointsPolicyImg}
+                    alt="Policy Considerations"
+                    className="ins-policy-clip-img"
+                  />
                 </div>
 
                 {/* Right 4 items */}
@@ -1677,9 +1661,12 @@ function Insurance() {
               </p>
 
               <div className="ins-edu-docs-grid">
-                <div className="ins-img-placeholder" style={{ minHeight: '180px' }}>
-                  <ImageIcon className="ins-placeholder-icon" />
-                  <span className="ins-placeholder-label">Passport &amp; Documents</span>
+                <div className="ins-edu-img-wrap">
+                  <img
+                    src={eduDocsImg}
+                    alt="Education Loan Documents"
+                    className="ins-edu-img"
+                  />
                 </div>
 
                 <ul className="ins-checklist">
@@ -1723,9 +1710,12 @@ function Insurance() {
               </div>
 
               <div className="ins-agri-grid">
-                <div className="ins-img-placeholder" style={{ minHeight: '180px' }}>
-                  <ImageIcon className="ins-placeholder-icon" />
-                  <span className="ins-placeholder-label">Farmer &amp; Tractor</span>
+                <div className="ins-agri-img-wrap">
+                  <img
+                    src={agriODImg}
+                    alt="Agri OD / Agricultural Finance"
+                    className="ins-agri-img"
+                  />
                 </div>
 
                 <div>
@@ -1769,8 +1759,11 @@ function Insurance() {
 
           <div className="ins-helps-3-col">
             <div className="ins-helps-thumb-box">
-              <ImageIcon className="ins-placeholder-icon" />
-              <span className="ins-placeholder-label">Consultation / Meeting</span>
+              <img
+                src={howBalajiLeftImg}
+                alt="Consultation / Meeting"
+                className="ins-helps-img"
+              />
             </div>
 
             <div>
@@ -1780,8 +1773,11 @@ function Insurance() {
             </div>
 
             <div className="ins-helps-thumb-box">
-              <ImageIcon className="ins-placeholder-icon" />
-              <span className="ins-placeholder-label">Advisor &amp; Client</span>
+              <img
+                src={howBalajiRightImg}
+                alt="Advisor & Client"
+                className="ins-helps-img"
+              />
             </div>
           </div>
         </div>
@@ -1971,10 +1967,11 @@ function Insurance() {
             </div>
 
             <div className="ins-bottom-cta-visual">
-              <div className="ins-bottom-cta-img-placeholder">
-                <ImageIcon className="ins-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="ins-placeholder-label" style={{ color: 'rgba(255,255,255,0.5)' }}>Family &amp; Adviser / Temple Visual</span>
-              </div>
+              <img
+                src={ctaFamilyImg}
+                alt="Discuss Your Insurance Requirement"
+                className="ins-bottom-cta-img"
+              />
             </div>
           </div>
         </div>

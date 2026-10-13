@@ -14,9 +14,16 @@ import {
   MessageSquareMore,
   UsersRound,
   FileText,
-  LockKeyhole,
-  Image as ImageIcon
+  LockKeyhole
 } from 'lucide-react';
+
+// Contact Page Image Assets
+import heroImg from '../assets/images/Contact/Contact_Hero_section_right_side.png';
+import loanFormHeaderImg from '../assets/images/Contact/Loan_Enquiry_Form.png';
+import insuranceFormHeaderImg from '../assets/images/Contact/Insurance_Enguiry_Form.png';
+import officeEntranceImg from '../assets/images/Contact/Balaji_Associates_Modern_Office_Entrance.png';
+import mapLandmarkImg from '../assets/images/Contact/Madurai_Map_and_Temple_Landmark_Banner.png';
+import requirementCtaImg from '../assets/images/Contact/Requirement.png';
 
 function Contact() {
   // Loan Form State
@@ -192,7 +199,7 @@ function Contact() {
           max-width: 580px;
         }
 
-        /* Hero Right Visual with Floating Cards */
+        /* Hero Right Visual */
         .contact-hero-right {
           position: relative;
           display: flex;
@@ -203,60 +210,23 @@ function Contact() {
         .contact-hero-img-box {
           position: relative;
           width: 100%;
-          min-height: 320px;
           border-radius: 20px;
           overflow: hidden;
-          background: rgba(255, 255, 255, 0.05);
-          border: 1px solid rgba(255, 255, 255, 0.15);
+          background: transparent;
+          border: none;
           box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
-          text-align: center;
-          padding: 24px;
         }
 
-        .contact-hero-float-card {
-          position: absolute;
-          z-index: 5;
-          background-color: #FFFFFF;
-          border: 1px solid rgba(226, 232, 240, 0.9);
-          border-radius: 12px;
-          padding: 8px 14px;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
-          white-space: nowrap;
-          font-size: 12px;
-          font-weight: 700;
-          color: #0A1B3A;
-          transition: transform 0.2s ease;
-        }
-
-        .contact-hero-float-card:hover {
-          transform: translateY(-2px);
-        }
-
-        .contact-float-loan {
-          top: 18px;
-          right: 20px;
-        }
-
-        .contact-float-insurance {
-          top: 72px;
-          right: 20px;
-        }
-
-        .contact-float-enquiry {
-          top: 126px;
-          right: 20px;
-        }
-
-        .contact-float-madurai {
-          bottom: 24px;
-          right: 20px;
+        .contact-hero-img {
+          width: 100%;
+          height: auto;
+          max-height: 400px;
+          object-fit: cover;
+          display: block;
+          border-radius: 20px;
         }
 
         /* TOP CONTACT CARDS */
@@ -425,24 +395,26 @@ function Contact() {
 
         .contact-form-header-img {
           width: 100%;
-          height: 110px;
+          height: auto;
           border-radius: 12px;
-          background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+          overflow: hidden;
           border: 1px solid #E2E8F0;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
           margin-bottom: 18px;
-          padding: 12px;
+          padding: 0;
+          background: transparent;
+        }
+
+        .contact-form-top-img {
+          width: 100%;
+          height: auto;
+          aspect-ratio: 3 / 1;
+          object-fit: cover;
+          display: block;
+          border-radius: 11px;
         }
 
         .contact-form-title-row {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          margin-bottom: 20px;
+          display: none;
         }
 
         .contact-form-heading {
@@ -691,10 +663,10 @@ function Contact() {
           font-weight: 500;
         }
 
-        /* 13. OFFICE & LOCATION SECTION (4 COLUMNS) */
+        /* 13. OFFICE & LOCATION SECTION (3 COLUMNS) */
         .contact-office-grid {
           display: grid;
-          grid-template-columns: 1.15fr 1fr 1fr 1.25fr;
+          grid-template-columns: 1.35fr 1fr 1fr;
           gap: 18px;
           margin-bottom: 30px;
           align-items: stretch;
@@ -704,8 +676,21 @@ function Contact() {
           background-color: #FFFFFF;
           border: 1px solid #E2E8F0;
           border-radius: 14px;
-          padding: 20px;
+          padding: 20px 22px;
           box-shadow: 0 4px 14px rgba(10, 27, 58, 0.03);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .contact-office-details-flex {
+          display: grid;
+          grid-template-columns: 1.25fr 1fr;
+          gap: 18px;
+          align-items: center;
+        }
+
+        .contact-office-addr-col {
           display: flex;
           flex-direction: column;
         }
@@ -742,23 +727,18 @@ function Contact() {
         }
 
         .contact-office-address {
-          font-size: 12.5px;
+          font-size: 12px;
           line-height: 1.55;
           color: #475569;
           margin: 0;
         }
 
-        /* Column 2: Contact Details */
-        .contact-phone-details-card {
-          background-color: #FFFFFF;
-          border: 1px solid #E2E8F0;
-          border-radius: 14px;
-          padding: 20px;
-          box-shadow: 0 4px 14px rgba(10, 27, 58, 0.03);
+        .contact-office-phones-col {
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          gap: 18px;
+          gap: 16px;
+          border-left: 1px solid #F1F5F9;
+          padding-left: 16px;
         }
 
         .contact-phone-row {
@@ -797,60 +777,44 @@ function Contact() {
           text-decoration: underline;
         }
 
-        /* Column 3: Office Image Placeholder */
+        /* Column 2: Office Photo Card */
         .contact-office-img-box {
-          background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+          background: #FFFFFF;
           border: 1px solid #E2E8F0;
           border-radius: 14px;
-          min-height: 160px;
+          overflow: hidden;
+          padding: 0;
+          box-shadow: 0 4px 14px rgba(10, 27, 58, 0.03);
           display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          padding: 14px;
         }
 
-        /* Column 4: Map Image Placeholder */
+        .contact-office-photo {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
+          border-radius: 13px;
+        }
+
+        /* Column 3: Map Image Card */
         .contact-map-img-box {
-          position: relative;
-          background: linear-gradient(135deg, #EFF6FF 0%, #E2E8F0 100%);
+          background: #FFFFFF;
           border: 1px solid #E2E8F0;
           border-radius: 14px;
-          min-height: 160px;
+          overflow: hidden;
+          padding: 0;
+          box-shadow: 0 4px 14px rgba(10, 27, 58, 0.03);
           display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          padding: 14px;
         }
 
-        .contact-map-overlay-badge {
-          position: absolute;
-          top: 14px;
-          right: 14px;
-          background-color: #FFFFFF;
-          border: 1px solid #E2E8F0;
-          border-radius: 8px;
-          padding: 6px 12px;
-          display: flex;
-          align-items: center;
-          gap: 6px;
-          box-shadow: 0 4px 12px rgba(10, 27, 58, 0.08);
-          z-index: 2;
-        }
-
-        .contact-map-pin {
-          width: 14px;
-          height: 14px;
-          color: #DC2626;
-        }
-
-        .contact-map-pin-title {
-          font-size: 11px;
-          font-weight: 700;
-          color: #0A1B3A;
+        .contact-map-photo {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
+          border-radius: 13px;
         }
 
         /* 14. BOTTOM CTA BANNER */
@@ -861,9 +825,9 @@ function Contact() {
         .contact-bottom-cta-card {
           background: linear-gradient(135deg, #071329 0%, #0A1B3A 55%, #0F2856 100%);
           border-radius: 18px;
-          padding: 24px 32px;
+          padding: 0 0 0 32px;
           display: grid;
-          grid-template-columns: auto 1fr auto 240px;
+          grid-template-columns: auto 1fr auto 340px;
           align-items: center;
           gap: 24px;
           box-shadow: 0 16px 40px rgba(10, 27, 58, 0.2);
@@ -926,16 +890,22 @@ function Contact() {
         }
 
         .contact-bottom-cta-img-box {
-          background: rgba(255, 255, 255, 0.08);
-          border: 1px dashed rgba(255, 255, 255, 0.25);
-          border-radius: 12px;
-          height: 90px;
+          height: 140px;
+          overflow: hidden;
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
-          text-align: center;
-          padding: 8px;
+          border: none;
+          background: transparent;
+          padding: 0;
+        }
+
+        .contact-bottom-cta-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: right center;
+          display: block;
         }
 
         /* 15. LOAN & INSURANCE DISCLAIMERS */
@@ -947,19 +917,27 @@ function Contact() {
         }
 
         .contact-disclaimer-card {
-          background-color: #F8FAFC;
-          border: 1px solid #E2E8F0;
           border-radius: 12px;
           padding: 16px 20px;
           display: flex;
           gap: 14px;
           align-items: flex-start;
+          border: 1px solid transparent;
+        }
+
+        .contact-disclaimer-loan {
+          background-color: #EFF6FF;
+          border-color: #BFDBFE;
+        }
+
+        .contact-disclaimer-insurance {
+          background-color: #FEF9EE;
+          border-color: #FDE68A;
         }
 
         .contact-disclaimer-shield {
           width: 22px;
           height: 22px;
-          color: #0A1B3A;
           flex-shrink: 0;
           margin-top: 2px;
         }
@@ -990,10 +968,15 @@ function Contact() {
             grid-template-columns: 1fr;
           }
           .contact-office-grid {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
+          }
+          .contact-office-img-box,
+          .contact-map-img-box {
+            height: 220px;
           }
           .contact-bottom-cta-card {
             grid-template-columns: auto 1fr auto;
+            padding: 24px 28px;
           }
           .contact-bottom-cta-img-box {
             display: none;
@@ -1152,41 +1135,14 @@ function Contact() {
               </p>
             </div>
 
-            {/* Right Column: Hero Visual with 4 Floating Cards */}
+            {/* Right Column: Hero Visual with Madurai Consultation Scene */}
             <div className="contact-hero-right">
-              {/* Floating Card 1: Loan Enquiry */}
-              <div className="contact-hero-float-card contact-float-loan">
-                <Landmark className="w-4 h-4 text-sky-700" />
-                <span>Loan Enquiry</span>
-              </div>
-
-              {/* Floating Card 2: Insurance Enquiry */}
-              <div className="contact-hero-float-card contact-float-insurance">
-                <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                <span>Insurance Enquiry</span>
-              </div>
-
-              {/* Floating Card 3: Your Enquiry */}
-              <div className="contact-hero-float-card contact-float-enquiry">
-                <ClipboardList className="w-4 h-4 text-amber-500" />
-                <span>Your Enquiry</span>
-              </div>
-
-              {/* Floating Card 4: Madurai */}
-              <div className="contact-hero-float-card contact-float-madurai">
-                <MapPin className="w-4 h-4 text-red-500" />
-                <span>Madurai</span>
-              </div>
-
-              {/* Dedicated Hero Image Placeholder */}
               <div className="contact-hero-img-box">
-                <ImageIcon className="w-10 h-10 text-slate-400 mb-2 opacity-50" />
-                <span className="text-white text-xs font-semibold">
-                  Financial Consultation Discussion
-                </span>
-                <span className="text-slate-300 text-[11px] mt-1">
-                  Professional consultant &amp; family with Madurai temple backdrop
-                </span>
+                <img
+                  src={heroImg}
+                  alt="Tell Us What You Need Help With — Balaji Associates Contact"
+                  className="contact-hero-img"
+                />
               </div>
             </div>
           </div>
@@ -1263,13 +1219,13 @@ function Contact() {
         <div className="contact-forms-grid">
           {/* LEFT FORM: LOAN ENQUIRY FORM */}
           <div className="contact-form-card" id="loan-enquiry-form">
-            {/* Header Image Placeholder */}
+            {/* Header Image */}
             <div className="contact-form-header-img">
-              <ImageIcon className="w-7 h-7 text-slate-400 opacity-40 mb-1" />
-              <span className="text-xs text-slate-600 font-semibold">
-                Residential Houses &amp; Property Documents
-              </span>
-              <span className="text-[10px] text-slate-400">Loan Consultation Visual</span>
+              <img
+                src={loanFormHeaderImg}
+                alt="Loan Enquiry Form — Residential Houses and Coins"
+                className="contact-form-top-img"
+              />
             </div>
 
             <div className="contact-form-title-row">
@@ -1443,13 +1399,13 @@ function Contact() {
 
           {/* RIGHT FORM: INSURANCE ENQUIRY FORM */}
           <div className="contact-form-card" id="insurance-enquiry-form">
-            {/* Header Image Placeholder */}
+            {/* Header Image */}
             <div className="contact-form-header-img">
-              <ImageIcon className="w-7 h-7 text-slate-400 opacity-40 mb-1" />
-              <span className="text-xs text-slate-600 font-semibold">
-                Family Protection &amp; Policy Paperwork
-              </span>
-              <span className="text-[10px] text-slate-400">Insurance Consultation Visual</span>
+              <img
+                src={insuranceFormHeaderImg}
+                alt="Insurance Enquiry Form — Protection and Guidance"
+                className="contact-form-top-img"
+              />
             </div>
 
             <div className="contact-form-title-row">
@@ -1666,76 +1622,75 @@ function Contact() {
       {/* 8. OFFICE CONTACT AND LOCATION SECTION */}
       <section className="contact-container">
         <div className="contact-office-grid">
-          {/* Column 1 — Office details */}
+          {/* Panel 1 — Office details & Contact phones */}
           <div className="contact-office-card">
-            <div className="contact-office-title-row">
-              <div className="contact-office-pin-wrap">
-                <MapPin className="w-4 h-4 text-amber-600" />
+            <div className="contact-office-details-flex">
+              <div className="contact-office-addr-col">
+                <div className="contact-office-title-row">
+                  <div className="contact-office-pin-wrap">
+                    <MapPin className="w-4 h-4 text-amber-600" />
+                  </div>
+                  <span className="contact-office-label">Office *</span>
+                </div>
+                <h3 className="contact-office-name">Balaji Associates</h3>
+                <p className="contact-office-address">
+                  Old No. 2, New No. 3, 2nd Floor,<br />
+                  Kaathukondan Thoppu Street,<br />
+                  Opp. Amidhini Stores,<br />
+                  Tamil Sangam Road,<br />
+                  Madurai - 625001, Tamil Nadu.
+                </p>
               </div>
-              <span className="contact-office-label">Office *</span>
+
+              <div className="contact-office-phones-col">
+                <div className="contact-phone-row">
+                  <div className="contact-phone-circle-green">
+                    <Phone className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <div className="contact-phone-label">Landline:</div>
+                    <a href="tel:04524292644" className="contact-phone-link">
+                      0452-4292644
+                    </a>
+                  </div>
+                </div>
+
+                <div className="contact-phone-row">
+                  <div className="contact-phone-circle-green">
+                    <MessageCircle className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <div className="contact-phone-label">Mobile / WhatsApp:</div>
+                    <a
+                      href="https://wa.me/919842817644"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="contact-phone-link"
+                    >
+                      98428 17644
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h3 className="contact-office-name">Balaji Associates</h3>
-            <p className="contact-office-address">
-              Old No. 2, New No. 3, 2nd Floor,<br />
-              Kaathukondan Thoppu Street,<br />
-              Opp. Amidhini Stores,<br />
-              Tamil Sangam Road,<br />
-              Madurai - 625001, Tamil Nadu.
-            </p>
           </div>
 
-          {/* Column 2 — Contact details */}
-          <div className="contact-phone-details-card">
-            <div className="contact-phone-row">
-              <div className="contact-phone-circle-green">
-                <Phone className="w-4 h-4" />
-              </div>
-              <div>
-                <div className="contact-phone-label">Landline:</div>
-                <a href="tel:04524292644" className="contact-phone-link">
-                  0452-4292644
-                </a>
-              </div>
-            </div>
-
-            <div className="contact-phone-row">
-              <div className="contact-phone-circle-green">
-                <MessageCircle className="w-4 h-4" />
-              </div>
-              <div>
-                <div className="contact-phone-label">Mobile / WhatsApp:</div>
-                <a
-                  href="https://wa.me/919842817644"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="contact-phone-link"
-                >
-                  98428 17644
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Column 3 — Office image placeholder */}
+          {/* Panel 2 — Office Photograph */}
           <div className="contact-office-img-box">
-            <ImageIcon className="w-7 h-7 text-slate-400 opacity-40 mb-1" />
-            <span className="text-xs text-slate-600 font-semibold">
-              Balaji Associates Office
-            </span>
-            <span className="text-[10px] text-slate-400">Building &amp; Signage</span>
+            <img
+              src={officeEntranceImg}
+              alt="Balaji Associates Modern Office Entrance in Madurai"
+              className="contact-office-photo"
+            />
           </div>
 
-          {/* Column 4 — Map image placeholder */}
+          {/* Panel 3 — Madurai Location Map & Temple Landmark */}
           <div className="contact-map-img-box">
-            <div className="contact-map-overlay-badge">
-              <MapPin className="contact-map-pin" />
-              <span className="contact-map-pin-title">Balaji Associates Madurai</span>
-            </div>
-            <ImageIcon className="w-7 h-7 text-slate-400 opacity-40 mb-1" />
-            <span className="text-xs text-slate-600 font-semibold">
-              Madurai Map &amp; Location
-            </span>
-            <span className="text-[10px] text-slate-400">Temple City Street View</span>
+            <img
+              src={mapLandmarkImg}
+              alt="Balaji Associates Madurai Location Map and Meenakshi Temple Landmark"
+              className="contact-map-photo"
+            />
           </div>
         </div>
       </section>
@@ -1768,13 +1723,13 @@ function Contact() {
               <ArrowRight className="w-5 h-5" />
             </a>
 
-            {/* Right-Side Photo Placeholder */}
+            {/* Right-Side Consultation & Temple Visual Banner */}
             <div className="contact-bottom-cta-img-box">
-              <ImageIcon className="w-6 h-6 text-white opacity-40 mb-1" />
-              <span className="text-[10px] text-white/70 font-semibold">
-                Financial Consultation
-              </span>
-              <span className="text-[9px] text-white/40">Madurai Temple Backdrop</span>
+              <img
+                src={requirementCtaImg}
+                alt="Discuss Your Requirement with Balaji Associates"
+                className="contact-bottom-cta-img"
+              />
             </div>
           </div>
         </div>
@@ -1784,8 +1739,8 @@ function Contact() {
       <section className="contact-container">
         <div className="contact-disclaimers-row">
           {/* Left: Loan Disclaimer */}
-          <div className="contact-disclaimer-card">
-            <ShieldCheck className="contact-disclaimer-shield" />
+          <div className="contact-disclaimer-card contact-disclaimer-loan">
+            <ShieldCheck className="contact-disclaimer-shield text-blue-900" />
             <div className="contact-disclaimer-content">
               <h4 className="contact-disclaimer-heading">Loan Disclaimer</h4>
               <p className="contact-disclaimer-text">
@@ -1795,8 +1750,8 @@ function Contact() {
           </div>
 
           {/* Right: Insurance Disclaimer */}
-          <div className="contact-disclaimer-card">
-            <ShieldCheck className="contact-disclaimer-shield" />
+          <div className="contact-disclaimer-card contact-disclaimer-insurance">
+            <ShieldCheck className="contact-disclaimer-shield text-amber-600" />
             <div className="contact-disclaimer-content">
               <h4 className="contact-disclaimer-heading">Insurance Disclaimer</h4>
               <p className="contact-disclaimer-text">

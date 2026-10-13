@@ -30,9 +30,22 @@ import {
   CarFront,
   Plane,
   House,
-  CheckCircle2,
-  Image as ImageIcon
+  CheckCircle2
 } from 'lucide-react';
+
+// Health insurance images
+import heroImg from '../../assets/images/Insurance/Health/Health_Hero_section_Rightside.png';
+import individualsImg from '../../assets/images/Insurance/Health/Individuals.png';
+import familiesImg from '../../assets/images/Insurance/Health/Families.png';
+import selfEmployedImg from '../../assets/images/Insurance/Health/Self-employed.png';
+import peopleReviewingImg from '../../assets/images/Insurance/Health/People-reviewing.png';
+import comparingCoverageImg from '../../assets/images/Insurance/Health/Comparing Coverage Beyond Premiums.png';
+import disclosureLeftImg from '../../assets/images/Insurance/Health/Accurate_Disclosure_left.png';
+import disclosureRightImg from '../../assets/images/Insurance/Health/Accurate_Disclosure_right.png';
+import howBalajiLeftImg from '../../assets/images/Insurance/Health/How_Balaji_left.png';
+import howBalajiRightImg from '../../assets/images/Insurance/Health/How_Balaji_Right.png';
+import keyFactorsImg from '../../assets/images/Insurance/Health/Key_factors.png';
+import ctaFamilyImg from '../../assets/images/Insurance/Health/Insurance_Requirement.png';
 
 const faqList = [
   {
@@ -308,51 +321,11 @@ function HealthInsurance() {
           justify-content: center;
         }
 
-        .hi-floating-card {
-          position: absolute;
-          background: #FFFFFF;
-          border: 1px solid #E2E8F0;
-          border-radius: 12px;
-          padding: 10px 14px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 6px;
-          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-          z-index: 2;
-        }
-
-        .hi-floating-icon {
-          width: 22px;
-          height: 22px;
-          color: #003B73;
-        }
-
-        .hi-floating-label {
-          font-size: 11px;
-          font-weight: 700;
-          color: #0A1B3A;
-          white-space: nowrap;
-        }
-
-        .hi-float-top-left {
-          top: 24px;
-          left: 24px;
-        }
-
-        .hi-float-bottom-left {
-          bottom: 24px;
-          left: 24px;
-        }
-
-        .hi-float-top-right {
-          top: 24px;
-          right: 24px;
-        }
-
-        .hi-float-bottom-right {
-          bottom: 24px;
-          right: 24px;
+        .hi-hero-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         /* 3. SECTION — WHO MAY NEED HEALTH INSURANCE */
@@ -384,9 +357,22 @@ function HealthInsurance() {
           background: #F8FAFC;
           border-bottom: 1px solid #E2E8F0;
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
+          overflow: hidden;
+          position: relative;
+        }
+
+        .hi-need-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          transition: transform 0.3s ease;
+        }
+
+        .hi-need-card:hover .hi-need-img {
+          transform: scale(1.05);
         }
 
         .hi-need-body {
@@ -500,34 +486,21 @@ function HealthInsurance() {
           box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
         }
 
-        .hi-comp-vis-left {
-          background: linear-gradient(135deg, #F0FDF4 0%, #EFF6FF 100%);
-          border: 1px solid #BFDBFE;
+        .hi-comp-vis-left-img-wrap {
           border-radius: 16px;
-          padding: 28px 24px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-          justify-content: center;
+          overflow: hidden;
+          border: 1px solid #BFDBFE;
+          height: 100%;
           min-height: 240px;
-        }
-
-        .hi-comp-vis-heading {
-          font-size: 18px;
-          font-weight: 800;
-          color: #0A1B3A;
-          line-height: 1.35;
-          margin: 0 0 16px 0;
-          font-family: 'DM Serif Display', Georgia, serif;
-        }
-
-        .hi-comp-vis-shield-wrap {
           display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 12px;
-          margin-top: 8px;
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+        }
+
+        .hi-comp-vis-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         .hi-comp-vis-right-grid {
@@ -560,7 +533,16 @@ function HealthInsurance() {
           display: grid;
           grid-template-columns: 0.8fr 1.4fr 0.8fr;
           gap: 24px;
-          align-items: center;
+          align-items: stretch;
+        }
+
+        .hi-disclosure-thumb-box {
+          border: 1px solid #E2E8F0;
+          border-radius: 16px;
+          overflow: hidden;
+          min-height: 170px;
+          display: flex;
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
         }
 
         /* 6. SECTION — HOW BALAJI ASSOCIATES HELPS */
@@ -568,7 +550,23 @@ function HealthInsurance() {
           display: grid;
           grid-template-columns: 0.8fr 1.4fr 0.8fr;
           gap: 24px;
-          align-items: center;
+          align-items: stretch;
+        }
+
+        .hi-helps-thumb-box {
+          border: 1px solid #E2E8F0;
+          border-radius: 16px;
+          overflow: hidden;
+          min-height: 170px;
+          display: flex;
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+        }
+
+        .hi-section-thumb-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         /* 7. SECTION — FAQS & KEY FACTORS BEFORE CHOOSING A POLICY */
@@ -680,16 +678,21 @@ function HealthInsurance() {
         }
 
         .hi-key-factors-center-doc {
-          background: #F8FAFC;
-          border: 2px solid #E2E8F0;
-          border-radius: 16px;
-          padding: 22px 16px;
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
-          min-width: 100px;
-          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+          min-width: 130px;
+          max-width: 170px;
+          padding: 6px;
+        }
+
+        .hi-key-factors-center-img {
+          width: 100%;
+          max-width: 160px;
+          height: auto;
+          object-fit: contain;
+          display: block;
+          filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.06));
         }
 
         /* 8. SECTION — IMPORTANT POLICY NOTE */
@@ -885,17 +888,23 @@ function HealthInsurance() {
           background: rgba(255, 255, 255, 0.1);
         }
 
-        .hi-bottom-cta-img-placeholder {
-          background-color: rgba(255, 255, 255, 0.05);
-          border: 1px solid rgba(255, 255, 255, 0.12);
-          border-radius: 18px;
-          min-height: 180px;
-          height: 100%;
+        .hi-bottom-cta-visual {
           width: 100%;
+          height: 100%;
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
+        }
+
+        .hi-bottom-cta-img {
+          width: 100%;
+          height: 100%;
+          max-height: 220px;
+          object-fit: cover;
+          border-radius: 18px;
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+          display: block;
         }
 
         /* 11. DISCLAIMER / INFORMATION BAR */
@@ -1158,29 +1167,11 @@ function HealthInsurance() {
 
             <div className="hi-hero-right">
               <div className="hi-hero-visual-card">
-                <ImageIcon className="hi-placeholder-icon" />
-                <span className="hi-placeholder-label">Family with Adviser &amp; Madurai Temple</span>
-
-                {/* 4 Floating Cards */}
-                <div className="hi-floating-card hi-float-top-left">
-                  <UserRound className="hi-floating-icon" />
-                  <span className="hi-floating-label">Individual Health</span>
-                </div>
-
-                <div className="hi-floating-card hi-float-bottom-left">
-                  <Users className="hi-floating-icon" />
-                  <span className="hi-floating-label">Family Health</span>
-                </div>
-
-                <div className="hi-floating-card hi-float-top-right">
-                  <ShieldCheck className="hi-floating-icon" />
-                  <span className="hi-floating-label">Coverage</span>
-                </div>
-
-                <div className="hi-floating-card hi-float-bottom-right">
-                  <ClipboardList className="hi-floating-icon" />
-                  <span className="hi-floating-label">Policy Terms</span>
-                </div>
+                <img
+                  src={heroImg}
+                  alt="Health Insurance Assistance in Madurai"
+                  className="hi-hero-img"
+                />
               </div>
             </div>
           </div>
@@ -1202,8 +1193,7 @@ function HealthInsurance() {
             {/* Card 1 */}
             <div className="hi-need-card">
               <div className="hi-need-img-box">
-                <ImageIcon className="hi-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="hi-placeholder-label">Individual Professional</span>
+                <img src={individualsImg} alt="Individuals without adequate existing cover" className="hi-need-img" />
               </div>
               <div className="hi-need-body">
                 <div className="hi-need-icon-wrap">
@@ -1219,8 +1209,7 @@ function HealthInsurance() {
             {/* Card 2 */}
             <div className="hi-need-card">
               <div className="hi-need-img-box">
-                <ImageIcon className="hi-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="hi-placeholder-label">Family with Adviser</span>
+                <img src={familiesImg} alt="Families looking for family health protection" className="hi-need-img" />
               </div>
               <div className="hi-need-body">
                 <div className="hi-need-icon-wrap">
@@ -1236,8 +1225,7 @@ function HealthInsurance() {
             {/* Card 3 */}
             <div className="hi-need-card">
               <div className="hi-need-img-box">
-                <ImageIcon className="hi-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="hi-placeholder-label">Self-Employed Professional</span>
+                <img src={selfEmployedImg} alt="Self-employed professionals and business owners" className="hi-need-img" />
               </div>
               <div className="hi-need-body">
                 <div className="hi-need-icon-wrap">
@@ -1253,8 +1241,7 @@ function HealthInsurance() {
             {/* Card 4 */}
             <div className="hi-need-card">
               <div className="hi-need-img-box">
-                <ImageIcon className="hi-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="hi-placeholder-label">Reviewing Documents</span>
+                <img src={peopleReviewingImg} alt="People reviewing whether existing employer/personal cover is sufficient" className="hi-need-img" />
               </div>
               <div className="hi-need-body">
                 <div className="hi-need-icon-wrap">
@@ -1356,14 +1343,12 @@ function HealthInsurance() {
 
           {/* Comparison Visual and Checklist Box */}
           <div className="hi-comparison-visual-box">
-            <div className="hi-comp-vis-left">
-              <h3 className="hi-comp-vis-heading">
-                Two policies with similar premiums can behave very differently at claim time.
-              </h3>
-              <div className="hi-comp-vis-shield-wrap">
-                <ShieldCheck className="w-12 h-12 text-emerald-600" />
-                <Stethoscope className="w-10 h-10 text-blue-600" />
-              </div>
+            <div className="hi-comp-vis-left-img-wrap">
+              <img
+                src={comparingCoverageImg}
+                alt="Two policies with similar premiums can behave very differently at claim time"
+                className="hi-comp-vis-img"
+              />
             </div>
 
             <div className="hi-comp-vis-right-grid">
@@ -1430,9 +1415,12 @@ function HealthInsurance() {
           </div>
 
           <div className="hi-disclosure-card">
-            <div className="hi-img-placeholder" style={{ minHeight: '170px' }}>
-              <ImageIcon className="hi-placeholder-icon" />
-              <span className="hi-placeholder-label">Consultation &amp; Discussion</span>
+            <div className="hi-disclosure-thumb-box">
+              <img
+                src={disclosureLeftImg}
+                alt="Consultation & Discussion"
+                className="hi-section-thumb-img"
+              />
             </div>
 
             <div>
@@ -1441,9 +1429,12 @@ function HealthInsurance() {
               </p>
             </div>
 
-            <div className="hi-img-placeholder" style={{ minHeight: '170px' }}>
-              <ImageIcon className="hi-placeholder-icon" />
-              <span className="hi-placeholder-label">Policy Document &amp; Shield</span>
+            <div className="hi-disclosure-thumb-box">
+              <img
+                src={disclosureRightImg}
+                alt="Policy Document & Shield"
+                className="hi-section-thumb-img"
+              />
             </div>
           </div>
         </div>
@@ -1458,9 +1449,12 @@ function HealthInsurance() {
           </div>
 
           <div className="hi-helps-card">
-            <div className="hi-img-placeholder" style={{ minHeight: '170px' }}>
-              <ImageIcon className="hi-placeholder-icon" />
-              <span className="hi-placeholder-label">Family Guidance</span>
+            <div className="hi-helps-thumb-box">
+              <img
+                src={howBalajiLeftImg}
+                alt="Family Guidance"
+                className="hi-section-thumb-img"
+              />
             </div>
 
             <div>
@@ -1469,9 +1463,12 @@ function HealthInsurance() {
               </p>
             </div>
 
-            <div className="hi-img-placeholder" style={{ minHeight: '170px' }}>
-              <ImageIcon className="hi-placeholder-icon" />
-              <span className="hi-placeholder-label">Adviser Consultation</span>
+            <div className="hi-helps-thumb-box">
+              <img
+                src={howBalajiRightImg}
+                alt="Adviser Consultation"
+                className="hi-section-thumb-img"
+              />
             </div>
           </div>
         </div>
@@ -1555,8 +1552,11 @@ function HealthInsurance() {
 
                 {/* Center document illustration */}
                 <div className="hi-key-factors-center-doc">
-                  <FileText className="w-10 h-10 text-slate-400 mb-2" />
-                  <ShieldCheck className="w-8 h-8 text-emerald-600" />
+                  <img
+                    src={keyFactorsImg}
+                    alt="Key Factors"
+                    className="hi-key-factors-center-img"
+                  />
                 </div>
 
                 {/* Right 3 factors */}
@@ -1694,10 +1694,11 @@ function HealthInsurance() {
             </div>
 
             <div className="hi-bottom-cta-visual">
-              <div className="hi-bottom-cta-img-placeholder">
-                <ImageIcon className="hi-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="hi-placeholder-label" style={{ color: 'rgba(255,255,255,0.5)' }}>Family &amp; Adviser / Temple Visual</span>
-              </div>
+              <img
+                src={ctaFamilyImg}
+                alt="Discuss Your Insurance Requirement"
+                className="hi-bottom-cta-img"
+              />
             </div>
           </div>
         </div>

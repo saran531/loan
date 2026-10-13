@@ -25,9 +25,19 @@ import {
   MessageSquare,
   Settings,
   Sparkles,
-  Wrench,
-  Image as ImageIcon
+  Wrench
 } from 'lucide-react';
+
+import heroBusinessMsmeMadurai from '../../assets/images/loan/Business&MSME/01_hero-business-msme-madurai.png';
+import businessLoanManThinking from '../../assets/images/loan/Business&MSME/02_business-loan-man-thinking.png';
+import manufacturingConsultation from '../../assets/images/loan/Business&MSME/03_manufacturing-consultation.png';
+import msmeBlocks from '../../assets/images/loan/Business&MSME/04_msme-blocks.png';
+import expansionNewCapacity from '../../assets/images/loan/Business&MSME/05_expansion-new-capacity.png';
+import machineryPurchase from '../../assets/images/loan/Business&MSME/06_machinery-purchase.png';
+import workingCapital from '../../assets/images/loan/Business&MSME/07_working-capital.png';
+import documentsStack from '../../assets/images/loan/Business&MSME/08_documents-stack.png';
+import consultationMeeting from '../../assets/images/loan/Business&MSME/29_consultation-meeting.png';
+import footerFactory from '../../assets/images/loan/Business&MSME/35_footer-factory.png';
 
 const faqList = [
   {
@@ -118,6 +128,14 @@ function BusinessMSMELoans() {
           justify-content: center;
           position: relative;
           overflow: hidden;
+        }
+
+        .bms-section-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         .bms-placeholder-icon {
@@ -283,6 +301,14 @@ function BusinessMSMELoans() {
           display: flex;
           align-items: center;
           justify-content: center;
+        }
+
+        .bms-hero-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         .bms-floating-card {
@@ -598,6 +624,15 @@ function BusinessMSMELoans() {
           display: flex;
           align-items: center;
           justify-content: center;
+          overflow: hidden;
+        }
+
+        .bms-purpose-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         .bms-purpose-card-footer {
@@ -722,6 +757,15 @@ function BusinessMSMELoans() {
           display: flex;
           align-items: center;
           justify-content: center;
+          overflow: hidden;
+        }
+
+        .bms-docs-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         /* 9. HOW BALAJI ASSOCIATES HELPS */
@@ -951,12 +995,17 @@ function BusinessMSMELoans() {
           background-color: rgba(255, 255, 255, 0.05);
           border: 1px solid rgba(255, 255, 255, 0.12);
           border-radius: 16px;
-          min-height: 200px;
-          height: 100%;
+          height: 180px;
           width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          overflow: hidden;
+        }
+
+        .bms-bottom-cta-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         /* 13. DISCLAIMER / INFORMATION BAR */
@@ -1210,27 +1259,11 @@ function BusinessMSMELoans() {
 
             <div className="bms-hero-right">
               <div className="bms-hero-visual-card">
-                <ImageIcon className="bms-placeholder-icon" />
-
-                <div className="bms-floating-card bms-float-1">
-                  <TrendingUp className="bms-floating-card-icon" />
-                  <span className="bms-floating-card-label">Business Finance</span>
-                </div>
-
-                <div className="bms-floating-card bms-float-2">
-                  <Building2 className="bms-floating-card-icon" />
-                  <span className="bms-floating-card-label">MSME</span>
-                </div>
-
-                <div className="bms-floating-card bms-float-3">
-                  <FileText className="bms-floating-card-icon" />
-                  <span className="bms-floating-card-label">Document Review</span>
-                </div>
-
-                <div className="bms-floating-card bms-float-4">
-                  <Landmark className="bms-floating-card-icon" />
-                  <span className="bms-floating-card-label">Bank / NBFC</span>
-                </div>
+                <img
+                  src={heroBusinessMsmeMadurai}
+                  alt="Business & MSME Loan Assistance in Madurai"
+                  className="bms-hero-img"
+                />
               </div>
             </div>
           </div>
@@ -1247,7 +1280,11 @@ function BusinessMSMELoans() {
 
           <div className="bms-biz-grid">
             <div className="bms-img-placeholder">
-              <ImageIcon className="bms-placeholder-icon" />
+              <img
+                src={businessLoanManThinking}
+                alt="Business Loan assistance"
+                className="bms-section-img"
+              />
             </div>
 
             <div className="bms-biz-content">
@@ -1340,7 +1377,11 @@ function BusinessMSMELoans() {
             </div>
 
             <div className="bms-img-placeholder" style={{ borderColor: '#BBF7D0' }}>
-              <ImageIcon className="bms-placeholder-icon" />
+              <img
+                src={manufacturingConsultation}
+                alt="MSME Finance and manufacturing consultation"
+                className="bms-section-img"
+              />
             </div>
           </div>
         </div>
@@ -1351,7 +1392,11 @@ function BusinessMSMELoans() {
         <div className="bms-container">
           <div className="bms-cgtmse-card">
             <div className="bms-img-placeholder" style={{ backgroundColor: 'rgba(255,255,255,0.05)', borderColor: 'rgba(255,255,255,0.12)' }}>
-              <ImageIcon className="bms-placeholder-icon" style={{ opacity: 0.3 }} />
+              <img
+                src={msmeBlocks}
+                alt="CGTMSE-Related Finance"
+                className="bms-section-img"
+              />
             </div>
 
             <div className="bms-cgtmse-content">
@@ -1423,7 +1468,11 @@ function BusinessMSMELoans() {
           <div className="bms-purpose-cards">
             <div className="bms-purpose-card">
               <div className="bms-purpose-img-holder">
-                <ImageIcon className="bms-placeholder-icon" />
+                <img
+                  src={expansionNewCapacity}
+                  alt="Expansion / New Capacity"
+                  className="bms-purpose-img"
+                />
               </div>
               <div className="bms-purpose-card-footer">
                 <span className="bms-purpose-title">Expansion / New Capacity</span>
@@ -1433,7 +1482,11 @@ function BusinessMSMELoans() {
 
             <div className="bms-purpose-card">
               <div className="bms-purpose-img-holder">
-                <ImageIcon className="bms-placeholder-icon" />
+                <img
+                  src={machineryPurchase}
+                  alt="Machinery Purchase"
+                  className="bms-purpose-img"
+                />
               </div>
               <div className="bms-purpose-card-footer">
                 <span className="bms-purpose-title">Machinery Purchase</span>
@@ -1443,7 +1496,11 @@ function BusinessMSMELoans() {
 
             <div className="bms-purpose-card">
               <div className="bms-purpose-img-holder">
-                <ImageIcon className="bms-placeholder-icon" />
+                <img
+                  src={workingCapital}
+                  alt="Working Capital"
+                  className="bms-purpose-img"
+                />
               </div>
               <div className="bms-purpose-card-footer">
                 <span className="bms-purpose-title">Working Capital</span>
@@ -1564,7 +1621,11 @@ function BusinessMSMELoans() {
                 </ul>
 
                 <div className="bms-docs-img-holder">
-                  <ImageIcon className="bms-placeholder-icon" />
+                  <img
+                    src={documentsStack}
+                    alt="Documents and paperwork for Business & MSME loans"
+                    className="bms-docs-img"
+                  />
                 </div>
               </div>
             </div>
@@ -1582,7 +1643,11 @@ function BusinessMSMELoans() {
 
           <div className="bms-helps-grid">
             <div className="bms-img-placeholder">
-              <ImageIcon className="bms-placeholder-icon" />
+              <img
+                src={consultationMeeting}
+                alt="How Balaji Associates Helps with Business & MSME Loans"
+                className="bms-section-img"
+              />
             </div>
 
             <div className="bms-helps-content">
@@ -1750,7 +1815,11 @@ function BusinessMSMELoans() {
 
             <div className="bms-bottom-cta-visual">
               <div className="bms-bottom-cta-img-placeholder">
-                <ImageIcon className="bms-placeholder-icon" style={{ opacity: 0.3 }} />
+                <img
+                  src={footerFactory}
+                  alt="Business loan consultation in manufacturing environment"
+                  className="bms-bottom-cta-img"
+                />
               </div>
             </div>
           </div>

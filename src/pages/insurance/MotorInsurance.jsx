@@ -27,9 +27,25 @@ import {
   Plane,
   House,
   Sparkles,
-  Users,
-  Image as ImageIcon
+  Users
 } from 'lucide-react';
+
+// Motor insurance images
+import heroImg from '../../assets/images/Insurance/Motor/Motor_Right_side_image.png';
+import thirdPartyImg from '../../assets/images/Insurance/Motor/Third_party.png';
+import ownDamageImg from '../../assets/images/Insurance/Motor/Own_damage.png';
+import motorCompareBannerImg from '../../assets/images/Insurance/Motor/Motor_Insurance.png';
+import renewalImg from '../../assets/images/Insurance/Motor/Renewal_left_side.png';
+import howBalajiLeftImg from '../../assets/images/Insurance/Motor/How_balaji_left.png';
+import howBalajiRightImg from '../../assets/images/Insurance/Motor/How_balaji_Right.png';
+import keyAreasImg from '../../assets/images/Insurance/Motor/Key_Areas.png';
+import policyNoteImg from '../../assets/images/Insurance/Motor/Policy_note.png';
+import relatedInsServicesImg from '../../assets/images/Insurance/Motor/Insurance_services.png';
+import relatedHealthImg from '../../assets/images/Insurance/Motor/Health_insurance.png';
+import relatedSmeImg from '../../assets/images/Insurance/Motor/SME&Business_insurance.png';
+import relatedTravelImg from '../../assets/images/Insurance/Motor/Travel_Insurance.png';
+import relatedHomeImg from '../../assets/images/Insurance/Motor/Home_Insurance.png';
+import ctaRequirementImg from '../../assets/images/Insurance/Motor/Insurance_Requirment.png';
 
 const faqList = [
   {
@@ -285,38 +301,11 @@ function MotorInsurance() {
           justify-content: center;
         }
 
-        .mi-floating-stack {
-          position: absolute;
-          top: 24px;
-          right: 20px;
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          z-index: 2;
-        }
-
-        .mi-floating-card {
-          background: #FFFFFF;
-          border: 1px solid #E2E8F0;
-          border-radius: 12px;
-          padding: 8px 14px;
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-        }
-
-        .mi-floating-icon {
-          width: 18px;
-          height: 18px;
-          color: #003B73;
-        }
-
-        .mi-floating-label {
-          font-size: 11.5px;
-          font-weight: 700;
-          color: #0A1B3A;
-          white-space: nowrap;
+        .mi-hero-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         /* 3. SECTION — THIRD-PARTY VS BROADER COVER */
@@ -377,10 +366,17 @@ function MotorInsurance() {
           background: #F8FAFC;
           border: 1px solid #E2E8F0;
           border-radius: 14px;
+          overflow: hidden;
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
+        }
+
+        .mi-vs-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         .mi-vs-notice-strip {
@@ -461,6 +457,7 @@ function MotorInsurance() {
           top: 50%;
           transform: translateY(-50%);
           max-width: 260px;
+          z-index: 2;
         }
 
         .mi-vis-heading {
@@ -474,17 +471,25 @@ function MotorInsurance() {
 
         .mi-vis-center-illustration {
           width: 380px;
+          max-width: 100%;
           height: 220px;
           background: #FFFFFF;
           border: 1px solid #E2E8F0;
           border-radius: 20px;
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
           box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
           position: relative;
           z-index: 1;
+          overflow: hidden;
+        }
+
+        .mi-vis-center-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         .mi-pill-tag {
@@ -533,6 +538,23 @@ function MotorInsurance() {
           align-items: center;
         }
 
+        .mi-renewal-img-box {
+          border-radius: 18px;
+          overflow: hidden;
+          border: 1px solid #E2E8F0;
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+          height: 100%;
+          min-height: 220px;
+          display: flex;
+        }
+
+        .mi-renewal-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
         .mi-renewal-card {
           background: #F0FDF4;
           border: 1.5px solid #BBF7D0;
@@ -572,9 +594,47 @@ function MotorInsurance() {
         /* 7. HOW BALAJI ASSOCIATES HELPS */
         .mi-helps-card {
           display: grid;
-          grid-template-columns: 0.8fr 1.4fr 0.8fr;
+          grid-template-columns: 0.6fr 1.6fr 1fr;
           gap: 24px;
           align-items: center;
+        }
+
+        .mi-helps-icon-box {
+          background: #FFFFFF;
+          border: 1px solid #E2E8F0;
+          border-radius: 16px;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 8px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+          max-width: 140px;
+        }
+
+        .mi-helps-icon-img {
+          width: 100%;
+          height: auto;
+          max-height: 110px;
+          object-fit: contain;
+          display: block;
+        }
+
+        .mi-helps-photo-box {
+          border-radius: 16px;
+          overflow: hidden;
+          border: 1px solid #E2E8F0;
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+          height: 100%;
+          min-height: 160px;
+          display: flex;
+        }
+
+        .mi-helps-photo-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         /* 8. FAQS & KEY AREAS TO UNDERSTAND */
@@ -662,23 +722,34 @@ function MotorInsurance() {
           border-radius: 20px;
           padding: 24px;
           min-height: 380px;
+          height: 100%;
           display: flex;
           align-items: center;
           justify-content: center;
           overflow: hidden;
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
         }
 
         .mi-key-areas-inner-img {
           width: 220px;
+          max-width: 100%;
           height: 150px;
           background: #FFFFFF;
           border: 1px solid #CBD5E1;
           border-radius: 14px;
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
           z-index: 1;
+          overflow: hidden;
+          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+        }
+
+        .mi-key-areas-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         /* Key areas floating tags around inner image */
@@ -711,12 +782,18 @@ function MotorInsurance() {
           width: 80px;
           height: 80px;
           border-radius: 16px;
-          background: rgba(255, 255, 255, 0.08);
-          border: 1px solid rgba(255, 255, 255, 0.15);
           display: flex;
           align-items: center;
           justify-content: center;
           flex-shrink: 0;
+          overflow: hidden;
+        }
+
+        .mi-policy-note-img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          display: block;
         }
 
         .mi-policy-note-content {
@@ -771,12 +848,25 @@ function MotorInsurance() {
 
         .mi-related-img-holder {
           width: 100%;
-          height: 85px;
+          height: 90px;
           background: #F8FAFC;
           border-bottom: 1px solid #E2E8F0;
+          overflow: hidden;
           display: flex;
           align-items: center;
           justify-content: center;
+        }
+
+        .mi-related-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          transition: transform 0.3s ease;
+        }
+
+        .mi-related-card:hover .mi-related-img {
+          transform: scale(1.05);
         }
 
         .mi-related-footer {
@@ -845,17 +935,23 @@ function MotorInsurance() {
           flex-wrap: wrap;
         }
 
-        .mi-bottom-cta-img-placeholder {
-          background-color: rgba(255, 255, 255, 0.05);
-          border: 1px solid rgba(255, 255, 255, 0.12);
-          border-radius: 18px;
-          min-height: 170px;
-          height: 100%;
+        .mi-bottom-cta-visual {
           width: 100%;
+          height: 100%;
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
+        }
+
+        .mi-bottom-cta-img {
+          width: 100%;
+          height: 100%;
+          max-height: 220px;
+          object-fit: cover;
+          border-radius: 18px;
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+          display: block;
         }
 
         /* 12. DISCLAIMER / INFORMATION BAR */
@@ -1120,31 +1216,11 @@ function MotorInsurance() {
 
             <div className="mi-hero-right">
               <div className="mi-hero-visual-card">
-                <ImageIcon className="mi-placeholder-icon" />
-                <span className="mi-placeholder-label">Car, Two-Wheeler &amp; Madurai Temple</span>
-
-                {/* 4 Floating Cards */}
-                <div className="mi-floating-stack">
-                  <div className="mi-floating-card">
-                    <CarFront className="mi-floating-icon" />
-                    <span className="mi-floating-label">Car Insurance</span>
-                  </div>
-
-                  <div className="mi-floating-card">
-                    <Bike className="mi-floating-icon" />
-                    <span className="mi-floating-label">Two-Wheeler Insurance</span>
-                  </div>
-
-                  <div className="mi-floating-card">
-                    <Car className="mi-floating-icon" />
-                    <span className="mi-floating-label">Vehicle Insurance</span>
-                  </div>
-
-                  <div className="mi-floating-card">
-                    <ShieldCheck className="mi-floating-icon" />
-                    <span className="mi-floating-label">Motor Insurance</span>
-                  </div>
-                </div>
+                <img
+                  src={heroImg}
+                  alt="Motor Insurance Assistance in Madurai"
+                  className="mi-hero-img"
+                />
               </div>
             </div>
           </div>
@@ -1179,8 +1255,7 @@ function MotorInsurance() {
               </div>
 
               <div className="mi-vs-img-box">
-                <ImageIcon className="mi-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="mi-placeholder-label">Third-Party Cover</span>
+                <img src={thirdPartyImg} alt="Third-Party Cover" className="mi-vs-img" />
               </div>
             </div>
 
@@ -1199,8 +1274,7 @@ function MotorInsurance() {
               </div>
 
               <div className="mi-vs-img-box">
-                <ImageIcon className="mi-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="mi-placeholder-label">Comprehensive Cover</span>
+                <img src={ownDamageImg} alt="Own-Damage / Comprehensive Cover" className="mi-vs-img" />
               </div>
             </div>
           </div>
@@ -1304,9 +1378,11 @@ function MotorInsurance() {
             </div>
 
             <div className="mi-vis-center-illustration">
-              <CarFront className="w-12 h-12 text-slate-400 mb-2" />
-              <ShieldCheck className="w-8 h-8 text-emerald-600" />
-              <span className="mi-placeholder-label" style={{ marginTop: '4px' }}>Motor Insurance Shield</span>
+              <img
+                src={motorCompareBannerImg}
+                alt="Motor Insurance"
+                className="mi-vis-center-img"
+              />
             </div>
 
             {/* Surrounding Floating Pills */}
@@ -1377,9 +1453,12 @@ function MotorInsurance() {
       <section className="mi-section">
         <div className="mi-container">
           <div className="mi-renewal-grid">
-            <div className="mi-img-placeholder" style={{ minHeight: '220px' }}>
-              <ImageIcon className="mi-placeholder-icon" />
-              <span className="mi-placeholder-label">Reviewing Renewal on Laptop</span>
+            <div className="mi-renewal-img-box">
+              <img
+                src={renewalImg}
+                alt="Motor Insurance Policy Review and Renewal"
+                className="mi-renewal-img"
+              />
             </div>
 
             <div className="mi-renewal-card">
@@ -1399,9 +1478,12 @@ function MotorInsurance() {
       <section className="mi-section">
         <div className="mi-container">
           <div className="mi-helps-card">
-            <div className="mi-img-placeholder" style={{ minHeight: '160px' }}>
-              <ImageIcon className="mi-placeholder-icon" />
-              <span className="mi-placeholder-label">Consultation Graphic</span>
+            <div className="mi-helps-icon-box">
+              <img
+                src={howBalajiLeftImg}
+                alt="Balaji Associates Guidance"
+                className="mi-helps-icon-img"
+              />
             </div>
 
             <div>
@@ -1414,9 +1496,12 @@ function MotorInsurance() {
               </p>
             </div>
 
-            <div className="mi-img-placeholder" style={{ minHeight: '160px' }}>
-              <ImageIcon className="mi-placeholder-icon" />
-              <span className="mi-placeholder-label">Adviser &amp; Vehicle Discussion</span>
+            <div className="mi-helps-photo-box">
+              <img
+                src={howBalajiRightImg}
+                alt="Motor Insurance Consultation"
+                className="mi-helps-photo-img"
+              />
             </div>
           </div>
         </div>
@@ -1481,9 +1566,11 @@ function MotorInsurance() {
 
               <div className="mi-key-areas-box">
                 <div className="mi-key-areas-inner-img">
-                  <CarFront className="w-10 h-10 text-slate-400 mb-1" />
-                  <ShieldCheck className="w-6 h-6 text-emerald-600" />
-                  <span className="mi-placeholder-label">Vehicle &amp; Policy</span>
+                  <img
+                    src={keyAreasImg}
+                    alt="Key Areas to Understand"
+                    className="mi-key-areas-img"
+                  />
                 </div>
 
                 {/* Floating Tags Around Inner Image */}
@@ -1542,7 +1629,11 @@ function MotorInsurance() {
           {/* 9. IMPORTANT POLICY NOTE */}
           <div className="mi-policy-note-banner">
             <div className="mi-policy-note-img-holder">
-              <FileText className="w-8 h-8 text-amber-400" />
+              <img
+                src={policyNoteImg}
+                alt="Important Policy Note"
+                className="mi-policy-note-img"
+              />
             </div>
 
             <div className="mi-policy-note-content">
@@ -1569,7 +1660,7 @@ function MotorInsurance() {
           <div className="mi-related-cards">
             <Link to="/insurance/" className="mi-related-card">
               <div className="mi-related-img-holder">
-                <Umbrella className="w-7 h-7 text-blue-800" />
+                <img src={relatedInsServicesImg} alt="Insurance Services" className="mi-related-img" />
               </div>
               <div className="mi-related-footer">
                 <div className="mi-related-left">
@@ -1582,7 +1673,7 @@ function MotorInsurance() {
 
             <Link to="/health-insurance-madurai/" className="mi-related-card">
               <div className="mi-related-img-holder">
-                <HeartPulse className="w-7 h-7 text-rose-600" />
+                <img src={relatedHealthImg} alt="Health Insurance" className="mi-related-img" />
               </div>
               <div className="mi-related-footer">
                 <div className="mi-related-left">
@@ -1595,7 +1686,7 @@ function MotorInsurance() {
 
             <Link to="/sme-business-insurance/" className="mi-related-card">
               <div className="mi-related-img-holder">
-                <Building2 className="w-7 h-7 text-amber-600" />
+                <img src={relatedSmeImg} alt="SME & Business Insurance" className="mi-related-img" />
               </div>
               <div className="mi-related-footer">
                 <div className="mi-related-left">
@@ -1608,7 +1699,7 @@ function MotorInsurance() {
 
             <Link to="/travel-insurance-madurai/" className="mi-related-card">
               <div className="mi-related-img-holder">
-                <Plane className="w-7 h-7 text-sky-600" />
+                <img src={relatedTravelImg} alt="Travel Insurance" className="mi-related-img" />
               </div>
               <div className="mi-related-footer">
                 <div className="mi-related-left">
@@ -1621,7 +1712,7 @@ function MotorInsurance() {
 
             <Link to="/home-insurance-madurai/" className="mi-related-card">
               <div className="mi-related-img-holder">
-                <House className="w-7 h-7 text-emerald-600" />
+                <img src={relatedHomeImg} alt="Home Insurance" className="mi-related-img" />
               </div>
               <div className="mi-related-footer">
                 <div className="mi-related-left">
@@ -1664,10 +1755,11 @@ function MotorInsurance() {
             </div>
 
             <div className="mi-bottom-cta-visual">
-              <div className="mi-bottom-cta-img-placeholder">
-                <ImageIcon className="mi-placeholder-icon" style={{ opacity: 0.35 }} />
-                <span className="mi-placeholder-label" style={{ color: 'rgba(255,255,255,0.5)' }}>Car, Bike &amp; Madurai Temple</span>
-              </div>
+              <img
+                src={ctaRequirementImg}
+                alt="Discuss Your Insurance Requirement"
+                className="mi-bottom-cta-img"
+              />
             </div>
           </div>
         </div>

@@ -25,6 +25,14 @@ import {
   Sparkles
 } from 'lucide-react';
 
+import heroHomeLoanMadurai from '../../assets/images/loan/Home&property/hero-home-loan-madurai.png';
+import housingLoanHouseModel from '../../assets/images/loan/Home&property/housing-loan-house-model.png';
+import constructionSiteBlueprint from '../../assets/images/loan/Home&property/construction-site-blueprint.png';
+import homeDocumentsClipboard from '../../assets/images/loan/Home&property/home-documents-clipboard.png';
+import documentsHouseModel from '../../assets/images/loan/Home&property/documents-house-model.png';
+import consultationMeeting from '../../assets/images/loan/Home&property/consultation-meeting.png';
+import footerHouse from '../../assets/images/loan/Home&property/footer-house.png';
+
 const faqList = [
   {
     question: 'What is the difference between a home loan and LAP?',
@@ -111,6 +119,14 @@ function HomePropertyLoans() {
           box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
           position: relative;
           overflow: hidden;
+          display: flex;
+        }
+
+        .hpl-section-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         /* 2. BREADCRUMB */
@@ -264,25 +280,31 @@ function HomePropertyLoans() {
 
         .hpl-hero-visual-card {
           position: relative;
-          min-height: 380px;
-          height: 100%;
+          width: 100%;
           background-color: #F1F5F9;
           border: 2px solid #FCD34D;
           border-radius: 24px;
           overflow: hidden;
           box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
           display: flex;
-          align-items: center;
-          justify-content: center;
+        }
+
+        .hpl-hero-img {
+          width: 100%;
+          height: auto;
+          aspect-ratio: 605 / 329;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         .hpl-floating-card {
+          display: none;
           position: absolute;
           background: #FFFFFF;
           border: 1px solid #E2E8F0;
           border-radius: 12px;
           padding: 10px 14px;
-          display: flex;
           flex-direction: column;
           align-items: center;
           gap: 6px;
@@ -758,9 +780,19 @@ function HomePropertyLoans() {
           background-color: rgba(255, 255, 255, 0.05);
           border: 1px solid rgba(255, 255, 255, 0.12);
           border-radius: 16px;
-          min-height: 200px;
-          height: 100%;
           width: 100%;
+          overflow: hidden;
+          position: relative;
+          display: flex;
+        }
+
+        .hpl-bottom-cta-img {
+          width: 100%;
+          height: auto;
+          aspect-ratio: 377 / 152;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         /* Responsive Breakpoints */
@@ -777,9 +809,6 @@ function HomePropertyLoans() {
             gap: 30px;
           }
 
-          .hpl-hero-visual-card {
-            min-height: 300px;
-          }
 
           .hpl-hero-title {
             font-size: 32px;
@@ -860,9 +889,6 @@ function HomePropertyLoans() {
             margin-bottom: 18px;
           }
 
-          .hpl-hero-visual-card {
-            min-height: 260px;
-          }
 
           .hpl-floating-card {
             padding: 8px 10px;
@@ -969,6 +995,11 @@ function HomePropertyLoans() {
 
             <div className="hpl-hero-right">
               <div className="hpl-hero-visual-card">
+                <img
+                  src={heroHomeLoanMadurai}
+                  alt="Home & Property Loan Assistance in Madurai"
+                  className="hpl-hero-img"
+                />
                 <div className="hpl-floating-card hpl-float-1">
                   <HomeIcon className="hpl-floating-card-icon" />
                   <span className="hpl-floating-card-label">Home Purchase</span>
@@ -998,7 +1029,13 @@ function HomePropertyLoans() {
           </div>
 
           <div className="hpl-housing-grid">
-            <div className="hpl-img-placeholder" />
+            <div className="hpl-img-placeholder">
+              <img
+                src={housingLoanHouseModel}
+                alt="Housing loan miniature house model with documents and keys"
+                className="hpl-section-img"
+              />
+            </div>
 
             <div className="hpl-housing-content">
               <p className="hpl-text-p">
@@ -1094,7 +1131,13 @@ function HomePropertyLoans() {
               </div>
             </div>
 
-            <div className="hpl-img-placeholder" />
+            <div className="hpl-img-placeholder">
+              <img
+                src={constructionSiteBlueprint}
+                alt="Land purchase and construction site with architectural blueprints and safety helmet"
+                className="hpl-section-img"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -1174,7 +1217,13 @@ function HomePropertyLoans() {
               </div>
             </div>
 
-            <div className="hpl-img-placeholder" />
+            <div className="hpl-img-placeholder">
+              <img
+                src={homeDocumentsClipboard}
+                alt="Property evaluation documents with house model and pen"
+                className="hpl-section-img"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -1188,7 +1237,13 @@ function HomePropertyLoans() {
           </div>
 
           <div className="hpl-docs-grid">
-            <div className="hpl-img-placeholder" />
+            <div className="hpl-img-placeholder">
+              <img
+                src={documentsHouseModel}
+                alt="Miniature house model with property documentation stack"
+                className="hpl-section-img"
+              />
+            </div>
 
             <div className="hpl-docs-content">
               <p className="hpl-docs-lead">Exact requirements vary.</p>
@@ -1243,7 +1298,13 @@ function HomePropertyLoans() {
           </div>
 
           <div className="hpl-helps-grid">
-            <div className="hpl-img-placeholder" />
+            <div className="hpl-img-placeholder">
+              <img
+                src={consultationMeeting}
+                alt="Financial consultants discussing loan requirements with customers"
+                className="hpl-section-img"
+              />
+            </div>
 
             <div className="hpl-helps-content">
               <p className="hpl-text-p">
@@ -1402,7 +1463,13 @@ function HomePropertyLoans() {
             </div>
 
             <div className="hpl-bottom-cta-visual">
-              <div className="hpl-bottom-cta-img-placeholder" />
+              <div className="hpl-bottom-cta-img-placeholder">
+                <img
+                  src={footerHouse}
+                  alt="Modern residential house with landscape lighting"
+                  className="hpl-bottom-cta-img"
+                />
+              </div>
             </div>
           </div>
         </div>

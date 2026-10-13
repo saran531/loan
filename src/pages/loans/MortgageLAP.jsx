@@ -23,9 +23,18 @@ import {
   GraduationCap,
   CheckSquare,
   CheckCircle2,
-  Landmark,
-  Image as ImageIcon
+  Landmark
 } from 'lucide-react';
+
+import heroMortgageMadurai from '../../assets/images/loan/Mortgage&LAP/hero-mortgage-madurai.png';
+import mortgageLoanHouseModel from '../../assets/images/loan/Mortgage&LAP/mortgage-loan-house-model.png';
+import landMortgagePlot from '../../assets/images/loan/Mortgage&LAP/land-mortgage-plot.png';
+import commercialPropertyMortgage from '../../assets/images/loan/Mortgage&LAP/commercial-property-mortgage.png';
+import applicantSalariedEmployee from '../../assets/images/loan/Mortgage&LAP/applicant-salaried-employee.png';
+import applicantSelfEmployed from '../../assets/images/loan/Mortgage&LAP/applicant-self-employed.png';
+import applicantBusinessOwner from '../../assets/images/loan/Mortgage&LAP/applicant-business-owner.png';
+import commonDocumentsChecklist from '../../assets/images/loan/Mortgage&LAP/common-documents-checklist.png';
+import footerHouse from '../../assets/images/loan/Mortgage&LAP/footer-house.png';
 
 const faqList = [
   {
@@ -116,6 +125,14 @@ function MortgageLAP() {
           justify-content: center;
           position: relative;
           overflow: hidden;
+        }
+
+        .lap-section-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         .lap-placeholder-icon {
@@ -283,6 +300,14 @@ function MortgageLAP() {
           justify-content: center;
         }
 
+        .lap-hero-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
+        }
+
         .lap-floating-card {
           position: absolute;
           background: #FFFFFF;
@@ -312,7 +337,8 @@ function MortgageLAP() {
 
         .lap-float-1 {
           top: 24px;
-          left: 40px;
+          left: 45%;
+          transform: translateX(-50%);
         }
 
         .lap-float-2 {
@@ -322,8 +348,9 @@ function MortgageLAP() {
         }
 
         .lap-float-3 {
-          bottom: 24px;
-          right: 32px;
+          top: 48%;
+          right: 20px;
+          transform: translateY(-50%);
         }
 
         /* 4. MORTGAGE LOAN / LAP SECTION */
@@ -449,12 +476,21 @@ function MortgageLAP() {
 
         .lap-applicant-img-holder {
           width: 100%;
-          height: 105px;
+          height: 110px;
           background-color: #F1F5F9;
           border-bottom: 1px solid #E2E8F0;
           display: flex;
           align-items: center;
           justify-content: center;
+          overflow: hidden;
+        }
+
+        .lap-applicant-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top center;
+          display: block;
         }
 
         .lap-applicant-info {
@@ -528,7 +564,7 @@ function MortgageLAP() {
           display: grid;
           grid-template-columns: 0.7fr 1.3fr;
           gap: 20px;
-          align-items: start;
+          align-items: stretch;
         }
 
         .lap-docs-img-holder {
@@ -541,6 +577,15 @@ function MortgageLAP() {
           display: flex;
           align-items: center;
           justify-content: center;
+          overflow: hidden;
+        }
+
+        .lap-docs-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         .lap-docs-lead {
@@ -864,12 +909,17 @@ function MortgageLAP() {
           background-color: rgba(255, 255, 255, 0.05);
           border: 1px solid rgba(255, 255, 255, 0.12);
           border-radius: 16px;
-          min-height: 200px;
-          height: 100%;
+          height: 180px;
           width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          overflow: hidden;
+        }
+
+        .lap-bottom-cta-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
         }
 
         /* Responsive Breakpoints */
@@ -982,17 +1032,21 @@ function MortgageLAP() {
 
           .lap-float-1 {
             top: 14px;
-            left: 14px;
+            left: 45%;
+            transform: translateX(-50%);
           }
 
           .lap-float-2 {
             top: 50%;
             left: 14px;
+            transform: translateY(-50%);
           }
 
           .lap-float-3 {
-            bottom: 14px;
+            top: 50%;
             right: 14px;
+            bottom: auto;
+            transform: translateY(-50%);
           }
 
           .lap-bottom-cta-card {
@@ -1079,22 +1133,11 @@ function MortgageLAP() {
 
             <div className="lap-hero-right">
               <div className="lap-hero-visual-card">
-                <ImageIcon className="lap-placeholder-icon" />
-
-                <div className="lap-floating-card lap-float-1">
-                  <HomeIcon className="lap-floating-card-icon" />
-                  <span className="lap-floating-card-label">Property</span>
-                </div>
-
-                <div className="lap-floating-card lap-float-2">
-                  <FileText className="lap-floating-card-icon" />
-                  <span className="lap-floating-card-label">Documents</span>
-                </div>
-
-                <div className="lap-floating-card lap-float-3">
-                  <Landmark className="lap-floating-card-icon" />
-                  <span className="lap-floating-card-label">Assessment</span>
-                </div>
+                <img
+                  src={heroMortgageMadurai}
+                  alt="Mortgage, LAP & Property-Backed Finance Assistance in Madurai"
+                  className="lap-hero-img"
+                />
               </div>
             </div>
           </div>
@@ -1111,7 +1154,11 @@ function MortgageLAP() {
 
           <div className="lap-mortgage-grid">
             <div className="lap-img-placeholder">
-              <ImageIcon className="lap-placeholder-icon" />
+              <img
+                src={mortgageLoanHouseModel}
+                alt="Mortgage loan and Loan Against Property assessment with house model and documentation"
+                className="lap-section-img"
+              />
             </div>
 
             <div className="lap-mortgage-content">
@@ -1193,7 +1240,11 @@ function MortgageLAP() {
             </div>
 
             <div className="lap-img-placeholder">
-              <ImageIcon className="lap-placeholder-icon" />
+              <img
+                src={landMortgagePlot}
+                alt="Land mortgage plot with property documentation and blueprints"
+                className="lap-section-img"
+              />
             </div>
           </div>
         </div>
@@ -1209,7 +1260,11 @@ function MortgageLAP() {
 
           <div className="lap-commercial-grid">
             <div className="lap-img-placeholder">
-              <ImageIcon className="lap-placeholder-icon" />
+              <img
+                src={commercialPropertyMortgage}
+                alt="Commercial property mortgage assistance"
+                className="lap-section-img"
+              />
             </div>
 
             <div className="lap-commercial-content">
@@ -1271,7 +1326,11 @@ function MortgageLAP() {
               <div className="lap-applicant-cards">
                 <div className="lap-applicant-card">
                   <div className="lap-applicant-img-holder">
-                    <ImageIcon className="lap-placeholder-icon" style={{ width: '24px', height: '24px' }} />
+                    <img
+                      src={applicantSalariedEmployee}
+                      alt="Salaried Employees"
+                      className="lap-applicant-img"
+                    />
                   </div>
                   <div className="lap-applicant-info">
                     <User className="lap-applicant-icon" />
@@ -1281,7 +1340,11 @@ function MortgageLAP() {
 
                 <div className="lap-applicant-card">
                   <div className="lap-applicant-img-holder">
-                    <ImageIcon className="lap-placeholder-icon" style={{ width: '24px', height: '24px' }} />
+                    <img
+                      src={applicantSelfEmployed}
+                      alt="Self-Employed Professionals"
+                      className="lap-applicant-img"
+                    />
                   </div>
                   <div className="lap-applicant-info">
                     <UserCheck className="lap-applicant-icon" />
@@ -1291,7 +1354,11 @@ function MortgageLAP() {
 
                 <div className="lap-applicant-card">
                   <div className="lap-applicant-img-holder">
-                    <ImageIcon className="lap-placeholder-icon" style={{ width: '24px', height: '24px' }} />
+                    <img
+                      src={applicantBusinessOwner}
+                      alt="Business Owners"
+                      className="lap-applicant-img"
+                    />
                   </div>
                   <div className="lap-applicant-info">
                     <Briefcase className="lap-applicant-icon" />
@@ -1391,7 +1458,11 @@ function MortgageLAP() {
 
               <div className="lap-docs-inner-grid">
                 <div className="lap-docs-img-holder">
-                  <ImageIcon className="lap-placeholder-icon" />
+                  <img
+                    src={commonDocumentsChecklist}
+                    alt="Common documents and paperwork for mortgage loan"
+                    className="lap-docs-img"
+                  />
                 </div>
 
                 <div className="lap-docs-content">
@@ -1599,7 +1670,11 @@ function MortgageLAP() {
 
             <div className="lap-bottom-cta-visual">
               <div className="lap-bottom-cta-img-placeholder">
-                <ImageIcon className="lap-placeholder-icon" style={{ opacity: 0.3 }} />
+                <img
+                  src={footerHouse}
+                  alt="Modern residential property"
+                  className="lap-bottom-cta-img"
+                />
               </div>
             </div>
           </div>
