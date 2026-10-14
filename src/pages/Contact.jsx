@@ -14,7 +14,10 @@ import {
   MessageSquareMore,
   UsersRound,
   FileText,
-  LockKeyhole
+  LockKeyhole,
+  Loader2,
+  CheckCircle2,
+  AlertCircle
 } from 'lucide-react';
 
 // Contact Page Image Assets
@@ -25,33 +28,43 @@ import officeEntranceImg from '../assets/images/Contact/Balaji_Associates_Modern
 import mapLandmarkImg from '../assets/images/Contact/Madurai_Map_and_Temple_Landmark_Banner.png';
 import requirementCtaImg from '../assets/images/Contact/Requirement.png';
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || '';
+
+const initialLoanFormData = {
+  name: '',
+  mobile: '',
+  city: '',
+  loanType: '',
+  approxAmount: '',
+  employmentType: '',
+  message: '',
+  callbackTime: '',
+  consent: false
+};
+
+const initialInsuranceFormData = {
+  name: '',
+  mobile: '',
+  city: '',
+  insuranceType: '',
+  policyCategory: '',
+  message: '',
+  callbackTime: '',
+  consent: false
+};
+
 function Contact() {
   // Loan Form State
-  const [loanFormData, setLoanFormData] = useState({
-    name: '',
-    mobile: '',
-    city: '',
-    loanType: '',
-    approxAmount: '',
-    employmentType: '',
-    message: '',
-    callbackTime: '',
-    consent: false
-  });
-  const [loanSubmitted, setLoanSubmitted] = useState(false);
+  const [loanFormData, setLoanFormData] = useState(initialLoanFormData);
+  const [loanLoading, setLoanLoading] = useState(false);
+  const [loanSuccessMsg, setLoanSuccessMsg] = useState('');
+  const [loanErrorMsg, setLoanErrorMsg] = useState('');
 
   // Insurance Form State
-  const [insuranceFormData, setInsuranceFormData] = useState({
-    name: '',
-    mobile: '',
-    city: '',
-    insuranceType: '',
-    policyCategory: '',
-    message: '',
-    callbackTime: '',
-    consent: false
-  });
-  const [insuranceSubmitted, setInsuranceSubmitted] = useState(false);
+  const [insuranceFormData, setInsuranceFormData] = useState(initialInsuranceFormData);
+  const [insuranceLoading, setInsuranceLoading] = useState(false);
+  const [insuranceSuccessMsg, setInsuranceSuccessMsg] = useState('');
+  const [insuranceErrorMsg, setInsuranceErrorMsg] = useState('');
 
   const handleLoanChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -69,22 +82,99 @@ function Contact() {
     }));
   };
 
-  const handleLoanSubmit = (e) => {
+  const handleLoanSubmit = async (e) => {
     e.preventDefault();
-    if (!loanFormData.name || !loanFormData.mobile || !loanFormData.city || !loanFormData.loanType || !loanFormData.consent) {
-      alert('Please fill all required fields and check the consent box.');
+    setLoanErrorMsg('');
+    setLoanSuccessMsg('');
+
+    if (
+      !loanFormData.name.trim() ||
+      !loanFormData.mobile.trim() ||
+      !loanFormData.city.trim() ||
+      !loanFormData.loanType.trim() ||
+      !loanFormData.consent
+    ) {
+      setLoanErrorMsg('Please fill all required fields (*) and check the consent box.');
       return;
     }
-    setLoanSubmitted(true);
+
+    const cleanDigits = loanFormData.mobile.replace(/\D/g, '');
+    if (cleanDigits.length < 10) {
+      setLoanErrorMsg('Please enter a valid 10-digit mobile number.');
+      return;
+    }
+
+    setLoanLoading(true);
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/loan-enquiry`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(loanFormData)
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || 'Unable to submit loan enquiry at this moment. Please try again.');
+      }
+
+      setLoanSuccessMsg(data.message || 'Thank you! Your loan enquiry has been submitted. We will contact you shortly.');
+      setLoanFormData(initialLoanFormData);
+    } catch (err) {
+      setLoanErrorMsg(err.message || 'Unable to connect to the server. Please check your internet connection or call us directly.');
+    } finally {
+      setLoanLoading(false);
+    }
   };
 
-  const handleInsuranceSubmit = (e) => {
+  const handleInsuranceSubmit = async (e) => {
     e.preventDefault();
-    if (!insuranceFormData.name || !insuranceFormData.mobile || !insuranceFormData.city || !insuranceFormData.consent) {
-      alert('Please fill all required fields and check the consent box.');
+    setInsuranceErrorMsg('');
+    setInsuranceSuccessMsg('');
+
+    if (
+      !insuranceFormData.name.trim() ||
+      !insuranceFormData.mobile.trim() ||
+      !insuranceFormData.city.trim() ||
+      !insuranceFormData.consent
+    ) {
+      setInsuranceErrorMsg('Please fill all required fields (*) and check the consent box.');
       return;
     }
-    setInsuranceSubmitted(true);
+
+    const cleanDigits = insuranceFormData.mobile.replace(/\D/g, '');
+    if (cleanDigits.length < 10) {
+      setInsuranceErrorMsg('Please enter a valid 10-digit mobile number.');
+      return;
+    }
+
+    setInsuranceLoading(true);
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/insurance-enquiry`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(insuranceFormData)
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || 'Unable to submit insurance enquiry at this moment. Please try again.');
+      }
+
+      setInsuranceSuccessMsg(data.message || 'Thank you! Your insurance enquiry has been submitted. We will contact you shortly.');
+      setInsuranceFormData(initialInsuranceFormData);
+    } catch (err) {
+      setInsuranceErrorMsg(err.message || 'Unable to connect to the server. Please check your internet connection or call us directly.');
+    } finally {
+      setInsuranceLoading(false);
+    }
   };
 
   const scrollToForm = (formId) => {
@@ -532,9 +622,17 @@ function Contact() {
           transition: all 0.2s ease;
         }
 
-        .contact-btn-submit-loan:hover {
+        .contact-btn-submit-loan:hover:not(:disabled) {
           transform: translateY(-1px);
           box-shadow: 0 6px 18px rgba(217, 119, 6, 0.4);
+        }
+
+        .contact-btn-submit-loan:disabled,
+        .contact-btn-submit-insurance:disabled {
+          opacity: 0.65;
+          cursor: not-allowed;
+          transform: none;
+          box-shadow: none;
         }
 
         .contact-btn-submit-insurance {
@@ -555,7 +653,7 @@ function Contact() {
           transition: all 0.2s ease;
         }
 
-        .contact-btn-submit-insurance:hover {
+        .contact-btn-submit-insurance:hover:not(:disabled) {
           background-color: #15803D;
           transform: translateY(-1px);
           box-shadow: 0 6px 18px rgba(22, 163, 74, 0.4);
@@ -571,6 +669,34 @@ function Contact() {
           margin-bottom: 14px;
           text-align: center;
           font-weight: 600;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+        }
+
+        .contact-error-msg {
+          padding: 12px 16px;
+          background-color: #FEF2F2;
+          border: 1px solid #FECACA;
+          color: #991B1B;
+          border-radius: 8px;
+          font-size: 13px;
+          margin-bottom: 14px;
+          text-align: center;
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+        }
+
+        @keyframes contact-spin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        .contact-spinner {
+          animation: contact-spin 1s linear infinite;
         }
 
         /* 11. ENQUIRY PROCESS SECTION */
@@ -1233,11 +1359,19 @@ function Contact() {
               <div className="contact-gold-line"></div>
             </div>
 
-            {loanSubmitted ? (
+            {loanSuccessMsg && (
               <div className="contact-success-msg">
-                Thank you! Your loan enquiry has been submitted. We will contact you shortly.
+                <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
+                <span>{loanSuccessMsg}</span>
               </div>
-            ) : null}
+            )}
+
+            {loanErrorMsg && (
+              <div className="contact-error-msg">
+                <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                <span>{loanErrorMsg}</span>
+              </div>
+            )}
 
             <form onSubmit={handleLoanSubmit}>
               {/* Row 1 — Two columns */}
@@ -1390,9 +1524,22 @@ function Contact() {
               </div>
 
               {/* Submit Button */}
-              <button type="submit" className="contact-btn-submit-loan">
-                <span>Submit Loan Enquiry</span>
-                <ArrowRight className="w-4 h-4" />
+              <button
+                type="submit"
+                className="contact-btn-submit-loan"
+                disabled={loanLoading}
+              >
+                {loanLoading ? (
+                  <>
+                    <Loader2 className="w-4 h-4 contact-spinner" />
+                    <span>Submitting Enquiry...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Submit Loan Enquiry</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </>
+                )}
               </button>
             </form>
           </div>
@@ -1413,11 +1560,19 @@ function Contact() {
               <div className="contact-gold-line"></div>
             </div>
 
-            {insuranceSubmitted ? (
+            {insuranceSuccessMsg && (
               <div className="contact-success-msg">
-                Thank you! Your insurance enquiry has been submitted. We will contact you shortly.
+                <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
+                <span>{insuranceSuccessMsg}</span>
               </div>
-            ) : null}
+            )}
+
+            {insuranceErrorMsg && (
+              <div className="contact-error-msg">
+                <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                <span>{insuranceErrorMsg}</span>
+              </div>
+            )}
 
             <form onSubmit={handleInsuranceSubmit}>
               {/* Row 1 — Two columns */}
@@ -1552,9 +1707,22 @@ function Contact() {
               </div>
 
               {/* Submit Button */}
-              <button type="submit" className="contact-btn-submit-insurance">
-                <span>Submit Insurance Enquiry</span>
-                <ArrowRight className="w-4 h-4" />
+              <button
+                type="submit"
+                className="contact-btn-submit-insurance"
+                disabled={insuranceLoading}
+              >
+                {insuranceLoading ? (
+                  <>
+                    <Loader2 className="w-4 h-4 contact-spinner" />
+                    <span>Submitting Enquiry...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Submit Insurance Enquiry</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </>
+                )}
               </button>
             </form>
           </div>
