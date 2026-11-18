@@ -39,7 +39,7 @@ function Footer() {
             <p>
               Old No. 2, New No. 3, 2nd Floor,<br />
               Kanthiakam Theppam Street,<br />
-              Opp. Amidhami Stores, Tamil Sangam Road,<br />
+              Opp. Amizhthini Stores, Tamil Sangam Road,<br />
               Madurai - 625001, Tamil Nadu.
             </p>
           </div>

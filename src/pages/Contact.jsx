@@ -1806,7 +1806,7 @@ function Contact() {
                 <p className="contact-office-address">
                   Old No. 2, New No. 3, 2nd Floor,<br />
                   Kaathukondan Thoppu Street,<br />
-                  Opp. Amidhini Stores,<br />
+                  Opp. Amizhthini Stores,<br />
                   Tamil Sangam Road,<br />
                   Madurai - 625001, Tamil Nadu.
                 </p>

@@ -81,7 +81,7 @@ const homepageFaqs = [
   },
   {
     question: 'Where is Balaji Associates located?',
-    answer: 'Balaji Associates is headquartered in Madurai at Old No. 2, New No. 3, 2nd Floor, Kanthiakam Theppam Street, Opp. Amidhami Stores, Tamil Sangam Road, Madurai - 625001, Tamil Nadu.'
+    answer: 'Balaji Associates is headquartered in Madurai at Old No. 2, New No. 3, 2nd Floor, Kanthiakam Theppam Street, Opp. Amizhthini Stores, Tamil Sangam Road, Madurai - 625001, Tamil Nadu.'
   }
 ];
 
