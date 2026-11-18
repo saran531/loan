@@ -36,6 +36,7 @@ import motorCatImg from '../../assets/images/Insurance/Insurance_overview/Motor-
 import smeCatImg from '../../assets/images/Insurance/Insurance_overview/SME&Business_Insurance.png';
 import travelCatImg from '../../assets/images/Insurance/Insurance_overview/Travel_Insurance.png';
 import homeCatImg from '../../assets/images/Insurance/Insurance_overview/Home_Insurance.png';
+import lifeCatImg from '../../assets/images/Insurance/Life_insurance/Golden Shield Family Protection.png';
 
 import healthRiskImg from '../../assets/images/Insurance/Insurance_overview/Health.png';
 import motorRiskImg from '../../assets/images/Insurance/Insurance_overview/Motor.png';
@@ -328,7 +329,7 @@ function Insurance() {
         /* 3. SECTION — OUR INSURANCE CATEGORIES */
         .ins-categories-grid {
           display: grid;
-          grid-template-columns: repeat(5, 1fr);
+          grid-template-columns: repeat(3, 1fr);
           gap: 16px;
         }
 
@@ -1330,9 +1331,9 @@ function Insurance() {
                   <span>Discuss Your Insurance Requirement</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-                <a href="tel:9842817644" className="ins-btn-secondary">
+                <a href="tel:9626205844" className="ins-btn-secondary">
                   <Phone className="w-4 h-4" />
-                  <span>Call / WhatsApp 98428 17644</span>
+                  <span>Call / WhatsApp 9626205844</span>
                 </a>
               </div>
             </div>
@@ -1447,6 +1448,25 @@ function Insurance() {
                 <h3 className="ins-cat-title">Home Insurance</h3>
                 <p className="ins-cat-desc">
                   Protection for eligible home structure and/or contents against insured events, depending on the policy.
+                </p>
+                <div className="ins-cat-arrow-wrap">
+                  <span className="ins-cat-arrow-circle">→</span>
+                </div>
+              </div>
+            </Link>
+
+            {/* Card 6: Life Insurance */}
+            <Link to="/insurance/life-insurance/" className="ins-cat-card">
+              <div className="ins-cat-img-box">
+                <img src={lifeCatImg} alt="Life Insurance" className="ins-cat-img" />
+              </div>
+              <div className="ins-cat-body">
+                <div className="ins-cat-icon-badge gold">
+                  <ShieldCheck className="w-5 h-5" />
+                </div>
+                <h3 className="ins-cat-title">Life Insurance</h3>
+                <p className="ins-cat-desc">
+                  Financial protection for loved ones and dependants to secure long-term family security and support future commitments, subject to policy terms.
                 </p>
                 <div className="ins-cat-arrow-wrap">
                   <span className="ins-cat-arrow-circle">→</span>
@@ -1951,7 +1971,7 @@ function Insurance() {
           <div className="ins-bottom-cta-card">
             <div className="ins-bottom-cta-content">
               <h3 className="ins-bottom-cta-title">
-                Discuss Your Insurance Requirement | Call / WhatsApp 98428 17644
+                Discuss Your Insurance Requirement | Call / WhatsApp 9626205844
               </h3>
 
               <div className="ins-bottom-cta-buttons">
@@ -1959,9 +1979,9 @@ function Insurance() {
                   <span>Discuss Your Insurance Requirement</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-                <a href="tel:9842817644" className="ins-btn-cta-outline">
+                <a href="tel:9626205844" className="ins-btn-cta-outline">
                   <Phone className="w-4 h-4" />
-                  <span>Call / WhatsApp 98428 17644</span>
+                  <span>Call / WhatsApp 9626205844</span>
                 </a>
               </div>
             </div>

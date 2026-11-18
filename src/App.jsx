@@ -24,6 +24,7 @@ import MotorInsurance from './pages/insurance/MotorInsurance'
 import SMEBusinessInsurance from './pages/insurance/SMEBusinessInsurance'
 import TravelInsurance from './pages/insurance/TravelInsurance'
 import HomeInsurance from './pages/insurance/HomeInsurance'
+import LifeInsurance from './pages/insurance/LifeInsurance'
 
 import PrivacyPolicy from './pages/legal/PrivacyPolicy'
 import Terms from './pages/legal/Terms'
@@ -67,6 +68,8 @@ function App() {
           <Route path="/sme-business-insurance/" element={<SMEBusinessInsurance />} />
           <Route path="/travel-insurance-madurai/" element={<TravelInsurance />} />
           <Route path="/home-insurance-madurai/" element={<HomeInsurance />} />
+          <Route path="/insurance/life-insurance/" element={<LifeInsurance />} />
+          <Route path="/insurance/life-insurance" element={<LifeInsurance />} />
 
           {/* Resources */}
           <Route path="/faq/" element={<FAQ />} />
@@ -75,8 +78,11 @@ function App() {
 
           {/* Legal pages */}
           <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms/" element={<Terms />} />
+          <Route path="/terms" element={<Terms />} />
           <Route path="/disclaimer/" element={<Disclaimer />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
 
           {/* Fallback */}
           <Route path="*" element={<NotFound />} />

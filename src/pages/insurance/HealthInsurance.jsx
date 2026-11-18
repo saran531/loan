@@ -758,7 +758,7 @@ function HealthInsurance() {
         /* 9. SECTION — RELATED SERVICES */
         .hi-related-cards {
           display: grid;
-          grid-template-columns: repeat(5, 1fr);
+          grid-template-columns: repeat(6, 1fr);
           gap: 14px;
         }
 
@@ -1158,9 +1158,9 @@ function HealthInsurance() {
                   <span>Discuss Your Insurance Requirement</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-                <a href="tel:9842817644" className="hi-btn-secondary">
+                <a href="tel:9626205844" className="hi-btn-secondary">
                   <Phone className="w-4 h-4" />
-                  <span>Call / WhatsApp 98428 17644</span>
+                  <span>Call / WhatsApp 9626205844</span>
                 </a>
               </div>
             </div>
@@ -1658,6 +1658,14 @@ function HealthInsurance() {
               </div>
               <span className="hi-related-arrow">→</span>
             </Link>
+
+            <Link to="/insurance/life-insurance/" className="hi-related-card">
+              <div className="hi-related-left">
+                <ShieldCheck className="hi-related-icon" />
+                <span className="hi-related-title">Life Insurance</span>
+              </div>
+              <span className="hi-related-arrow">→</span>
+            </Link>
           </div>
 
           {/* 11. DISCLAIMER / INFORMATION BAR */}
@@ -1678,7 +1686,7 @@ function HealthInsurance() {
           <div className="hi-bottom-cta-card">
             <div className="hi-bottom-cta-content">
               <h3 className="hi-bottom-cta-title">
-                Discuss Your Insurance Requirement | Call / WhatsApp 98428 17644
+                Discuss Your Insurance Requirement | Call / WhatsApp 9626205844
               </h3>
 
               <div className="hi-bottom-cta-buttons">
@@ -1686,9 +1694,9 @@ function HealthInsurance() {
                   <span>Discuss Your Insurance Requirement</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-                <a href="tel:9842817644" className="hi-btn-cta-outline">
+                <a href="tel:9626205844" className="hi-btn-cta-outline">
                   <Phone className="w-4 h-4" />
-                  <span>Call / WhatsApp 98428 17644</span>
+                  <span>Call / WhatsApp 9626205844</span>
                 </a>
               </div>
             </div>

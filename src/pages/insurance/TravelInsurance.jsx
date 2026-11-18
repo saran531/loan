@@ -730,7 +730,7 @@ function TravelInsurance() {
         /* 9. RELATED SERVICES */
         .ti-related-cards {
           display: grid;
-          grid-template-columns: repeat(5, 1fr);
+          grid-template-columns: repeat(6, 1fr);
           gap: 14px;
         }
 
@@ -1191,9 +1191,9 @@ function TravelInsurance() {
             </p>
 
             <div className="ti-hero-actions">
-              <a href="tel:9842817644" className="ti-btn-primary">
+              <a href="tel:9626205844" className="ti-btn-primary">
                 <Phone className="w-4 h-4" />
-                <span>Discuss Your Insurance Requirement | Call / WhatsApp 98428 17644</span>
+                <span>Discuss Your Insurance Requirement | Call / WhatsApp 9626205844</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
@@ -1688,6 +1688,14 @@ function TravelInsurance() {
               </div>
               <span className="ti-related-arrow">→</span>
             </Link>
+
+            <Link to="/insurance/life-insurance/" className="ti-related-card">
+              <div className="ti-related-left">
+                <ShieldCheck className="ti-related-icon" />
+                <span className="ti-related-title">Life Insurance</span>
+              </div>
+              <span className="ti-related-arrow">→</span>
+            </Link>
           </div>
         </div>
       </section>
@@ -1706,12 +1714,12 @@ function TravelInsurance() {
           <div className="ti-bottom-cta-content">
             <h3 className="ti-bottom-cta-title">
               Discuss Your Insurance Requirement |<br />
-              Call / WhatsApp 98428 17644
+              Call / WhatsApp 9626205844
             </h3>
 
-            <a href="tel:9842817644" className="ti-btn-cta-gold">
+            <a href="tel:9626205844" className="ti-btn-cta-gold">
               <Phone className="w-4 h-4" />
-              <span>Discuss Your Insurance Requirement | Call / WhatsApp 98428 17644</span>
+              <span>Discuss Your Insurance Requirement | Call / WhatsApp 9626205844</span>
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>

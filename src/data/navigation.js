@@ -25,6 +25,7 @@ export const insuranceDropdown = [
   { label: 'SME & Business', path: '/sme-business-insurance/' },
   { label: 'Travel', path: '/travel-insurance-madurai/' },
   { label: 'Home', path: '/home-insurance-madurai/' },
+  { label: 'Life Insurance', path: '/insurance/life-insurance/' },
 ];
 
 export const dropdowns = {

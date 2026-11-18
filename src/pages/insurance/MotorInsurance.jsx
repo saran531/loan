@@ -45,6 +45,7 @@ import relatedHealthImg from '../../assets/images/Insurance/Motor/Health_insuran
 import relatedSmeImg from '../../assets/images/Insurance/Motor/SME&Business_insurance.png';
 import relatedTravelImg from '../../assets/images/Insurance/Motor/Travel_Insurance.png';
 import relatedHomeImg from '../../assets/images/Insurance/Motor/Home_Insurance.png';
+import relatedLifeImg from '../../assets/images/Insurance/Life_insurance/Golden Shield Family Protection.png';
 import ctaRequirementImg from '../../assets/images/Insurance/Motor/Insurance_Requirment.png';
 
 const faqList = [
@@ -825,7 +826,7 @@ function MotorInsurance() {
         /* 10. RELATED SERVICES */
         .mi-related-cards {
           display: grid;
-          grid-template-columns: repeat(5, 1fr);
+          grid-template-columns: repeat(6, 1fr);
           gap: 14px;
         }
 
@@ -1206,9 +1207,9 @@ function MotorInsurance() {
               </p>
 
               <div className="mi-hero-actions">
-                <a href="tel:9842817644" className="mi-btn-primary">
+                <a href="tel:9626205844" className="mi-btn-primary">
                   <Phone className="w-4 h-4" />
-                  <span>Discuss Your Insurance Requirement | Call / WhatsApp 98428 17644</span>
+                  <span>Discuss Your Insurance Requirement | Call / WhatsApp 9626205844</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
@@ -1722,6 +1723,19 @@ function MotorInsurance() {
                 <span className="mi-related-arrow">→</span>
               </div>
             </Link>
+
+            <Link to="/insurance/life-insurance/" className="mi-related-card">
+              <div className="mi-related-img-holder">
+                <img src={relatedLifeImg} alt="Life Insurance" className="mi-related-img" />
+              </div>
+              <div className="mi-related-footer">
+                <div className="mi-related-left">
+                  <ShieldCheck className="mi-related-icon" />
+                  <span className="mi-related-title">Life Insurance</span>
+                </div>
+                <span className="mi-related-arrow">→</span>
+              </div>
+            </Link>
           </div>
 
           {/* 12. DISCLAIMER / INFORMATION BAR */}
@@ -1742,13 +1756,13 @@ function MotorInsurance() {
           <div className="mi-bottom-cta-card">
             <div className="mi-bottom-cta-content">
               <h3 className="mi-bottom-cta-title">
-                Discuss Your Insurance Requirement | Call / WhatsApp 98428 17644
+                Discuss Your Insurance Requirement | Call / WhatsApp 9626205844
               </h3>
 
               <div className="mi-bottom-cta-buttons">
-                <a href="tel:9842817644" className="mi-btn-primary">
+                <a href="tel:9626205844" className="mi-btn-primary">
                   <Phone className="w-4 h-4" />
-                  <span>Call / WhatsApp 98428 17644</span>
+                  <span>Call / WhatsApp 9626205844</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>

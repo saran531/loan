@@ -1437,10 +1437,11 @@ function Contact() {
                   >
                     <option value="">Select loan type</option>
                     <option value="Home & Property Loans">Home &amp; Property Loans</option>
+                    <option value="Land purchase and construction">Land purchase and construction</option>
                     <option value="Mortgage / LAP">Mortgage / LAP</option>
-                    <option value="Business & MSME Loans">Business &amp; MSME Loans</option>
+                    <option value="Business Loans / Personal Loans">Business Loans / Personal Loans</option>
                     <option value="Machinery & Equipment Finance">Machinery &amp; Equipment Finance</option>
-                    <option value="Working Capital Finance">Working Capital Finance</option>
+                    <option value="Working Capital / MSME">Working Capital / MSME</option>
                     <option value="Personal & Car Loans">Personal &amp; Car Loans</option>
                     <option value="Education & Agri Finance">Education &amp; Agri Finance</option>
                   </select>
@@ -1641,6 +1642,7 @@ function Contact() {
                     <option value="SME & Business Insurance">SME &amp; Business Insurance</option>
                     <option value="Travel Insurance">Travel Insurance</option>
                     <option value="Home Insurance">Home Insurance</option>
+                    <option value="Life Insurance">Life Insurance</option>
                   </select>
                 </div>
               </div>

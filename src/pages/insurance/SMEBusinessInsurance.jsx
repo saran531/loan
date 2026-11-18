@@ -799,7 +799,7 @@ function SMEBusinessInsurance() {
         /* 8. SECTION — RELATED SERVICES */
         .sme-related-cards {
           display: grid;
-          grid-template-columns: repeat(5, 1fr);
+          grid-template-columns: repeat(6, 1fr);
           gap: 14px;
         }
 
@@ -1176,9 +1176,9 @@ function SMEBusinessInsurance() {
               </p>
 
               <div className="sme-hero-actions">
-                <a href="tel:9842817644" className="sme-btn-primary">
+                <a href="tel:9626205844" className="sme-btn-primary">
                   <Phone className="w-4 h-4" />
-                  <span>Discuss Your Insurance Requirement | Call / WhatsApp 98428 17644</span>
+                  <span>Discuss Your Insurance Requirement | Call / WhatsApp 9626205844</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
@@ -1626,6 +1626,14 @@ function SMEBusinessInsurance() {
               </div>
               <span className="sme-related-arrow">→</span>
             </Link>
+
+            <Link to="/insurance/life-insurance/" className="sme-related-card">
+              <div className="sme-related-left">
+                <ShieldCheck className="sme-related-icon" />
+                <span className="sme-related-title">Life Insurance</span>
+              </div>
+              <span className="sme-related-arrow">→</span>
+            </Link>
           </div>
 
           {/* 10. DISCLAIMER / INFORMATION BAR */}
@@ -1656,11 +1664,11 @@ function SMEBusinessInsurance() {
 
               <div>
                 <h3 className="sme-bottom-cta-title">
-                  Discuss Your Insurance Requirement | Call / WhatsApp 98428 17644
+                  Discuss Your Insurance Requirement | Call / WhatsApp 9626205844
                 </h3>
               </div>
 
-              <a href="tel:9842817644" className="sme-btn-cta-circle">
+              <a href="tel:9626205844" className="sme-btn-cta-circle">
                 <ArrowRight className="w-5 h-5" />
               </a>
             </div>

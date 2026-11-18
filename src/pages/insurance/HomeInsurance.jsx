@@ -749,7 +749,7 @@ function HomeInsurance() {
         /* 8. SECTION — RELATED SERVICES */
         .home-related-cards {
           display: grid;
-          grid-template-columns: repeat(5, 1fr);
+          grid-template-columns: repeat(6, 1fr);
           gap: 14px;
         }
 
@@ -1108,9 +1108,9 @@ function HomeInsurance() {
               </p>
 
               <div className="home-hero-actions">
-                <a href="tel:9842817644" className="home-btn-primary">
+                <a href="tel:9626205844" className="home-btn-primary">
                   <Phone className="w-4 h-4" />
-                  <span>Discuss Your Insurance Requirement | Call / WhatsApp 98428 17644</span>
+                  <span>Discuss Your Insurance Requirement | Call / WhatsApp 9626205844</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
@@ -1581,6 +1581,14 @@ function HomeInsurance() {
               </div>
               <span className="home-related-arrow">→</span>
             </Link>
+
+            <Link to="/insurance/life-insurance/" className="home-related-card">
+              <div className="home-related-left">
+                <ShieldCheck className="home-related-icon" />
+                <span className="home-related-title">Life Insurance</span>
+              </div>
+              <span className="home-related-arrow">→</span>
+            </Link>
           </div>
         </div>
       </section>
@@ -1604,11 +1612,11 @@ function HomeInsurance() {
 
               <div>
                 <h3 className="home-bottom-cta-title">
-                  Discuss Your Insurance Requirement | Call / WhatsApp 98428 17644
+                  Discuss Your Insurance Requirement | Call / WhatsApp 9626205844
                 </h3>
               </div>
 
-              <a href="tel:9842817644" className="home-btn-cta-circle" aria-label="Call Balaji Associates">
+              <a href="tel:9626205844" className="home-btn-cta-circle" aria-label="Call Balaji Associates">
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
