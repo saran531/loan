@@ -154,7 +154,17 @@ function Footer() {
       {/* Footer Bottom Strip */}
       <div className="footer-bottom">
         <div className="container footer-bottom-container">
-          <p className="copyright">&copy; 2024 Balaji Associates. All rights reserved.</p>
+          <p className="copyright">
+            &copy; 2026 Balaji Associates. All rights reserved. | Designed &amp; Developed by:{' '}
+            <a
+              href="https://www.staticsavvymedia.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="developer-link"
+            >
+              Staticsavvymedia
+            </a>
+          </p>
           <div className="footer-legal-links">
             <Link to="/privacy-policy/" className={isPathActive('/privacy-policy/') ? 'active' : ''}>Privacy Policy</Link>
             <span className="divider">|</span>
